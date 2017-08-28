@@ -1,0 +1,58 @@
+// DM Environment file for SimpleBuild.dme.
+// All manual changes should be made outside the BEGIN_ and END_ blocks.
+// New source code should be placed in .dm files: choose File/New --> Code File.
+
+// BEGIN_INTERNALS
+// END_INTERNALS
+
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+#define FILE_DIR "icon"
+#define FILE_DIR "sounds"
+// END_FILE_DIR
+
+// BEGIN_PREFERENCES
+// END_PREFERENCES
+
+// BEGIN_INCLUDE
+#include "testmap.dmm"
+#include "code\adminpanel.dm"
+#include "code\affect.dm"
+#include "code\AI.dm"
+#include "code\areas.dm"
+#include "code\cleanable.dm"
+#include "code\closets.dm"
+#include "code\clothing.dm"
+#include "code\craft.dm"
+#include "code\critter.dm"
+#include "code\damage.dm"
+#include "code\daycycle.dm"
+#include "code\decals.dm"
+#include "code\defines.dm"
+#include "code\diseases.dm"
+#include "code\doors.dm"
+#include "code\drugs.dm"
+#include "code\effects.dm"
+#include "code\fix255.dm"
+#include "code\flora.dm"
+#include "code\food.dm"
+#include "code\hud.dm"
+#include "code\human.dm"
+#include "code\interact.dm"
+#include "code\items.dm"
+#include "code\landmarks.dm"
+#include "code\light.dm"
+#include "code\living.dm"
+#include "code\lobby.dm"
+#include "code\machinery.dm"
+#include "code\movement.dm"
+#include "code\roleplay.dm"
+#include "code\setup.dm"
+#include "code\sounds.dm"
+#include "code\statistics.dm"
+#include "code\stats.dm"
+#include "code\structures.dm"
+#include "code\turfs.dm"
+#include "code\weapon.dm"
+// END_INCLUDE
+
