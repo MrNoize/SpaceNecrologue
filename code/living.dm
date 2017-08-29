@@ -59,6 +59,8 @@ proc/mob_controller()
 			M.health += 0.1
 		if(M.health > 100)
 			M.health = 100
+		if(M.health <= 0 && !M.rests)
+			M.fall_down()
 
 /mob/living/proc/life()
 	if(!isDead && health > 0 && calories != 0 && !isUndead)
@@ -96,7 +98,7 @@ proc/mob_controller()
 			Ma.Turn(360)
 			transform = Ma
 			rests = 0
-			rundelay -= 3
+			density = 1
 			spawn(10)
 				canrest = 1
 
@@ -106,4 +108,4 @@ proc/mob_controller()
 	transform = Ma
 	view() << "<B>[src.name]</B> падает на землю!"
 	rests = 1
-	rundelay += 3
+	density = 0

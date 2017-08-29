@@ -14,6 +14,7 @@
 	var/obj/hud/intent/ACT
 	var/obj/hud/pocket/P
 	var/hand = RHAND
+	var/throw_mode = 0
 	var/acthand
 	var/movement = 0
 	var/act = "help"

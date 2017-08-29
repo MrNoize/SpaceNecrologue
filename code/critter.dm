@@ -26,7 +26,7 @@
 			zombieAI()
 
 /mob/living/proc/zhit(var/mob/living/zombie)
-	if(!src.isDead && zombie.canhit && zombie.stamina >= 5)
+	if(!src.isDead && zombie.canhit && zombie.stamina >= 5 && !zombie.rests)
 		if(prob(src.dexterity*4))
 			view() << "\red \bold [zombie.name] попыталс[ya] ударить [src.name] когт[ya]ми!"
 			view() << "\red \bold [src.name] избежал удара!"

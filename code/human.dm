@@ -14,9 +14,6 @@
 		skill_check()
 		name_pick()
 		role_pick()
-		if(prob(15))
-			usr.icon_state = "krasnohuman"
-			usr << "\blue \bold Ты - красногриб."
 		L = new(src)
 		R = new(src)
 		C = new(src)

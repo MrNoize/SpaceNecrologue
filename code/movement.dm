@@ -11,19 +11,20 @@
 
 /mob/living/Move()
 	if(!isDead)
-		if(stamina <= 1 && M)
-			movement = 0
-			M.icon_state = "movement_walk"
-			return
-		if(move)
-			move = 0
-			..()
-			if(!movement)
-				sleep(calcutale_step())
-			else
-				sleep(calcutale_step())
-				stamina--
-			move = 1
+		if(!rests)
+			if(stamina <= 1 && M)
+				movement = 0
+				M.icon_state = "movement_walk"
+				return
+			if(move)
+				move = 0
+				..()
+				if(!movement)
+					sleep(calcutale_step())
+				else
+					sleep(calcutale_step())
+					stamina--
+				move = 1
 	else
 		if(move)
 			move = 0

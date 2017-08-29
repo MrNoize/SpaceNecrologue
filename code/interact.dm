@@ -1,5 +1,15 @@
-/atom/Click()
-	attack_hand(usr)
+/atom/Click(location,control,params,var/mob/living/H = src)
+	params = params2list(params)
+	if("right" in params)
+		if(istype(H) && H in range(1, usr))
+			H.push(usr)
+	if("left" in params)
+		var/mob/living/U = usr
+		if(src in range(1, U))
+			attack_hand(usr)
+	if("middle" in params)
+		var/mob/living/U = usr
+		U.swap_hands()
 
 /atom/proc/act_by_item(var/mob/living/H = usr, var/obj/items/I)
 
@@ -83,6 +93,15 @@
 		view() << "\blue <B>[H.name]</B> сканирует <B>[src.name]</B>!"
 		usr << "\blue Здоровье: [src.health]"
 
+/mob/living/proc/push(var/mob/living/attacker)
+	if(!src.isDead && !attacker.isDead && attacker.canhit && attacker.stamina >= 10 && !rests && attacker.ckey != src.ckey)
+		view() << "\red \bold [attacker.name] толкает [src.name]!"
+		fall_down()
+		attacker.stamina -= 10
+		attacker.canhit = FALSE
+		spawn(7)
+			attacker.canhit = TRUE
+
 /mob/living/proc/hit(var/mob/living/attacker)
 	if(!src.isDead && attacker.canhit && attacker.stamina >= 5)
 		if(prob(src.dexterity*4) && !src.isUndead && attacker.ckey != src.ckey)
@@ -93,7 +112,7 @@
 			view() << "\red \bold [attacker.name] бьет [src.name] кулаком!"
 			view() << punch
 			src.HurtMe(max(attacker.strength*1.3, 0))
-			if(prob(attacker.strength*3))
+			if(prob(attacker.strength*3) && !rests)
 				src.fall_down()
 			if(src.isUndead && src.target != attacker)
 				view() << "[src.name] смотрит на [attacker.name]."
@@ -130,7 +149,7 @@
 			view() << "\red \bold [attacker.name] бьет [src.name] с помощью [W.name]!"
 			view() << weaponhit
 			src.HurtMe(max(W.power*attacker.strength/5, 0))
-			if(prob(attacker.strength+W.power))
+			if(prob(attacker.strength+W.power) && !rests)
 				src.fall_down()
 			if(src.isUndead && src.target != attacker)
 				view() << "[src.name] смотрит на [attacker.name]."

@@ -12,7 +12,7 @@
 
 /mob/living/proc/zombieAI()
 	if(!isDead)
-		if(target in range(14, src))
+		if(target in range(10, src))
 			if(!target.isDead)
 				if(get_dist(src, target) > 1)
 					step_to(src, target, 0, 10)
@@ -65,7 +65,7 @@
 		spawn() hostileAI()
 
 /mob/living/proc/get_target()
-	for(var/mob/living/H in oview(6, src))
+	for(var/mob/living/H in oview(5, src))
 		if(!H.isUndead)
 			target = H
 			return

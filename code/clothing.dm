@@ -13,6 +13,11 @@
 	icon_state = "blacksuit"
 	texture = "black_suit"
 
+/obj/items/clothing/grey
+	name = "grey suit"
+	icon_state = "greysuit"
+	texture = "grey_suit"
+
 /obj/items/clothing/shirt
 	name = "clothes"
 	icon_state = "shirt"

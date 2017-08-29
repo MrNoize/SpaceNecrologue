@@ -30,7 +30,5 @@
 			del(P)
 			ghost.key = H.key
 			H.overlays = null
-			H.density = 0
 	else
 		H.isDead = 1
-		H.density = 0

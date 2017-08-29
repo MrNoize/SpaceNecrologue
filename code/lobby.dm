@@ -3,8 +3,8 @@
 	luminosity = 10
 
 /mob/living/proc/name_pick()
-	var/f_name = pick("Ivan", "Urist", "Randy", "Daniel", "Oscar", "Ottar", "Colton", "Dagon", "Michael", "Jew", "Darius", "Luther", "John", "Junkie", "Hooman", "Yurka", "Heh")
-	var/l_name = pick("Rambold", "McDwarf", "Ratfucker", "Deadwood", "Shepard", "Smith", "Hitler", "Cobb", "Robustovich", "Shulgin", "Shaleez", "Rana", "Krasnogribov", "Stalin", "Huang")
+	var/f_name = pick("Ivan", "Urist", "Cliff", "Rick", "Carl", "Randy", "Daniel", "Oscar", "Ottar", "Colton", "Dagon", "Michael", "Jew", "Darius", "Luther", "John", "Junkie", "Hooman", "Yurka", "Heh")
+	var/l_name = pick("Rambold", "McDwarf", "Ratfucker", "Grimes", "Shepard", "Smith", "Hitler", "Cobb", "Robustovich", "Shulgin", "Shaleez", "Rana", "Krasnogribov", "Stalin", "Huang")
 	var/pick = input("Your name was generated") in list("Ok") as text|null
 	if(pick)
 		switch(pick)

@@ -17,6 +17,8 @@ mob
 	step_size = 32
 	var/rundelay = 2
 
+client/show_popup_menus = 0
+
 obj
 	step_size = 32
 
