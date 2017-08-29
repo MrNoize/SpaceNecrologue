@@ -147,7 +147,7 @@
 					canhit = TRUE
 		else
 			view() << "\red \bold [attacker.name] בüוע [src.name] ס ןמלמשü‏ [W.name]!"
-			view() << weaponhit
+			view() << sound(pick('weaponhit1.ogg','weaponhit2.ogg'))
 			src.HurtMe(max(W.power*attacker.strength/5, 0))
 			if(prob(attacker.strength+W.power) && !rests)
 				src.fall_down()

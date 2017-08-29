@@ -20,7 +20,6 @@
 		stat(null, "ST: [strength]")
 		stat(null, "EN: [endurance]")
 		stat(null, "DX: [dexterity]")
-		stat(null, "Health: [health]")
 		stat(null, "Calories: [calories]")
 		stat(null, "Stamina: [stamina]")
 		stat(null, "Daytime: [daytime]")
@@ -48,6 +47,33 @@
 	isDead = 1
 	density = 0
 	movement = 1
+
+/mob/living/proc/health()
+	if(!isDead)
+		spawn(0.1)
+			health()
+		if(health >= 100)
+			He.icon_state = "health10"
+		if(health <= 90)
+			He.icon_state = "health9"
+		if(health <= 80)
+			He.icon_state = "health8"
+		if(health <= 70)
+			He.icon_state = "health7"
+		if(health <= 60)
+			He.icon_state = "health6"
+		if(health <= 50)
+			He.icon_state = "health5"
+		if(health <= 40)
+			He.icon_state = "health4"
+		if(health <= 30)
+			He.icon_state = "health3"
+		if(health <= 20)
+			He.icon_state = "health2"
+		if(health <= 10)
+			He.icon_state = "health1"
+		if(health <= 0)
+			He.icon_state = "health0"
 
 proc/mob_controller()
 	for(var/mob/living/M in world)
@@ -84,7 +110,7 @@ proc/mob_controller()
 /mob/living/verb/rest()
 	set name = "Rest"
 	set category = "IC"
-	if(!isDead && canrest)
+	if(!isDead && canrest && health > 0)
 		if(!rests)
 			fall_down()
 			canrest = 0
@@ -94,18 +120,23 @@ proc/mob_controller()
 			view() << "\blue<B>[src.name]</B> поднимаетс[ya] на ноги!"
 			canrest = 0
 			sleep(10)
-			var/matrix/Ma = matrix()
-			Ma.Turn(360)
-			transform = Ma
-			rests = 0
-			density = 1
-			spawn(10)
-				canrest = 1
+			if(health > 0)
+				var/matrix/Ma = matrix()
+				rests = 0
+				Ma.Turn(360)
+				transform = Ma
+				if(key)
+					Re.icon_state = "rest_up"
+				density = 1
+				spawn(10)
+					canrest = 1
 
 /mob/living/proc/fall_down()
 	var/matrix/Ma = matrix()
 	Ma.Turn(90)
 	transform = Ma
 	view() << "<B>[src.name]</B> падает на землю!"
+	if(key)
+		Re.icon_state = "rest_down"
 	rests = 1
 	density = 0

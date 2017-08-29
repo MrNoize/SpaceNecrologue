@@ -1,6 +1,5 @@
 var/sound/console = sound('sounds/console.ogg')
 var/sound/consoledone = sound('sounds/console_done.ogg')
-var/sound/weaponhit = sound('sounds/weaponhit.ogg')
 var/sound/punch = sound('sounds/punch.ogg')
 var/sound/miss = sound('sounds/punchmiss.ogg')
 var/sound/parry = sound('sounds/parry.ogg')
@@ -15,3 +14,8 @@ var/sound/airlock = sound('sounds/airlock.ogg')
 var/sound/cage = sound('sounds/cage.ogg')
 var/sound/eat = sound('sounds/eat.ogg')
 var/sound/zombiehit = sound('sounds/zombiehit.ogg')
+var/sound/moan = sound('sounds/moan.ogg')
+
+mob/proc/playsound(sound/S as sound)
+	for(var/mob/M in view(10))
+		M << S

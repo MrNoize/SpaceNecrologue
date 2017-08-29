@@ -15,7 +15,7 @@
 		endurance = rand(5, 10)
 		dexterity = rand(5, 10)
 		meleeskill = rand(1, 2)
-		if(prob(1))
+		if(prob(2))
 			rundelay = 2
 		if(prob(10))
 			icon_state = "zombie_blacksuit"

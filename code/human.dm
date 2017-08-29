@@ -17,6 +17,8 @@
 		L = new(src)
 		R = new(src)
 		C = new(src)
+		Re = new(src)
+		He = new(src)
 		D = new(src)
 		E = new(src)
 		M = new(src)
@@ -25,6 +27,7 @@
 		ACT = new(src)
 		process()
 		hud_processor()
+		health()
 		x = pick(5,15,25)
 		y = 4
 		z = 1

@@ -13,6 +13,8 @@
 	var/obj/hud/consume/E
 	var/obj/hud/intent/ACT
 	var/obj/hud/pocket/P
+	var/obj/hud/rest/Re
+	var/obj/hud/health/He
 	var/hand = RHAND
 	var/throw_mode = 0
 	var/acthand
@@ -62,6 +64,22 @@
 			var/obj/items/food/F = H.acthand
 			if(istype(F))
 				F.consume()
+
+/obj/hud/health
+	name = "health"
+	icon_state = "health10"
+	New()
+		screen_loc = "15,1"
+		usr.client.screen += src
+
+/obj/hud/rest
+	name = "rest"
+	icon_state = "rest_up"
+	New()
+		screen_loc = "14,1"
+		usr.client.screen += src
+	Click(var/mob/living/H = usr)
+		H.rest()
 
 /obj/hud/pocket
 	name = "pocket"
@@ -149,11 +167,11 @@
 			R.active = 0
 			acthand = my_lhand_contents
 			L.active = 1
-		if(R.time_to_swap == 1 || L.time_to_swap == 1)
+		if(R.time_to_swap || L.time_to_swap)
 			R.time_to_swap = 0
 			L.time_to_swap = 0
 			swap_hands()
-		if(ACT.time_to_intent == 1)
+		if(ACT.time_to_intent)
 			ACT.time_to_intent = 0
 			intent()
 		spawn(0.1) hud_processor()

@@ -1,8 +1,11 @@
 /mob/living/proc/HurtMe(D)
 	health = health - D
 	if(D >= 10)
-		if(prob(30))
+		if(prob(40))
 			new/obj/cleanable/blood(src.loc)
+			if(!isUndead)
+				Me(pick("стискивает зубы", "шипит", "стонет", "вздрагивает"))
+				view() << moan
 	if(health <= 0)
 		die()
 		killed++
@@ -23,6 +26,8 @@
 			del(L)
 			del(D)
 			del(C)
+			del(He)
+			del(Re)
 			del(ACT)
 			del(B)
 			del(E)
