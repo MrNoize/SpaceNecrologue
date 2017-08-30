@@ -3,7 +3,6 @@
 	var/rests = 0
 	var/dressed = 0
 	var/isDead = 0
-	var/health = 100
 	var/calories = 300
 	var/stamina
 	var/stamina_max = 100
@@ -81,12 +80,16 @@ proc/mob_controller()
 			M.stamina += M.stamina_regen
 			if(M.stamina > M.stamina_max)
 				M.stamina = M.stamina_max
-		if(M.health < 100 && M.calories > 250)
+		if(M.health < 100 && M.calories > 250 && !M.isUndead)
 			M.health += 0.1
 		if(M.health > 100)
 			M.health = 100
 		if(M.health <= 0 && !M.rests)
 			M.fall_down()
+		if(M.blood < 0)
+			M.blood = 0
+		if(M.blood > 100)
+			M.blood = 100
 
 /mob/living/proc/life()
 	if(!isDead && health > 0 && calories != 0 && !isUndead)
@@ -97,6 +100,11 @@ proc/mob_controller()
 		stamina--
 		if(prob(15))
 			usr << "\red *Я очень голоден...*"
+	if(!isDead && blood <= 50)
+		HurtMe(0.2)
+		stamina--
+		if(prob(10))
+			usr << "\red *Я могу потер[ya]ть сознание в любую секунду...*"
 	if(health < 0)
 		health = 0
 	if(stamina < 0)

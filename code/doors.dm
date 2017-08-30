@@ -35,6 +35,12 @@ var/delay = 0
 /obj/machinery/doors/act_by_item(var/mob/living/user, var/obj/items/I)
 	var/obj/items/weapon/crowbar/C = I
 	var/obj/items/weapon/screwdriver/S = I
+	var/obj/items/plank/P = I
+	if(istype(P))
+		view() << "\bold[user.name] прибивает к двери доску!"
+		view() << deconstruct
+		new/obj/structures/planks(src.loc)
+		user.cut_hands()
 	if(istype(C))
 		if(closed)
 			if(prob(70))
@@ -43,7 +49,6 @@ var/delay = 0
 			else
 				view() << "\red<B>КРИТИЧЕСКИЙ ПРОВАЛ! [user.name] ломает монтировку!</B>"
 				user.cut_hands()
-				del C
 	if(istype(S))
 		if(broken)
 			if(prob(user.craftskill*30))
@@ -52,7 +57,6 @@ var/delay = 0
 			else
 				view() << "\red<B>КРИТИЧЕСКИЙ ПРОВАЛ! [user.name] ломает отвертку!</B>"
 				user.cut_hands()
-				del S
 
 /obj/machinery/doors/proc/try_to_break()
 	if(prob(1))

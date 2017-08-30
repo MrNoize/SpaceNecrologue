@@ -5,6 +5,14 @@
 	New()
 		icon_state = "bush[pick("1","2")]"
 		dir = dir8()
+	attack_hand(var/mob/living/H = usr)
+		if(!H.isDead && H.acthand)
+			var/obj/items/weapon/P = H.acthand
+			if(istype(P))
+				if(P.sharp)
+					view() << "\bold[H.name] режет куст!"
+					new/obj/items/drugs/bandage/cloth(src.loc)
+					del src
 
 /obj/structures/bush/berries
 	name = "berry bush"
@@ -12,11 +20,10 @@
 	density = 0
 	var/full = 1
 	attack_hand(var/mob/living/H)
-		if(H in range(1, src))
-			if(!H.acthand && full)
-				view() << "\blue \bold [H.name] срывает [ya]годы!"
-				new/obj/items/food/berries(H.loc)
-				full = 0
+		if(!H.acthand && full)
+			view() << "\blue \bold [H.name] срывает [ya]годы!"
+			new/obj/items/food/berries(H.loc)
+			full = 0
 	New()
 		check()
 

@@ -83,5 +83,23 @@
 	icon_state = "rock"
 	density = 1
 	opacity = 1
+	var/health = 100
 	New()
 		dir = dir4()
+	attack_hand(var/mob/living/H = usr)
+		if(!H.isDead && H.acthand && H.canhit && H.stamina >= 5)
+			var/obj/items/weapon/pickaxe/P = H.acthand
+			if(istype(P))
+				view() << "\red \bold[H.name] бьет [src.name] киркой!"
+				view() << pickaxe
+				health -= P.power+H.strength
+				H.stamina -= 5
+				H.calories -= 5
+				if(health <= 0)
+					new /turf/unsimulated/dirt(src)
+					H.canhit = TRUE
+				if(prob(10))
+					new /obj/items/metal(src)
+				H.canhit = FALSE
+				spawn(10)
+					H.canhit = TRUE

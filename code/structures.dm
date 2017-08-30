@@ -74,6 +74,17 @@
 	hitsound = 'sounds/grillehit.ogg'
 	loot = /obj/items/metal
 
+/obj/structures/planks
+	name = "wooden plank"
+	icon_state = "boarded"
+	destructible = 1
+	layer = 14
+	density = 1
+	hitsound = 'sounds/bang.ogg'
+	loot = /obj/items/plank
+	New()
+		dir = dir4()
+
 /turf/simulated/wall/window
 	name = "window"
 	icon_state = "window"
@@ -93,6 +104,15 @@
 					icon_state = "window"
 					density = 1
 					opened = 0
+			if(H.acthand && !H.isDead)
+				act_by_item(H, H.acthand)
+	act_by_item(var/mob/living/H, var/obj/items/weapon/W)
+		var/obj/items/plank/P = W
+		if(istype(P))
+			view() << "\bold[H.name] прибивает к окну доску!"
+			view() << deconstruct
+			new/obj/structures/planks(src)
+			H.cut_hands()
 	New()
 		..()
 		var/area/A = loc
@@ -148,6 +168,13 @@
 			if(H.acthand)
 				var/obj/items/metal/M = H.acthand
 				var/obj/items/weapon/shard/S = H.acthand
+				var/obj/items/plank/P = H.acthand
+				if(istype(P))
+					view() << "\bold[H.name] укрепл[ya]ет стену!"
+					view() << deconstruct
+					new/turf/simulated/wall/wooden(T)
+					H.cut_hands()
+					del src
 				if(istype(M))
 					view() << "\bold[H.name] укрепл[ya]ет стену!"
 					view() << deconstruct

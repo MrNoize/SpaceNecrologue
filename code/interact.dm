@@ -92,6 +92,9 @@
 	if(istype(A))
 		view() << "\blue <B>[H.name]</B> сканирует <B>[src.name]</B>!"
 		usr << "\blue Здоровье: [src.health]"
+		usr << "\blue Уровень крови: [src.blood]%"
+		if(src.bleeding)
+			usr << "\red \bold Обнаружено кровотечение."
 
 /mob/living/proc/push(var/mob/living/attacker)
 	if(!src.isDead && !attacker.isDead && attacker.canhit && attacker.stamina >= 10 && !rests && attacker.ckey != src.ckey)
@@ -112,7 +115,11 @@
 			view() << "\red \bold [attacker.name] бьет [src.name] кулаком!"
 			view() << punch
 			src.HurtMe(max(attacker.strength*1.3, 0))
-			if(prob(attacker.strength*3) && !rests)
+			if(!attacker.isUndead)
+				attacker.calories -= 2
+			if(prob(5+attacker.strength) && !rests)
+				view() << "\red \bold КРИТИЧЕСКИЙ УДАР!"
+				src.HurtMe(10)
 				src.fall_down()
 			if(src.isUndead && src.target != attacker)
 				view() << "[src.name] смотрит на [attacker.name]."
@@ -126,11 +133,14 @@
 	if(!src.isDead && src.health < 100)
 		if(D.units > 0)
 			view() << "\blue \bold [attacker.name] использует [D.name] на [src.name]!"
-			D.units -= 1
 			src.HealMe(D.hp+attacker.medskill*3)
+			D.units -= 1
+			if(D.units <= 0)
+				cut_hands()
+			if(D.isBandage && src.bleeding)
+				bleeding = 0
+				src << "\blue Кровотечение прекратилось."
 			attacker << "\bold Осталось [D.units] использований."
-		else
-			attacker << "\bold [D.name] пуст."
 	else
 		attacker << "\bold Не выйдет."
 
@@ -149,7 +159,11 @@
 			view() << "\red \bold [attacker.name] бьет [src.name] с помощью [W.name]!"
 			view() << sound(pick('weaponhit1.ogg','weaponhit2.ogg'))
 			src.HurtMe(max(W.power*attacker.strength/5, 0))
-			if(prob(attacker.strength+W.power) && !rests)
+			if(!attacker.isUndead)
+				attacker.calories -= 2
+			if(prob(5+attacker.strength) && !rests)
+				view() << "\red \bold КРИТИЧЕСКИЙ УДАР!"
+				src.HurtMe(10)
 				src.fall_down()
 			if(src.isUndead && src.target != attacker)
 				view() << "[src.name] смотрит на [attacker.name]."

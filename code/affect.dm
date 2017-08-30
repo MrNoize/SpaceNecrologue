@@ -8,5 +8,7 @@
 				H.calories += nutriments
 			if(units <= 0)
 				H.cut_hands()
+			if(H.blood < 100)
+				H.blood += 10
 		else
 			usr << "\bold \red Не смогу больше съесть..."

@@ -21,6 +21,32 @@
 	var/movement = 0
 	var/act = "help"
 
+/mob/living/proc/draw_hud()
+	L = new(src)
+	R = new(src)
+	C = new(src)
+	Re = new(src)
+	He = new(src)
+	D = new(src)
+	E = new(src)
+	M = new(src)
+	B = new(src)
+	P = new(src)
+	ACT = new(src)
+
+/mob/living/proc/del_hud()
+	del(R)
+	del(L)
+	del(D)
+	del(C)
+	del(He)
+	del(Re)
+	del(ACT)
+	del(B)
+	del(E)
+	del(M)
+	del(P)
+
 /obj/hud
 	layer = MOB_LAYER + 50
 	icon = 'hud.dmi'
@@ -71,6 +97,18 @@
 	New()
 		screen_loc = "15,1"
 		usr.client.screen += src
+	Click(var/mob/living/H = usr)
+		usr << "\blue *--------*"
+		usr << "\bold СОСТОЯНИЕ [H.name]"
+		if(H.bleeding)
+			usr << "\red \bold Кровотечение."
+		if(H.health <= 40)
+			usr << "\red \bold Т[ya]жело ранен."
+		if(H.calories <= 50)
+			usr << "\red Сильно истощен."
+		if(H.blood <= 50)
+			usr << "\red Бледный цвет кожи."
+		usr << "\blue *--------*"
 
 /obj/hud/rest
 	name = "rest"

@@ -1,5 +1,6 @@
 /mob/living
 	var/tmp/move = 1
+	var/list/obj/my_pull = list()
 
 /mob/living/proc/calcutale_step()
 	var/step_time

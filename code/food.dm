@@ -12,7 +12,7 @@
 /obj/items/food/krasnogrib
 	name = "krasnogrib"
 	icon_state = "krasnogrib"
-	nutriments = 70
+	nutriments = 50
 	units = 1
 
 /obj/items/food/boletus
@@ -24,7 +24,7 @@
 /obj/items/food/berries
 	name = "berries"
 	icon_state = "berries"
-	nutriments = 100
+	nutriments = 80
 	units = 1
 
 /obj/items/food/crisps

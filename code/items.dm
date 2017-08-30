@@ -10,6 +10,10 @@
 	icon_state = "battery"
 	var/energystored = 800
 
+/obj/items/plank
+	name = "wooden plank"
+	icon_state = "wood"
+
 /obj/items/cartridge
 	name = "cartridge"
 	icon_state = "cartridge"
