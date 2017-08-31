@@ -10,5 +10,8 @@
 				H.cut_hands()
 			if(H.blood < 100)
 				H.blood += 10
+			if(velocity && H.move_debuff > 0)
+				H.move_debuff = 0
+				H << "\blue Ты снова чувствуешь себ[ya] шустрым."
 		else
 			usr << "\bold \red Не смогу больше съесть..."

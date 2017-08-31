@@ -14,3 +14,14 @@
 	stamina = stamina_max
 	stamina_regen = endurance/2
 	parrychance = meleeskill*20
+
+/mob/living/proc/skill_rand()
+	meleeskill = rand(1, 2)
+	craftskill = rand(1, 2)
+	medskill = rand(0, 1)
+	miningskill = rand(1, 2)
+	strength = rand(5, 10)
+	endurance = rand(5, 10)
+	dexterity = rand(5, 10)
+	stamina = stamina_max
+	skill_check()

@@ -15,6 +15,8 @@ var/sound/cage = sound('sounds/cage.ogg')
 var/sound/eat = sound('sounds/eat.ogg')
 var/sound/zombiehit = sound('sounds/zombiehit.ogg')
 var/sound/moan = sound('sounds/moan.ogg')
+var/sound/sigh = sound('sounds/sigh.ogg')
+var/sound/cough = sound('sounds/cough.ogg')
 
 mob/proc/playsound(sound/S as sound)
 	for(var/mob/M in view(10))

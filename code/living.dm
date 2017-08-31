@@ -82,8 +82,8 @@ proc/mob_controller()
 				M.stamina = M.stamina_max
 		if(M.health < 100 && M.calories > 250 && !M.isUndead)
 			M.health += 0.1
-		if(M.health > 100)
-			M.health = 100
+		if(M.health > M.maxHealth)
+			M.health = M.maxHealth
 		if(M.health <= 0 && !M.rests)
 			M.fall_down()
 		if(M.blood < 0)
@@ -110,7 +110,7 @@ proc/mob_controller()
 	if(stamina < 0)
 		stamina = 0
 	if(!dressed && !isUndead)
-		try_to_cold()
+		try_to_cold(30)
 	spawn(10) life()
 
 /mob/living/var/canrest = 1

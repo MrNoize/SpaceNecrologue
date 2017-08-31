@@ -26,6 +26,7 @@
 				step_rand(src)
 		else
 			get_target()
+			step_rand(src)
 			if(target)
 				sleep(1)
 			else
@@ -36,6 +37,9 @@
 			view() << sound(pick('sounds/zombie_life1.ogg', 'sounds/zombie_life2.ogg', 'sounds/zombie_life3.ogg'))
 		if(rests)
 			rest()
+		if(isFrozen)
+			for(var/mob/living/H in oview(3, src))
+				H.try_to_cold(50)
 		spawn() zombieAI()
 
 /mob/living/proc/hostileAI()

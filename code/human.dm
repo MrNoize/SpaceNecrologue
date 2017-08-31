@@ -3,15 +3,7 @@
 	icon_state = "human"
 	mymob = "human"
 	Login()
-		meleeskill = rand(1, 2)
-		craftskill = rand(1, 2)
-		medskill = rand(0, 1)
-		miningskill = rand(1, 2)
-		strength = rand(5, 10)
-		endurance = rand(5, 10)
-		dexterity = rand(5, 10)
-		stamina = stamina_max
-		skill_check()
+		skill_rand()
 		name_pick()
 		role_pick()
 		draw_hud()

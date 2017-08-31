@@ -9,6 +9,32 @@
 				msg = fix255(msg)
 				M << "<B>[usr]</B> говорит, \"[msg]\""
 
+//EMOTE//
+/mob/living
+	var/canEmote = 1
+
+/mob/living/verb/sigh()
+	set name = "Sigh"
+	set category = "Emote"
+	if(canEmote)
+		Me("вздыхает")
+		view() << sigh
+		canEmote = FALSE
+		spawn(30)
+			canEmote = TRUE
+
+/mob/living/verb/laugh()
+	set name = "Laugh"
+	set category = "Emote"
+	if(canEmote)
+		Me("смеется")
+		view() << sound(pick('sounds/laugh_1.ogg','sounds/laugh_2.ogg','sounds/laugh_3.ogg'))
+		canEmote = FALSE
+		spawn(30)
+			canEmote = TRUE
+
+//EMOTE//
+
 /mob/verb/OOC(msg as text)
 	set category = "OOC"
 	msg = fix255(msg)

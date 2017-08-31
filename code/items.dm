@@ -10,6 +10,10 @@
 	icon_state = "battery"
 	var/energystored = 800
 
+/obj/items/modules/st_cb
+	name = "standart circuit board"
+	icon_state = "st_cb"
+
 /obj/items/plank
 	name = "wooden plank"
 	icon_state = "wood"

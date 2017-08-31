@@ -2,6 +2,7 @@
 	icon = 'food.dmi'
 	var/nutriments = 0
 	var/units = 0
+	var/velocity = 0
 
 /obj/items/food/borscht
 	name = "can of borscht"
@@ -14,6 +15,13 @@
 	icon_state = "krasnogrib"
 	nutriments = 50
 	units = 1
+
+/obj/items/food/coffee
+	name = "coffee"
+	icon_state = "coffee"
+	nutriments = 20
+	units = 1
+	velocity = 1
 
 /obj/items/food/boletus
 	name = "boletus"
