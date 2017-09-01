@@ -1,6 +1,7 @@
 /mob/living
 	var/isVampire = 0
 	var/fangsOut = 0
+	var/invisible = 0
 
 /mob/living/proc/vampire_check()
 	if(isVampire && !isDead)
@@ -28,9 +29,11 @@
 	if(blood >= 10)
 		blood -= 10
 		alpha = 5
+		invisible = 1
 		view() << discipline
 		spawn(500)
 			alpha = 255
+			invisible = 0
 	else
 		usr << "\red Недостаточно крови."
 

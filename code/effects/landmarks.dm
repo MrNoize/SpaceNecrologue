@@ -9,6 +9,8 @@
         new I(src.loc)
         del src
 
+var/global/maxzombies = 45
+
 /obj/landmarks/zombiespawner
 	icon = 'effects.dmi'
 	icon_state = "zombie"
@@ -18,6 +20,7 @@
 		spawnzombie()
 
 	proc/spawnzombie()
-		var/Z = /mob/living/zombie
-		new Z(src.loc)
-		spawn(600)	spawnzombie()
+		if(zombies < maxzombies)
+			var/Z = /mob/living/zombie
+			new Z(src.loc)
+			spawn(600)	spawnzombie()

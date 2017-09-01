@@ -13,7 +13,7 @@
 /mob/living/proc/zombieAI()
 	if(!isDead)
 		if(target in range(10, src))
-			if(!target.isDead && !target.isUndead)
+			if(!target.isDead && !target.isUndead && !target.invisible)
 				if(get_dist(src, target) > 1)
 					step_to(src, target, 0, 10)
 					sleep(rundelay*time_scale)
@@ -48,7 +48,7 @@
 /mob/living/proc/hostileAI()
 	if(!isDead)
 		if(target in range(14, src))
-			if(!target.isDead)
+			if(!target.isDead && !target.invisible)
 				if(get_dist(src, target) > 1)
 					step_to(src, target, 0, 10)
 					sleep(rundelay*time_scale)
@@ -73,6 +73,6 @@
 
 /mob/living/proc/get_target()
 	for(var/mob/living/H in oview(5, src))
-		if(!H.isUndead)
+		if(!H.isUndead && !H.invisible)
 			target = H
 			return

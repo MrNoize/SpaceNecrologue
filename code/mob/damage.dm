@@ -17,7 +17,6 @@
 				view() << moan
 	if(health <= 0)
 		die()
-		killed++
 
 /mob/living/proc/BloodLoss()
 	if(bleeding && blood > 0)
@@ -33,9 +32,12 @@
 	health = health + D
 
 /mob/living/proc/die(var/mob/living/human/H = src)
+	killed++
 	H.dropinventory()
 	if(!rests)
 		H.fall_down()
+	if(isUndead)
+		zombies--
 	if(H.client)
 		H.isDead = 1
 		var/mob/ghost = null
