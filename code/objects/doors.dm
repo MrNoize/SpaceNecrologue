@@ -35,7 +35,7 @@ var/delay = 0
 /obj/machinery/doors/act_by_item(var/mob/living/user, var/obj/items/I)
 	var/obj/items/weapon/crowbar/C = I
 	var/obj/items/weapon/screwdriver/S = I
-	var/obj/items/plank/P = I
+	var/obj/items/weapon/plank/P = I
 	if(istype(P))
 		view() << "\bold[user.name] прибивает к двери доску!"
 		view() << deconstruct

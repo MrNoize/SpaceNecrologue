@@ -4,7 +4,7 @@
 	var/turf/T = src.loc
 	var/obj/items/metal/M
 	var/pick = input("Что будем создавать?") in list("Пол", "Стена", "Дверь", "Решетка", "Стол") as text|null
-	if(pick && !isDead)
+	if(pick && !isDead && usr.loc == T)
 		switch(pick)
 			if("Пол")
 				for(M in T)
@@ -58,7 +58,7 @@
 	var/turf/T = src.loc
 	var/obj/items/metal/M
 	var/pick = input("Инструментики") in list ("Отвертка", "Лом", "Кирка") as text|null
-	if(pick && !isDead)
+	if(pick && !isDead && usr.loc == T)
 		switch(pick)
 			if("Отвертка")
 				for(M in T)
@@ -96,7 +96,7 @@
 	var/obj/items/battery/B
 	var/obj/items/modules/st_cb/ST
 	var/pick = input("Девайсы") in list ("Картридж", "Анализер") as text|null
-	if(pick && !isDead)
+	if(pick && !isDead && usr.loc == T)
 		switch(pick)
 			if("Картридж")
 				for(M in T)

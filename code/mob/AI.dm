@@ -13,12 +13,15 @@
 /mob/living/proc/zombieAI()
 	if(!isDead)
 		if(target in range(10, src))
-			if(!target.isDead)
+			if(!target.isDead && !target.isUndead)
 				if(get_dist(src, target) > 1)
 					step_to(src, target, 0, 10)
 					sleep(rundelay*time_scale)
 				else
-					target.zhit(src)
+					if(prob(70))
+						target.zhit(src)
+					else
+						target.zbite(src)
 					sleep(rundelay*time_scale)
 			else
 				target = null

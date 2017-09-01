@@ -86,7 +86,7 @@
 		screen_loc = "7,1"
 		usr.client.screen += src
 	Click(var/mob/living/H = usr)
-		if(H.acthand)
+		if(H.acthand && !H.isUndead)
 			var/obj/items/food/F = H.acthand
 			if(istype(F))
 				F.consume()
@@ -100,6 +100,8 @@
 	Click(var/mob/living/H = usr)
 		usr << "\blue *--------*"
 		usr << "\bold ÑÎÑÒÎßÍÈÅ [H.name]"
+		if(H.isBitten)
+			usr << "\red \bold Óêóøåí."
 		if(H.bleeding)
 			usr << "\red \bold Êðîâîòå÷åíèå."
 		if(H.health <= 40)
@@ -126,7 +128,7 @@
 		screen_loc = "3,1"
 		usr.client.screen += src
 	Click(var/mob/living/H = usr)
-		if(H.dressed)
+		if(H.dressed && !H.isUndead)
 			if(!H.my_pocket_contents)
 				H.epocket()
 			else
@@ -139,7 +141,7 @@
 		screen_loc = "1,1"
 		usr.client.screen += src
 	Click(var/mob/living/H = usr)
-		if(H.dressed)
+		if(H.dressed && !H.isUndead)
 			if(!H.my_belt_contents)
 				H.ebelt()
 			else
@@ -152,11 +154,12 @@
 		screen_loc = "2,1"
 		usr.client.screen += src
 	Click(var/mob/living/H = usr)
-		if(!H.dressed)
-			time_to_wearc = 1
-			H.eclothes()
-		else
-			H.cunequip()
+		if(!H.isUndead)
+			if(!H.dressed)
+				time_to_wearc = 1
+				H.eclothes()
+			else
+				H.cunequip()
 
 /obj/hud/intent
 	name = "intent"

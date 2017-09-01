@@ -6,7 +6,7 @@
 		freeze(src)
 
 /mob/living/proc/freeze(var/mob/living/F)
-	if(!isDead && !isUndead)
+	if(!isDead && !isUndead && !isVampire)
 		HurtMe(1)
 		if(prob(30))
 			if(canEmote)
@@ -16,4 +16,12 @@
 				canEmote = FALSE
 				spawn(30)
 					canEmote = TRUE
+
+/mob/living/proc/virus(var/mob/living/V)
+	if(!V.isDead && !V.isUndead && !V.isVampire && V.isBitten)
+		spawn(600)
+			V.icon_state = "zombie"
+			V.isUndead = 1
+			V.isBitten = 0
+
 

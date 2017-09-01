@@ -19,6 +19,8 @@
 		stat(null, "ST: [strength]")
 		stat(null, "EN: [endurance]")
 		stat(null, "DX: [dexterity]")
+		if(isVampire)
+			stat(null, "Blood: [blood]")
 		stat(null, "Calories: [calories]")
 		stat(null, "Stamina: [stamina]")
 		stat(null, "Daytime: [daytime]")
@@ -86,20 +88,31 @@ proc/mob_controller()
 			M.health = M.maxHealth
 		if(M.health <= 0 && !M.rests)
 			M.fall_down()
-		if(M.blood < 0)
+		if(M.blood <= 0)
+			M.fall_down()
 			M.blood = 0
 		if(M.blood > 100)
 			M.blood = 100
+		if(M.isVampire)
+			M.calories = 0
 
 /mob/living/proc/life()
-	if(!isDead && health > 0 && calories != 0 && !isUndead)
+	if(!isDead && health > 0 && calories != 0 && !isUndead && !isVampire)
 		calories -= 1
 		sleep(10)
-	if(calories <= 0 && !isDead && !isUndead)
+	if(isVampire)
+		blood -= 1
+		sleep(20)
+	if(calories <= 0 && !isDead && !isUndead && !isVampire)
 		HurtMe(0.2)
 		stamina--
 		if(prob(15))
 			usr << "\red *я очень голоден...*"
+	if(isUndead && ckey)
+		if(prob(10))
+			say(pick("ћмм-м-мэээээ...","Ёэээаааааууууу-у!","’хххммммссссс...","√ррррээээ!","ћмммсссхиии..."))
+			Me("мычит")
+			view() << sound(pick('sounds/zombie_life1.ogg', 'sounds/zombie_life2.ogg', 'sounds/zombie_life3.ogg'))
 	if(!isDead && blood <= 50)
 		HurtMe(0.2)
 		stamina--
@@ -140,11 +153,12 @@ proc/mob_controller()
 					canrest = 1
 
 /mob/living/proc/fall_down()
-	var/matrix/Ma = matrix()
-	Ma.Turn(90)
-	transform = Ma
-	view() << "<B>[src.name]</B> падает на землю!"
-	if(key)
-		Re.icon_state = "rest_down"
-	rests = 1
-	density = 0
+	if(!rests)
+		var/matrix/Ma = matrix()
+		Ma.Turn(90)
+		transform = Ma
+		view() << "<B>[src.name]</B> падает на землю!"
+		if(key)
+			Re.icon_state = "rest_down"
+		rests = 1
+		density = 0

@@ -8,6 +8,11 @@
 	icon_state = "bluesuit"
 	texture = "blue_suit"
 
+/obj/items/clothing/green
+	name = "clothes"
+	icon_state = "greensuit"
+	texture = "green_suit"
+
 /obj/items/clothing/black
 	name = "black suit"
 	icon_state = "blacksuit"

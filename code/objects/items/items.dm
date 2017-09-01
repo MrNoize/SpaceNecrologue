@@ -14,10 +14,6 @@
 	name = "standart circuit board"
 	icon_state = "st_cb"
 
-/obj/items/plank
-	name = "wooden plank"
-	icon_state = "wood"
-
 /obj/items/cartridge
 	name = "cartridge"
 	icon_state = "cartridge"

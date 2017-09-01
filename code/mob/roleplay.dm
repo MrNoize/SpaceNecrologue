@@ -2,12 +2,13 @@
 	set name = "Say"
 	set category = "IC"
 	if(cantalk)
-		if(!msg)
-			return
-		else
+		if(!msg||msg==""||msg==null) return
+		if(!isUndead)
 			for(var/mob/M in view())
 				msg = fix255(msg)
 				M << "<B>[usr]</B> говорит, \"[msg]\""
+		else
+			M << pick("Ммм-м-мэээээ...","Ээээаааааууууу-у!","Ххххммммссссс...","Гррррээээ!","Ммммсссхиии...")
 
 //EMOTE//
 /mob/living
@@ -16,7 +17,7 @@
 /mob/living/verb/sigh()
 	set name = "Sigh"
 	set category = "Emote"
-	if(canEmote)
+	if(canEmote && !isDead)
 		Me("вздыхает")
 		view() << sigh
 		canEmote = FALSE
@@ -26,7 +27,7 @@
 /mob/living/verb/laugh()
 	set name = "Laugh"
 	set category = "Emote"
-	if(canEmote)
+	if(canEmote && !isDead)
 		Me("смеется")
 		view() << sound(pick('sounds/laugh_1.ogg','sounds/laugh_2.ogg','sounds/laugh_3.ogg'))
 		canEmote = FALSE
@@ -39,15 +40,13 @@
 	set category = "OOC"
 	msg = fix255(msg)
 	if(ooc)
-		if(!msg) return
-		else
-			world << "<B>\blue OOC: [key]: [msg]</B>"
+		if(!msg||msg==""||msg==null) return
+		world << "<B>\blue OOC: [key]: [msg]</B>"
 	else
 		usr << "<B>\red Недоступно.</B>"
 
 /mob/living/verb/Me(msg as text)
 	set category = "IC"
 	msg = fix255(msg)
-	if(!msg) return
-	else
-		view() << "<B>[src.name]</B> [msg].</B>"
+	if(!msg||msg==""||msg==null) return
+	view() << "<B>[src.name]</B> [msg].</B>"

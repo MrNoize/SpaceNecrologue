@@ -7,7 +7,7 @@
 	if(H in range(1, src))
 		if(H.acthand && istype(M))
 			view() << "\blue<B>[H.name]</B> вытирает пол швабронькой!"
-			cleaned += 1
+			cleaned++
 			del src
 
 /obj/cleanable/blood

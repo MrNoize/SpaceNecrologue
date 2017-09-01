@@ -9,6 +9,9 @@
 		draw_hud()
 		process()
 		hud_processor()
+		if(prob(15))
+			isVampire = 1
+			vampire_check()
 		health()
 		x = pick(5,15,25)
 		y = 4

@@ -12,6 +12,21 @@
 		if(H.acthand)
 			act_by_item(H, H.acthand)
 
+/obj/structures/proc/zact(var/mob/living/Z)
+	var/turf/T = src.loc
+	if(Z.canhit && destructible)
+		view() << "\red<B>[Z.name]</B> бьет <B>[src.name]</B>!"
+		view() << hitsound
+		health -= Z.strength*4
+		Z.canhit = FALSE
+		spawn(10)
+			Z.canhit = TRUE
+	if(health <= 0)
+		view() << breaksound
+		Z.canhit = TRUE
+		new loot(T)
+		del src
+
 /obj/structures/act_by_item(var/mob/living/H, var/obj/items/weapon/W)
 	var/turf/T = src.loc
 	var/obj/items/devices/demolisher/D = W
@@ -81,9 +96,7 @@
 	layer = 14
 	density = 1
 	hitsound = 'sounds/bang.ogg'
-	loot = /obj/items/plank
-	New()
-		dir = dir4()
+	loot = /obj/items/weapon/plank
 
 /turf/simulated/wall/window
 	name = "window"
@@ -107,7 +120,7 @@
 			if(H.acthand && !H.isDead)
 				act_by_item(H, H.acthand)
 	act_by_item(var/mob/living/H, var/obj/items/weapon/W)
-		var/obj/items/plank/P = W
+		var/obj/items/weapon/plank/P = W
 		if(istype(P))
 			view() << "\bold[H.name] прибивает к окну доску!"
 			view() << deconstruct
@@ -168,7 +181,7 @@
 			if(H.acthand)
 				var/obj/items/metal/M = H.acthand
 				var/obj/items/weapon/shard/S = H.acthand
-				var/obj/items/plank/P = H.acthand
+				var/obj/items/weapon/plank/P = H.acthand
 				if(istype(P))
 					view() << "\bold[H.name] укрепл[ya]ет стену!"
 					view() << deconstruct

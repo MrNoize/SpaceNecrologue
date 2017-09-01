@@ -15,7 +15,7 @@
 		skill_rand()
 		if(prob(2))
 			rundelay = 2
-		if(prob(30))
+		if(prob(30) && !isFrozen)
 			icon_state = pick("zombie_blacksuit","zombie_biohazard")
 		.=..()
 		spawn(1)
@@ -28,7 +28,7 @@
 	isFrozen = 1
 
 /mob/living/proc/zhit(var/mob/living/zombie)
-	if(!src.isDead && zombie.canhit && zombie.stamina >= 5 && !zombie.rests)
+	if(!src.isDead && zombie.canhit && zombie.stamina >= 5 && !zombie.rests && zombie.key != src.key)
 		if(prob(src.dexterity*4))
 			view() << "\red \bold [zombie.name] попыталс[ya] ударить [src.name] когт[ya]ми!"
 			view() << "\red \bold [src.name] избежал удара!"
@@ -38,11 +38,27 @@
 			view() << zombiehit
 			src.HurtMe(max(zombie.strength*1.3, 0))
 			if(zombie.isFrozen)
-				move_debuff += 0.2
+				move_debuff += 1
 		zombie.stamina = max(zombie.stamina - 10, 0)
 		zombie.canhit = FALSE
 		spawn(7)
 			zombie.canhit = TRUE
+
+/mob/living/proc/zbite(var/mob/living/zombie)
+	if(!src.isDead && zombie.canhit && !zombie.rests && zombie.key != src.key)
+		if(prob(src.dexterity*4))
+			view() << "\red \bold [zombie.name] попыталс[ya] укусить [src.name]!"
+			view() << "\red \bold [src.name] избежал укуса!"
+			view() << miss
+		else
+			view() << "\red \bold [zombie.name] кусает [src.name]!"
+			view() << bite
+			src.isBitten = 1
+			virus(src)
+			src.HurtMe(8)
+			zombie.canhit = FALSE
+			spawn(7)
+				zombie.canhit = TRUE
 
 /mob/living/skeleton
 	name = "Skeleton"

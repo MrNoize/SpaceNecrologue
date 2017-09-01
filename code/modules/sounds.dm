@@ -1,6 +1,5 @@
 var/sound/console = sound('sounds/console.ogg')
 var/sound/consoledone = sound('sounds/console_done.ogg')
-var/sound/punch = sound('sounds/punch.ogg')
 var/sound/miss = sound('sounds/punchmiss.ogg')
 var/sound/parry = sound('sounds/parry.ogg')
 var/sound/welcome = sound('sounds/welcome.ogg')
@@ -17,6 +16,21 @@ var/sound/zombiehit = sound('sounds/zombiehit.ogg')
 var/sound/moan = sound('sounds/moan.ogg')
 var/sound/sigh = sound('sounds/sigh.ogg')
 var/sound/cough = sound('sounds/cough.ogg')
+var/sound/discipline = sound('sounds/discipline.ogg')
+var/sound/fangs = sound('sounds/fangs.ogg')
+var/sound/bloodsuck = sound('sounds/bloodsuck.ogg')
+var/sound/bite = sound('bite.ogg')
+
+/mob/living
+	var/attacksound
+
+proc/soundpick(var/mob/living/H, var/obj/items/weapon/W)
+	if(W.attacktype == "stab")
+		H.attacksound = sound(pick('stab1.ogg','stab2.ogg','stab3.ogg'))
+	if(W.attacktype == "hit")
+		H.attacksound = sound(pick('weaponhit1.ogg','weaponhit2.ogg'))
+	if(W.attacktype == "slash")
+		H.attacksound = sound(pick('sounds/slash1.ogg','sounds/slash2.ogg','sounds/slash3.ogg','sounds/slash4.ogg','sounds/slash5.ogg'))
 
 mob/proc/playsound(sound/S as sound)
 	for(var/mob/M in view(10))

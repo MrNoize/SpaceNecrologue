@@ -15,6 +15,18 @@
 var/autoreboot = 0
 var/reboottime = 0
 
+/mob/living/var/fotgof = 0
+
+/mob/living/verb/Fotgof_Mode()
+	set category = "OOC"
+	if(!fotgof)
+		fotgof = 1
+		usr << "\bold Фотгоф-Мод активирован."
+	else
+		fotgof = 0
+		usr << "\bold Минус Фотгоф-Мод."
+
+
 mob/admin/verb/End()
 	set category = "Admin"
 	world.End()

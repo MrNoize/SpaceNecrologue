@@ -5,11 +5,26 @@
 			H.push(usr)
 	if("left" in params)
 		var/mob/living/U = usr
+		var/obj/structures/S = src
 		if(src in range(1, U))
-			attack_hand(usr)
+			if(!U.isUndead)
+				attack_hand(usr)
+			else
+				if(istype(H))
+					if(prob(80))
+						H.zhit(U)
+					else
+						H.zbite(U)
+				if(istype(S))
+					S.zact(U)
 	if("middle" in params)
-		var/mob/living/U = usr
-		U.swap_hands()
+		var/mob/living/Us = usr
+		if(!Us.fotgof)
+			var/mob/living/U = usr
+			U.swap_hands()
+		else
+			if(istype(H) && H in range(1, usr))
+				H.push(usr)
 
 /atom/proc/act_by_item(var/mob/living/H = usr, var/obj/items/I)
 
@@ -73,7 +88,10 @@
 	if(H in range(1, src))
 		if(!H.isDead)
 			if(!H.acthand && H.act == "harm")
-				hit(usr)
+				if(!H.fangsOut)
+					src.hit(usr)
+				else
+					src.bloodsuck(usr)
 			if(!H.acthand && H.act == "help")
 				view() << "\blue <B>[H.name]</B> поглаживает <B>[src.name]</B>!"
 			if(H.acthand)
@@ -98,12 +116,34 @@
 
 /mob/living/proc/push(var/mob/living/attacker)
 	if(!src.isDead && !attacker.isDead && attacker.canhit && attacker.stamina >= 10 && !rests && attacker.ckey != src.ckey)
-		view() << "\red \bold [attacker.name] толкает [src.name]!"
-		fall_down()
-		attacker.stamina -= 10
-		attacker.canhit = FALSE
-		spawn(7)
-			attacker.canhit = TRUE
+		if(prob(src.dexterity*3) && !src.isUndead)
+			view() << "\red \bold [src.name] перехватил [attacker.name]!"
+			attacker.push(src)
+		else
+			view() << "\red \bold [attacker.name] толкает [src.name]!"
+			fall_down()
+			attacker.stamina -= 10
+			attacker.canhit = FALSE
+			spawn(7)
+				attacker.canhit = TRUE
+
+/mob/living/proc/bloodsuck(var/mob/living/attacker)
+	if(!attacker.isDead && attacker.canhit && attacker.ckey != src.ckey)
+		if(prob(src.dexterity*5) && !src.isUndead)
+			view() << "\red \bold [attacker.name] попыталс[ya] укусить [src.name]!"
+			view() << "\red \bold [src.name] избежал укуса!"
+			view() << miss
+		else
+			if(src.blood > 0)
+				view() << "\red \bold [attacker.name] кусает [src.name] за шею!"
+				view() << bloodsuck
+				attacker.blood += 15
+				src.blood -= 15
+				attacker.canhit = FALSE
+				spawn(30)
+					attacker.canhit = TRUE
+			else
+				attacker << "В существе недостаточно крови."
 
 /mob/living/proc/hit(var/mob/living/attacker)
 	if(!src.isDead && attacker.canhit && attacker.stamina >= 5)
@@ -113,7 +153,7 @@
 			view() << miss
 		else
 			view() << "\red \bold [attacker.name] бьет [src.name] кулаком!"
-			view() << punch
+			view() << sound(pick('sounds/punch1.ogg','sounds/punch2.ogg','sounds/punch3.ogg'))
 			src.HurtMe(max(attacker.strength*1.3, 0))
 			if(!attacker.isUndead)
 				attacker.calories -= 2
@@ -157,7 +197,8 @@
 					canhit = TRUE
 		else
 			view() << "\red \bold [attacker.name] бьет [src.name] с помощью [W.name]!"
-			view() << sound(pick('weaponhit1.ogg','weaponhit2.ogg'))
+			soundpick(attacker,W)
+			view() << attacker.attacksound
 			src.HurtMe(max(W.power*attacker.strength/5, 0))
 			if(!attacker.isUndead)
 				attacker.calories -= 2
