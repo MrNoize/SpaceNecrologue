@@ -11,7 +11,7 @@
 				attack_hand(usr)
 			else
 				if(istype(H))
-					if(prob(80))
+					if(prob(90))
 						H.zhit(U)
 					else
 						H.zbite(U)

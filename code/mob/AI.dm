@@ -18,7 +18,7 @@
 					step_to(src, target, 0, 10)
 					sleep(rundelay*time_scale)
 				else
-					if(prob(70))
+					if(prob(90))
 						target.zhit(src)
 					else
 						target.zbite(src)

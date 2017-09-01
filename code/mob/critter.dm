@@ -53,8 +53,9 @@
 		else
 			view() << "\red \bold [zombie.name] кусает [src.name]!"
 			view() << bite
-			src.isBitten = 1
-			virus(src)
+			if(prob(40))
+				src.isBitten = 1
+				virus(src)
 			src.HurtMe(8)
 			zombie.canhit = FALSE
 			spawn(7)
