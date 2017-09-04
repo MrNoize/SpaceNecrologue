@@ -5,12 +5,12 @@ var/global/lightsources
 
 world/proc/End()
 	autoreboot = 1
-	world << "<b><font size=3>Х  онец дн[ya].</font></B>"
+	world << "<b><font size=3>Х End of the day.</font></B>"
 	sleep(20)
-	world << "<B><font size=2>”жасающие последстви[ya]:</font></B>"
-	world << "<B>√р[ya]зьки убрано:</B> [cleaned]"
-	world << "<B>”бито:</B> [killed]"
-	world << "<b><font color = red>–естарт через 30 секунд."
+	world << "<B><font size=2>Horrifying consequences:</font></B>"
+	world << "<B>Cleaned up dirt:</B> [cleaned]"
+	world << "<B>Killed:</B> [killed]"
+	world << "<b><font color = red>Restart in 30 seconds."
 	sleep(300)
 	if(autoreboot)
 		world.Reboot()

@@ -5,7 +5,7 @@
 	Login()
 		skill_rand()
 		name_pick()
-		role_pick()
+		nature_pick()
 		draw_hud()
 		process()
 		hud_processor()
@@ -28,4 +28,4 @@
 			human.name = human.key
 			overlays = null
 	else
-		usr << "\red<B>Сначала ты должен умереть.</B>"
+		usr << "\red \bold You need to die first."

@@ -9,9 +9,9 @@ world
 	countLight()
 	spawn(1) DemoDayCycle()
 	master_controller()
-	world << "\red \bold Было создано:"
-	world << "\red[zombies] зомби."
-	world << "\red[lightsources] источников света."
+	world << "\red \bold We created:"
+	world << "\red[zombies] zombies."
+	world << "\red[lightsources] light sources."
 
 mob
 	step_size = 32
@@ -43,7 +43,7 @@ var/lobby = 1
 mob/verb/Who()
    set category = "OOC"
    var/mob/M
-   usr << "<B>Мальчики:</B>"
+   usr << "<B>Boys:</B>"
    for(M)
       if(M.client)
          usr << M.key

@@ -34,195 +34,200 @@
 "aH" = (/obj/cleanable/blood,/turf/unsimulated/dirt,/area/outside)
 "aI" = (/obj/items/clothing/grey,/turf/simulated/floor/wood,/area/outside)
 "aJ" = (/obj/structures/table,/obj/items/weapon/screwdriver,/turf/simulated/floor/wood,/area/outside)
-"aK" = (/obj/machinery/light/lightbulb{tag = "icon-bulb1 (NORTH)"; icon_state = "bulb1"; dir = 1},/turf/simulated/floor/wood,/area/outside)
-"aL" = (/obj/items/drugs/bandage/cloth,/turf/simulated/floor/wood,/area/outside)
-"aM" = (/obj/structures/bed,/turf/simulated/floor/wood,/area/outside)
-"aN" = (/turf/simulated/wall,/area/outside)
-"aO" = (/obj/machinery/doors/cage,/turf/unsimulated/dirt/road,/area/outside)
-"aP" = (/obj/machinery/light/lightbulb,/turf/simulated/floor/wood,/area/outside)
-"aQ" = (/obj/items/drugs/ointment,/obj/structures/closets/toilet,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"aR" = (/obj/structures/table,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"aS" = (/turf/simulated/wall/window,/area/outside)
-"aT" = (/obj/structures/table,/obj/items/drugs/bandage,/turf/simulated/floor/wood,/area/outside)
-"aU" = (/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"aV" = (/obj/cleanable/greenglow,/turf/unsimulated/dirt,/area/outside)
-"aW" = (/obj/machinery/doors/house,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"aX" = (/obj/structures/closets/trashcart,/turf/unsimulated/dirt,/area/outside)
-"aY" = (/obj/machinery/light/lightbulb,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"aZ" = (/obj/items/food/crisps,/obj/structures/closets/fridge,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"ba" = (/obj/structures/rack,/obj/items/food/berries,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bb" = (/obj/structures/rack,/obj/items/food/krasnogrib,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bc" = (/obj/structures/rack,/obj/items/drugs/bandage/cloth,/obj/machinery/light/lightbulb,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bd" = (/obj/structures/rack,/obj/items/weapon/bat,/turf/simulated/floor/wood,/area/outside)
-"be" = (/obj/cleanable/blood,/turf/simulated/floor/wood,/area/outside)
-"bf" = (/obj/items/clothing/shirt,/obj/structures/closets/cabinet,/turf/simulated/floor/wood,/area/outside)
-"bg" = (/obj/structures/table{tag = "icon-table2"; icon_state = "table2"; dir = 2},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bh" = (/obj/machinery/doors/cage,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bi" = (/obj/machinery/doors/house,/obj/cleanable/blood,/turf/simulated/floor/wood,/area/outside)
-"bj" = (/obj/cleanable/blood,/mob/living/zombie,/turf/simulated/floor/wood,/area/outside)
-"bk" = (/obj/structures/bed,/obj/cleanable/blood,/turf/simulated/floor/wood,/area/outside)
-"bl" = (/obj/structures/chair{tag = "icon-chair (EAST)"; icon_state = "chair"; dir = 4},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bm" = (/obj/structures/table{tag = "icon-table1 (NORTH)"; icon_state = "table1"; dir = 1},/obj/items/weapon/knife,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bn" = (/obj/structures/chair,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bo" = (/obj/structures/table,/obj/items/cartridge,/obj/cleanable/blood,/turf/simulated/floor/wood,/area/outside)
-"bp" = (/obj/structures/table{tag = "icon-table1 (NORTH)"; icon_state = "table1"; dir = 1},/obj/landmarks/lootspawner,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bq" = (/obj/items/food/borscht,/obj/structures/closets/fridge,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"br" = (/obj/structures/table{tag = "icon-table2 (EAST)"; icon_state = "table2"; dir = 4},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bs" = (/obj/structures/table{tag = "icon-table1 (WEST)"; icon_state = "table1"; dir = 8},/obj/landmarks/lootspawner,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bt" = (/obj/structures/table{tag = "icon-table2 (WEST)"; icon_state = "table2"; dir = 8},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bu" = (/obj/structures/table{tag = "icon-table2 (NORTH)"; icon_state = "table2"; dir = 1},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bv" = (/obj/landmarks/zombiespawner,/turf/simulated/floor/road,/area/outside)
-"bw" = (/obj/items/clothing/white,/obj/structures/closets/closet,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bx" = (/obj/items/clothing/white,/obj/structures/closets/closet,/obj/machinery/light/lightbulb{tag = "icon-bulb1 (EAST)"; icon_state = "bulb1"; dir = 4},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"by" = (/obj/machinery/doors/cage,/turf/unsimulated/dirt,/area/outside)
-"bz" = (/mob/living/zombie,/turf/unsimulated/dirt/road,/area/outside)
-"bA" = (/obj/structures/tires,/turf/unsimulated/dirt,/area/outside)
-"bB" = (/obj/structures/girder,/turf/simulated/floor/plating,/area/outside)
-"bC" = (/mob/living/zombie,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bD" = (/obj/structures/rack,/obj/items/drugs/ointment,/obj/items/drugs/bandage,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bE" = (/obj/machinery/doors/futuristic,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bF" = (/obj/machinery/doors/cage,/turf/simulated/floor/road,/area/outside)
-"bG" = (/mob/living/zombie,/turf/simulated/floor/road,/area/outside)
-"bH" = (/obj/structures/decals/hospital,/turf/simulated/wall,/area/outside)
-"bI" = (/obj/structures/table{tag = "icon-table1 (NORTH)"; icon_state = "table1"; dir = 1},/obj/items/devices/analyzer,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bJ" = (/obj/structures/chair{tag = "icon-chair (WEST)"; icon_state = "chair"; dir = 8},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bK" = (/obj/structures/rack,/obj/items/drugs/ointment,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bL" = (/obj/items/metal,/turf/simulated/floor/plating,/area/outside)
-"bM" = (/turf/simulated/floor/plating,/area/outside)
-"bN" = (/obj/structures/table{tag = "icon-table2"; icon_state = "table2"; dir = 2},/obj/items/drugs/ointment,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bO" = (/obj/structures/table{tag = "icon-table2 (NORTH)"; icon_state = "table2"; dir = 1},/obj/landmarks/lootspawner,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bP" = (/obj/machinery/light/lightbulb{tag = "icon-bulb1 (WEST)"; icon_state = "bulb1"; dir = 8},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bQ" = (/obj/items/food/borscht,/turf/simulated/floor/plating,/area/outside)
-"bR" = (/obj/cleanable/trash,/turf/simulated/floor/plating,/area/outside)
-"bS" = (/obj/structures/table{tag = "icon-table1 (NORTH)"; icon_state = "table1"; dir = 1},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bT" = (/obj/structures/table{tag = "icon-table1 (NORTH)"; icon_state = "table1"; dir = 1},/obj/items/drugs/bandage,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bU" = (/obj/structures/table{tag = "icon-table1 (NORTH)"; icon_state = "table1"; dir = 1},/obj/machinery/light/lightbulb{tag = "icon-bulb1 (EAST)"; icon_state = "bulb1"; dir = 4},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"bV" = (/obj/structures/closets/trashcart,/turf/unsimulated/dirt/road,/area/outside)
-"bW" = (/obj/machinery/doors/spiral,/turf/simulated/floor/plating,/area/outside)
-"bX" = (/obj/items/weapon/shard,/turf/simulated/floor/plating,/area/outside)
-"bY" = (/obj/structures/tires,/turf/simulated/floor/plating,/area/outside)
-"bZ" = (/obj/structures/table{tag = "icon-table2 (NORTH)"; icon_state = "table2"; dir = 1},/obj/items/drugs/ointment,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"ca" = (/obj/items/modules/st_cb,/obj/structures/closets/trashcart,/turf/unsimulated/dirt/road,/area/outside)
-"cb" = (/obj/items/food/crisps,/turf/unsimulated/dirt,/area/outside)
-"cc" = (/obj/machinery/light/lightbulb{tag = "icon-bulb1 (EAST)"; icon_state = "bulb1"; dir = 4},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"cd" = (/obj/structures/table,/obj/items/devices/demolisher,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"ce" = (/obj/items/clothing/blue,/obj/structures/closets/closet,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
-"cf" = (/obj/machinery/light/lightbulb,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
-"cg" = (/obj/items/drugs/bandage,/turf/unsimulated/dirt/road,/area/outside)
-"ch" = (/obj/items/clothing/grey,/turf/unsimulated/dirt/road,/area/outside)
-"ci" = (/obj/structures/decals/exit,/turf/simulated/wall,/area/outside)
-"cj" = (/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
-"ck" = (/obj/structures/decals/caution,/turf/simulated/wall,/area/outside)
-"cl" = (/obj/structures/bed,/obj/landmarks/lootspawner,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
-"cm" = (/obj/items/weapon/knife,/obj/structures/closets/toilet,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
-"cn" = (/obj/items/weapon/shard,/obj/structures/closets/toilet,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
-"co" = (/obj/items/food/dogfood,/obj/structures/closets/closet,/turf/simulated/floor/plating,/area/outside)
-"cp" = (/obj/machinery/doors/spiral,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
-"cq" = (/obj/cleanable/blood,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
-"cr" = (/obj/machinery/doors/cage,/obj/cleanable/blood,/turf/simulated/floor/plating,/area/outside)
-"cs" = (/obj/cleanable/blood,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"ct" = (/obj/machinery/doors/cage,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
-"cu" = (/mob/living/zombie,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
-"cv" = (/obj/landmarks/lootspawner,/turf/unsimulated/dirt,/area/outside)
-"cw" = (/obj/machinery/vendomats/coffee,/turf/simulated/floor,/area/outside)
-"cx" = (/turf/simulated/floor,/area/outside)
-"cy" = (/obj/machinery/light/lightbulb,/turf/simulated/floor,/area/outside)
-"cz" = (/obj/items/food/borscht,/turf/unsimulated/dirt,/area/outside)
-"cA" = (/obj/structures/bed,/turf/simulated/floor/plating,/area/outside)
-"cB" = (/mob/living/zombie,/turf/simulated/floor,/area/outside)
-"cC" = (/obj/machinery/doors/futuristic,/turf/simulated/floor,/area/outside)
-"cD" = (/obj/structures/table{tag = "icon-table2"; icon_state = "table2"; dir = 2},/obj/items/battery,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"cE" = (/obj/structures/table{tag = "icon-table2"; icon_state = "table2"; dir = 2},/obj/items/cartridge,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"cF" = (/obj/structures/rack,/obj/items/weapon/shard,/turf/simulated/floor/plating,/area/outside)
-"cG" = (/obj/structures/rack,/obj/items/devices/analyzer,/turf/simulated/floor/plating,/area/outside)
-"cH" = (/obj/machinery/light/lightbulb,/turf/simulated/floor/plating,/area/outside)
-"cI" = (/obj/structures/closets/trashcart,/turf/simulated/floor/plating,/area/outside)
-"cJ" = (/obj/structures/table{tag = "icon-table1 (NORTHEAST)"; icon_state = "table1"; dir = 5},/obj/items/cartridge,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"cK" = (/obj/structures/table{tag = "icon-table1 (WEST)"; icon_state = "table1"; dir = 8},/obj/items/devices/analyzer,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"cL" = (/obj/structures/table{tag = "icon-table1 (NORTHWEST)"; icon_state = "table1"; dir = 9},/obj/items/cartridge,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"cM" = (/obj/items/weapon/pickaxe,/turf/simulated/floor/plating,/area/outside)
-"cN" = (/obj/machinery/doors/cage,/turf/simulated/floor/plating,/area/outside)
-"cO" = (/obj/structures/chair,/turf/simulated/floor/plating,/area/outside)
-"cP" = (/obj/structures/table{tag = "icon-table2 (EAST)"; icon_state = "table2"; dir = 4},/obj/items/food/crisps,/turf/simulated/floor/plating,/area/outside)
-"cQ" = (/obj/structures/table{tag = "icon-table2 (WEST)"; icon_state = "table2"; dir = 8},/obj/items/clothing/pink,/turf/simulated/floor/plating,/area/outside)
-"cR" = (/obj/items/modules/st_cb,/turf/simulated/floor/plating,/area/outside)
-"cS" = (/obj/structures/grille,/turf/simulated/floor/plating,/area/outside)
-"cT" = (/obj/machinery/light/lamp,/turf/unsimulated/dirt/road,/area/outside)
-"cU" = (/obj/landmarks/lootspawner,/turf/unsimulated/dirt/road,/area/outside)
-"cV" = (/obj/items/food/dogfood,/turf/unsimulated/dirt,/area/outside)
-"cW" = (/obj/items/weapon/crowbar,/turf/simulated/floor/road,/area/outside)
-"cX" = (/obj/structures/girder,/turf/simulated/floor/road,/area/outside)
-"cY" = (/obj/items/weapon/shard,/turf/simulated/floor/road,/area/outside)
-"cZ" = (/obj/items/drugs/bandage,/turf/simulated/floor/road,/area/outside)
-"da" = (/obj/landmarks/zombiespawner,/turf/unsimulated/dirt,/area/outside)
-"db" = (/obj/items/clothing/shirt,/turf/unsimulated/dirt/road,/area/outside)
-"dc" = (/obj/items/food/borscht,/obj/items/food/dogfood,/obj/structures/closets/fridge,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"dd" = (/obj/structures/table{tag = "icon-table1 (WEST)"; icon_state = "table1"; dir = 8},/obj/items/weapon/bat/lucille,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"de" = (/obj/structures/table{tag = "icon-table1 (SOUTHWEST)"; icon_state = "table1"; dir = 10},/obj/items/weapon/knife,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"df" = (/obj/items/food/crisps,/turf/unsimulated/dirt/road,/area/outside)
-"dg" = (/obj/structures/rack,/obj/items/weapon/plank,/turf/simulated/floor/wood,/area/outside)
-"dh" = (/obj/structures/rack,/obj/items/food/dogfood,/turf/simulated/floor/wood,/area/outside)
-"di" = (/obj/items/weapon/plank,/obj/structures/closets/trashcart,/turf/unsimulated/dirt/road,/area/outside)
-"dj" = (/obj/structures/rack,/obj/items/food/crisps,/obj/machinery/light/lightbulb{tag = "icon-bulb1 (EAST)"; icon_state = "bulb1"; dir = 4},/turf/simulated/floor/wood,/area/outside)
-"dk" = (/mob/living/zombie,/turf/simulated/floor/wood,/area/outside)
-"dl" = (/obj/structures/rack,/turf/simulated/floor/wood,/area/outside)
-"dm" = (/obj/structures/rack,/obj/items/modules/st_cb,/turf/simulated/floor/wood,/area/outside)
-"dn" = (/obj/structures/rack,/obj/landmarks/lootspawner,/turf/simulated/floor/wood,/area/outside)
-"do" = (/obj/structures/table{tag = "icon-table1 (SOUTHEAST)"; icon_state = "table1"; dir = 6},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"dp" = (/obj/structures/table,/obj/items/battery,/turf/simulated/floor/wood,/area/outside)
-"dq" = (/obj/structures/chair{tag = "icon-chair (WEST)"; icon_state = "chair"; dir = 8},/turf/simulated/floor/wood,/area/outside)
-"dr" = (/obj/structures/chair,/turf/simulated/floor/wood,/area/outside)
-"ds" = (/obj/items/weapon/plank,/turf/simulated/floor/wood,/area/outside)
-"dt" = (/obj/machinery/light/lightbulb{tag = "icon-bulb1 (WEST)"; icon_state = "bulb1"; dir = 8},/turf/simulated/floor/wood,/area/outside)
-"du" = (/obj/machinery/vendomats/coffee,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dv" = (/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dw" = (/obj/machinery/light/lightbulb,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dx" = (/obj/structures/rack,/obj/items/battery,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dy" = (/obj/items/clothing/shirt,/obj/structures/closets/closet,/turf/simulated/floor/wood,/area/outside)
-"dz" = (/obj/structures/rack,/obj/items/weapon/mop,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dA" = (/obj/structures/rack,/obj/items/weapon/screwdriver,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dB" = (/obj/structures/table{tag = "icon-table2"; icon_state = "table2"; dir = 2},/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dC" = (/obj/structures/chair,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dD" = (/obj/structures/tires,/turf/simulated/floor/road,/area/outside)
-"dE" = (/obj/structures/bed,/obj/items/clothing/grey,/turf/simulated/floor/wood,/area/outside)
-"dF" = (/obj/structures/rack,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dG" = (/obj/structures/rack,/obj/items/weapon/crowbar,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dH" = (/obj/structures/table{tag = "icon-table1 (NORTHEAST)"; icon_state = "table1"; dir = 5},/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dI" = (/obj/structures/table{tag = "icon-table1 (WEST)"; icon_state = "table1"; dir = 8},/obj/landmarks/lootspawner,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dJ" = (/obj/structures/table{tag = "icon-table2 (WEST)"; icon_state = "table2"; dir = 8},/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dK" = (/obj/items/weapon/mop,/obj/items/devices/analyzer,/obj/structures/closets/closet,/turf/simulated/floor/wood,/area/outside)
-"dL" = (/obj/landmarks/lootspawner,/turf/simulated/floor/wood,/area/outside)
-"dM" = (/obj/machinery/doors/store,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dN" = (/obj/items/weapon/shard,/turf/simulated/floor/wood,/area/outside)
-"dO" = (/obj/structures/rack,/obj/items/drugs/bandage,/turf/simulated/floor/wood,/area/outside)
-"dP" = (/obj/structures/table{tag = "icon-table2 (EAST)"; icon_state = "table2"; dir = 4},/obj/items/weapon/bat,/turf/simulated/floor/wood,/area/outside)
-"dQ" = (/obj/structures/table{tag = "icon-table1 (WEST)"; icon_state = "table1"; dir = 8},/obj/items/food/crisps,/obj/machinery/light/lightbulb{tag = "icon-bulb1 (NORTH)"; icon_state = "bulb1"; dir = 1},/turf/simulated/floor/wood,/area/outside)
-"dR" = (/obj/structures/table{tag = "icon-table2 (WEST)"; icon_state = "table2"; dir = 8},/obj/items/drugs/bandage,/turf/simulated/floor/wood,/area/outside)
-"dS" = (/obj/items/food/dogfood,/obj/structures/closets/trashcart,/turf/unsimulated/dirt/road,/area/outside)
-"dT" = (/obj/structures/rack,/obj/items/drugs/ointment,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dU" = (/obj/structures/rack,/obj/items/clothing/black,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dV" = (/obj/structures/rack,/obj/items/food/crisps,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dW" = (/obj/structures/rack,/obj/items/modules/st_cb,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"dX" = (/obj/items/clothing/black,/obj/structures/closets/cabinet,/turf/simulated/floor/wood,/area/outside)
-"dY" = (/obj/machinery/light/lightbulb{tag = "icon-bulb1 (WEST)"; icon_state = "bulb1"; dir = 8},/mob/living/zombie,/turf/simulated/floor/wood,/area/outside)
-"dZ" = (/obj/structures/rack,/obj/items/clothing/grey,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"ea" = (/obj/structures/rack,/obj/items/clothing/pink,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"eb" = (/obj/structures/rack,/obj/landmarks/lootspawner,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"ec" = (/obj/machinery/light/lightbulb{tag = "icon-bulb1 (NORTH)"; icon_state = "bulb1"; dir = 1},/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
-"ed" = (/obj/items/drugs/ointment,/obj/structures/closets/trashcart,/turf/simulated/floor/plating,/area/outside)
-"ee" = (/obj/items/weapon/plank,/turf/simulated/floor/plating,/area/outside)
-"ef" = (/obj/items/weapon/plank,/turf/unsimulated/dirt,/area/outside)
-"eg" = (/obj/machinery/doors/futuristic,/turf/simulated/floor/plating,/area/outside)
-"eh" = (/obj/items/weapon/pickaxe,/turf/unsimulated/dirt,/area/outside)
-"ei" = (/obj/machinery/light/lightbulb{tag = "icon-bulb1 (NORTH)"; icon_state = "bulb1"; dir = 1},/turf/simulated/floor/plating,/area/outside)
-"ej" = (/obj/structures/girder,/turf/unsimulated/dirt,/area/outside)
-"ek" = (/obj/structures/table{tag = "icon-table2 (EAST)"; icon_state = "table2"; dir = 4},/obj/machinery/light/lightbulb,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"el" = (/obj/structures/table{tag = "icon-table1 (SOUTHWEST)"; icon_state = "table1"; dir = 10},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
-"em" = (/obj/structures/bed,/obj/machinery/light/lightbulb{tag = "icon-bulb1 (WEST)"; icon_state = "bulb1"; dir = 8},/turf/simulated/floor/wood,/area/outside)
-"en" = (/obj/structures/table,/obj/items/modules/st_cb,/turf/simulated/floor/wood,/area/outside)
-"eo" = (/turf,/area)
-"ep" = (/turf/simulated/wall,/area)
-"eq" = (/turf/menu,/area)
+"aK" = (/obj/structures/closets/hatch,/turf/simulated/floor/road,/area/outside)
+"aL" = (/obj/machinery/light/lightbulb{tag = "icon-bulb1 (NORTH)"; icon_state = "bulb1"; dir = 1},/turf/simulated/floor/wood,/area/outside)
+"aM" = (/obj/items/drugs/bandage/cloth,/turf/simulated/floor/wood,/area/outside)
+"aN" = (/obj/structures/bed,/turf/simulated/floor/wood,/area/outside)
+"aO" = (/turf/simulated/wall,/area/outside)
+"aP" = (/obj/machinery/doors/cage,/turf/unsimulated/dirt/road,/area/outside)
+"aQ" = (/obj/machinery/light/lightbulb,/turf/simulated/floor/wood,/area/outside)
+"aR" = (/obj/items/drugs/ointment,/obj/structures/closets/toilet,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"aS" = (/obj/structures/table,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"aT" = (/turf/simulated/wall/window,/area/outside)
+"aU" = (/obj/structures/table,/obj/items/drugs/bandage,/turf/simulated/floor/wood,/area/outside)
+"aV" = (/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"aW" = (/obj/cleanable/greenglow,/turf/unsimulated/dirt,/area/outside)
+"aX" = (/obj/machinery/doors/house,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"aY" = (/obj/structures/closets/trashcart,/turf/unsimulated/dirt,/area/outside)
+"aZ" = (/obj/machinery/light/lightbulb,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"ba" = (/obj/items/food/crisps,/obj/structures/closets/fridge,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bb" = (/obj/structures/rack,/obj/items/food/berries,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bc" = (/obj/structures/rack,/obj/items/food/krasnogrib,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bd" = (/obj/structures/rack,/obj/items/drugs/bandage/cloth,/obj/machinery/light/lightbulb,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"be" = (/obj/structures/rack,/obj/items/weapon/bat,/turf/simulated/floor/wood,/area/outside)
+"bf" = (/obj/cleanable/blood,/turf/simulated/floor/wood,/area/outside)
+"bg" = (/obj/items/clothing/shirt,/obj/structures/closets/cabinet,/turf/simulated/floor/wood,/area/outside)
+"bh" = (/obj/structures/table{tag = "icon-table2"; icon_state = "table2"; dir = 2},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bi" = (/obj/machinery/doors/cage,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bj" = (/obj/machinery/doors/house,/obj/cleanable/blood,/turf/simulated/floor/wood,/area/outside)
+"bk" = (/obj/cleanable/blood,/mob/living/zombie,/turf/simulated/floor/wood,/area/outside)
+"bl" = (/obj/structures/bed,/obj/cleanable/blood,/turf/simulated/floor/wood,/area/outside)
+"bm" = (/obj/structures/chair{tag = "icon-chair (EAST)"; icon_state = "chair"; dir = 4},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bn" = (/obj/structures/table{tag = "icon-table1 (NORTH)"; icon_state = "table1"; dir = 1},/obj/items/weapon/knife,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bo" = (/obj/structures/chair,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bp" = (/obj/structures/table,/obj/items/cartridge,/obj/cleanable/blood,/turf/simulated/floor/wood,/area/outside)
+"bq" = (/obj/structures/table{tag = "icon-table1 (NORTH)"; icon_state = "table1"; dir = 1},/obj/landmarks/lootspawner,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"br" = (/obj/items/food/borscht,/obj/structures/closets/fridge,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bs" = (/obj/structures/table{tag = "icon-table2 (EAST)"; icon_state = "table2"; dir = 4},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bt" = (/obj/structures/table{tag = "icon-table1 (WEST)"; icon_state = "table1"; dir = 8},/obj/landmarks/lootspawner,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bu" = (/obj/structures/table{tag = "icon-table2 (WEST)"; icon_state = "table2"; dir = 8},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bv" = (/obj/structures/table{tag = "icon-table2 (NORTH)"; icon_state = "table2"; dir = 1},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bw" = (/obj/items/weapon/shard,/obj/structures/closets/hatch,/turf/simulated/floor/road,/area/outside)
+"bx" = (/obj/landmarks/zombiespawner,/turf/simulated/floor/road,/area/outside)
+"by" = (/obj/items/clothing/white,/obj/structures/closets/closet,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bz" = (/obj/items/clothing/white,/obj/structures/closets/closet,/obj/machinery/light/lightbulb{tag = "icon-bulb1 (EAST)"; icon_state = "bulb1"; dir = 4},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bA" = (/obj/machinery/doors/cage,/turf/unsimulated/dirt,/area/outside)
+"bB" = (/mob/living/zombie,/turf/unsimulated/dirt/road,/area/outside)
+"bC" = (/obj/structures/tires,/turf/unsimulated/dirt,/area/outside)
+"bD" = (/obj/structures/girder,/turf/simulated/floor/plating,/area/outside)
+"bE" = (/mob/living/zombie,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bF" = (/obj/structures/rack,/obj/items/drugs/ointment,/obj/items/drugs/bandage,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bG" = (/obj/machinery/doors/futuristic,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bH" = (/obj/machinery/doors/cage,/turf/simulated/floor/road,/area/outside)
+"bI" = (/mob/living/zombie,/turf/simulated/floor/road,/area/outside)
+"bJ" = (/obj/structures/decals/hospital,/turf/simulated/wall,/area/outside)
+"bK" = (/obj/structures/table{tag = "icon-table1 (NORTH)"; icon_state = "table1"; dir = 1},/obj/items/devices/analyzer,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bL" = (/obj/structures/chair{tag = "icon-chair (WEST)"; icon_state = "chair"; dir = 8},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bM" = (/obj/structures/rack,/obj/items/drugs/ointment,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bN" = (/obj/items/metal,/turf/simulated/floor/plating,/area/outside)
+"bO" = (/turf/simulated/floor/plating,/area/outside)
+"bP" = (/obj/structures/table{tag = "icon-table2"; icon_state = "table2"; dir = 2},/obj/items/drugs/ointment,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bQ" = (/obj/structures/table{tag = "icon-table2 (NORTH)"; icon_state = "table2"; dir = 1},/obj/landmarks/lootspawner,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bR" = (/obj/machinery/light/lightbulb{tag = "icon-bulb1 (WEST)"; icon_state = "bulb1"; dir = 8},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bS" = (/obj/items/food/borscht,/turf/simulated/floor/plating,/area/outside)
+"bT" = (/obj/cleanable/trash,/turf/simulated/floor/plating,/area/outside)
+"bU" = (/obj/structures/table{tag = "icon-table1 (NORTH)"; icon_state = "table1"; dir = 1},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bV" = (/obj/structures/table{tag = "icon-table1 (NORTH)"; icon_state = "table1"; dir = 1},/obj/items/drugs/bandage,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bW" = (/obj/structures/table{tag = "icon-table1 (NORTH)"; icon_state = "table1"; dir = 1},/obj/machinery/light/lightbulb{tag = "icon-bulb1 (EAST)"; icon_state = "bulb1"; dir = 4},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"bX" = (/obj/structures/closets/trashcart,/turf/unsimulated/dirt/road,/area/outside)
+"bY" = (/obj/machinery/doors/spiral,/turf/simulated/floor/plating,/area/outside)
+"bZ" = (/obj/items/weapon/shard,/turf/simulated/floor/plating,/area/outside)
+"ca" = (/obj/structures/tires,/turf/simulated/floor/plating,/area/outside)
+"cb" = (/obj/structures/table{tag = "icon-table2 (NORTH)"; icon_state = "table2"; dir = 1},/obj/items/drugs/ointment,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"cc" = (/obj/items/modules/st_cb,/obj/structures/closets/trashcart,/turf/unsimulated/dirt/road,/area/outside)
+"cd" = (/obj/items/food/crisps,/turf/unsimulated/dirt,/area/outside)
+"ce" = (/obj/machinery/light/lightbulb{tag = "icon-bulb1 (EAST)"; icon_state = "bulb1"; dir = 4},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"cf" = (/obj/structures/table,/obj/items/devices/demolisher,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"cg" = (/obj/items/clothing/blue,/obj/structures/closets/closet,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
+"ch" = (/obj/machinery/light/lightbulb,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
+"ci" = (/obj/items/drugs/bandage,/turf/unsimulated/dirt/road,/area/outside)
+"cj" = (/obj/items/clothing/grey,/turf/unsimulated/dirt/road,/area/outside)
+"ck" = (/obj/structures/decals/exit,/turf/simulated/wall,/area/outside)
+"cl" = (/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
+"cm" = (/obj/structures/decals/caution,/turf/simulated/wall,/area/outside)
+"cn" = (/obj/structures/bed,/obj/landmarks/lootspawner,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
+"co" = (/obj/items/weapon/knife,/obj/structures/closets/toilet,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
+"cp" = (/obj/items/weapon/shard,/obj/structures/closets/toilet,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
+"cq" = (/obj/items/food/dogfood,/obj/structures/closets/closet,/turf/simulated/floor/plating,/area/outside)
+"cr" = (/obj/machinery/doors/spiral,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
+"cs" = (/obj/cleanable/blood,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
+"ct" = (/obj/machinery/doors/cage,/obj/cleanable/blood,/turf/simulated/floor/plating,/area/outside)
+"cu" = (/obj/cleanable/blood,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"cv" = (/obj/machinery/doors/cage,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
+"cw" = (/mob/living/zombie,/turf/simulated/floor{tag = "icon-dark"; icon_state = "dark"},/area/outside)
+"cx" = (/obj/landmarks/lootspawner,/turf/unsimulated/dirt,/area/outside)
+"cy" = (/obj/machinery/vendomats/coffee,/turf/simulated/floor,/area/outside)
+"cz" = (/turf/simulated/floor,/area/outside)
+"cA" = (/obj/machinery/light/lightbulb,/turf/simulated/floor,/area/outside)
+"cB" = (/obj/items/food/borscht,/turf/unsimulated/dirt,/area/outside)
+"cC" = (/obj/structures/bed,/turf/simulated/floor/plating,/area/outside)
+"cD" = (/mob/living/zombie,/turf/simulated/floor,/area/outside)
+"cE" = (/obj/machinery/doors/futuristic,/turf/simulated/floor,/area/outside)
+"cF" = (/obj/structures/table{tag = "icon-table2"; icon_state = "table2"; dir = 2},/obj/items/battery,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"cG" = (/obj/structures/table{tag = "icon-table2"; icon_state = "table2"; dir = 2},/obj/items/cartridge,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"cH" = (/obj/structures/rack,/obj/items/weapon/shard,/turf/simulated/floor/plating,/area/outside)
+"cI" = (/obj/structures/rack,/obj/items/devices/analyzer,/turf/simulated/floor/plating,/area/outside)
+"cJ" = (/obj/machinery/light/lightbulb,/turf/simulated/floor/plating,/area/outside)
+"cK" = (/obj/structures/closets/trashcart,/turf/simulated/floor/plating,/area/outside)
+"cL" = (/obj/structures/table{tag = "icon-table1 (NORTHEAST)"; icon_state = "table1"; dir = 5},/obj/items/cartridge,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"cM" = (/obj/structures/table{tag = "icon-table1 (WEST)"; icon_state = "table1"; dir = 8},/obj/items/devices/analyzer,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"cN" = (/obj/structures/table{tag = "icon-table1 (NORTHWEST)"; icon_state = "table1"; dir = 9},/obj/items/cartridge,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"cO" = (/obj/items/weapon/pickaxe,/turf/simulated/floor/plating,/area/outside)
+"cP" = (/obj/machinery/doors/cage,/turf/simulated/floor/plating,/area/outside)
+"cQ" = (/obj/structures/chair,/turf/simulated/floor/plating,/area/outside)
+"cR" = (/obj/structures/table{tag = "icon-table2 (EAST)"; icon_state = "table2"; dir = 4},/obj/items/food/crisps,/turf/simulated/floor/plating,/area/outside)
+"cS" = (/obj/structures/table{tag = "icon-table2 (WEST)"; icon_state = "table2"; dir = 8},/obj/items/clothing/pink,/turf/simulated/floor/plating,/area/outside)
+"cT" = (/obj/items/modules/st_cb,/turf/simulated/floor/plating,/area/outside)
+"cU" = (/obj/structures/grille,/turf/simulated/floor/plating,/area/outside)
+"cV" = (/obj/machinery/light/lamp,/turf/unsimulated/dirt/road,/area/outside)
+"cW" = (/obj/landmarks/lootspawner,/turf/unsimulated/dirt/road,/area/outside)
+"cX" = (/obj/items/food/dogfood,/turf/unsimulated/dirt,/area/outside)
+"cY" = (/obj/items/weapon/crowbar,/turf/simulated/floor/road,/area/outside)
+"cZ" = (/obj/structures/girder,/turf/simulated/floor/road,/area/outside)
+"da" = (/obj/items/weapon/shard,/turf/simulated/floor/road,/area/outside)
+"db" = (/obj/items/drugs/bandage,/turf/simulated/floor/road,/area/outside)
+"dc" = (/obj/landmarks/zombiespawner,/turf/unsimulated/dirt,/area/outside)
+"dd" = (/obj/items/clothing/shirt,/turf/unsimulated/dirt/road,/area/outside)
+"de" = (/obj/items/food/borscht,/obj/items/food/dogfood,/obj/structures/closets/fridge,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"df" = (/obj/structures/table{tag = "icon-table1 (WEST)"; icon_state = "table1"; dir = 8},/obj/items/weapon/bat/lucille,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"dg" = (/obj/structures/table{tag = "icon-table1 (SOUTHWEST)"; icon_state = "table1"; dir = 10},/obj/items/weapon/knife,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"dh" = (/obj/items/food/crisps,/turf/unsimulated/dirt/road,/area/outside)
+"di" = (/obj/structures/rack,/obj/items/weapon/plank,/turf/simulated/floor/wood,/area/outside)
+"dj" = (/obj/structures/rack,/obj/items/food/dogfood,/turf/simulated/floor/wood,/area/outside)
+"dk" = (/obj/items/weapon/plank,/obj/structures/closets/trashcart,/turf/unsimulated/dirt/road,/area/outside)
+"dl" = (/obj/structures/rack,/obj/items/food/crisps,/obj/machinery/light/lightbulb{tag = "icon-bulb1 (EAST)"; icon_state = "bulb1"; dir = 4},/turf/simulated/floor/wood,/area/outside)
+"dm" = (/mob/living/zombie,/turf/simulated/floor/wood,/area/outside)
+"dn" = (/obj/structures/rack,/turf/simulated/floor/wood,/area/outside)
+"do" = (/obj/structures/rack,/obj/items/modules/st_cb,/turf/simulated/floor/wood,/area/outside)
+"dp" = (/obj/structures/rack,/obj/landmarks/lootspawner,/turf/simulated/floor/wood,/area/outside)
+"dq" = (/obj/items/battery,/obj/structures/closets/hatch,/turf/simulated/floor/road,/area/outside)
+"dr" = (/obj/structures/table{tag = "icon-table1 (SOUTHEAST)"; icon_state = "table1"; dir = 6},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"ds" = (/obj/structures/table,/obj/items/battery,/turf/simulated/floor/wood,/area/outside)
+"dt" = (/obj/structures/chair{tag = "icon-chair (WEST)"; icon_state = "chair"; dir = 8},/turf/simulated/floor/wood,/area/outside)
+"du" = (/obj/structures/chair,/turf/simulated/floor/wood,/area/outside)
+"dv" = (/obj/items/weapon/plank,/turf/simulated/floor/wood,/area/outside)
+"dw" = (/obj/machinery/light/lightbulb{tag = "icon-bulb1 (WEST)"; icon_state = "bulb1"; dir = 8},/turf/simulated/floor/wood,/area/outside)
+"dx" = (/obj/machinery/vendomats/coffee,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dy" = (/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dz" = (/obj/machinery/light/lightbulb,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dA" = (/obj/structures/rack,/obj/items/battery,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dB" = (/obj/items/clothing/shirt,/obj/structures/closets/closet,/turf/simulated/floor/wood,/area/outside)
+"dC" = (/obj/structures/rack,/obj/items/weapon/mop,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dD" = (/obj/structures/rack,/obj/items/weapon/screwdriver,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dE" = (/obj/structures/table{tag = "icon-table2"; icon_state = "table2"; dir = 2},/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dF" = (/obj/structures/chair,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dG" = (/obj/structures/tires,/turf/simulated/floor/road,/area/outside)
+"dH" = (/obj/structures/bed,/obj/items/clothing/grey,/turf/simulated/floor/wood,/area/outside)
+"dI" = (/obj/structures/rack,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dJ" = (/obj/structures/rack,/obj/items/weapon/crowbar,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dK" = (/obj/structures/table{tag = "icon-table1 (NORTHEAST)"; icon_state = "table1"; dir = 5},/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dL" = (/obj/structures/table{tag = "icon-table1 (WEST)"; icon_state = "table1"; dir = 8},/obj/landmarks/lootspawner,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dM" = (/obj/structures/table{tag = "icon-table2 (WEST)"; icon_state = "table2"; dir = 8},/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dN" = (/obj/items/weapon/mop,/obj/items/devices/analyzer,/obj/structures/closets/closet,/turf/simulated/floor/wood,/area/outside)
+"dO" = (/obj/landmarks/lootspawner,/turf/simulated/floor/wood,/area/outside)
+"dP" = (/obj/machinery/doors/store,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dQ" = (/obj/items/weapon/shard,/turf/simulated/floor/wood,/area/outside)
+"dR" = (/obj/structures/rack,/obj/items/drugs/bandage,/turf/simulated/floor/wood,/area/outside)
+"dS" = (/obj/structures/table{tag = "icon-table2 (EAST)"; icon_state = "table2"; dir = 4},/obj/items/weapon/bat,/turf/simulated/floor/wood,/area/outside)
+"dT" = (/obj/structures/table{tag = "icon-table1 (WEST)"; icon_state = "table1"; dir = 8},/obj/items/food/crisps,/obj/machinery/light/lightbulb{tag = "icon-bulb1 (NORTH)"; icon_state = "bulb1"; dir = 1},/turf/simulated/floor/wood,/area/outside)
+"dU" = (/obj/structures/table{tag = "icon-table2 (WEST)"; icon_state = "table2"; dir = 8},/obj/items/drugs/bandage,/turf/simulated/floor/wood,/area/outside)
+"dV" = (/obj/items/food/dogfood,/obj/structures/closets/trashcart,/turf/unsimulated/dirt/road,/area/outside)
+"dW" = (/obj/structures/rack,/obj/items/drugs/ointment,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dX" = (/obj/structures/rack,/obj/items/clothing/black,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dY" = (/obj/structures/rack,/obj/items/food/crisps,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"dZ" = (/obj/structures/rack,/obj/items/modules/st_cb,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"ea" = (/obj/items/clothing/black,/obj/structures/closets/cabinet,/turf/simulated/floor/wood,/area/outside)
+"eb" = (/obj/machinery/light/lightbulb{tag = "icon-bulb1 (WEST)"; icon_state = "bulb1"; dir = 8},/mob/living/zombie,/turf/simulated/floor/wood,/area/outside)
+"ec" = (/obj/structures/rack,/obj/items/clothing/grey,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"ed" = (/obj/structures/rack,/obj/items/clothing/pink,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"ee" = (/obj/structures/rack,/obj/landmarks/lootspawner,/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"ef" = (/obj/machinery/light/lightbulb{tag = "icon-bulb1 (NORTH)"; icon_state = "bulb1"; dir = 1},/turf/simulated/floor{tag = "icon-ancient"; icon_state = "ancient"},/area/outside)
+"eg" = (/obj/items/drugs/ointment,/obj/structures/closets/trashcart,/turf/simulated/floor/plating,/area/outside)
+"eh" = (/obj/items/weapon/plank,/turf/simulated/floor/plating,/area/outside)
+"ei" = (/obj/items/weapon/plank,/turf/unsimulated/dirt,/area/outside)
+"ej" = (/obj/machinery/doors/futuristic,/turf/simulated/floor/plating,/area/outside)
+"ek" = (/obj/items/weapon/pickaxe,/turf/unsimulated/dirt,/area/outside)
+"el" = (/obj/machinery/light/lightbulb{tag = "icon-bulb1 (NORTH)"; icon_state = "bulb1"; dir = 1},/turf/simulated/floor/plating,/area/outside)
+"em" = (/obj/structures/girder,/turf/unsimulated/dirt,/area/outside)
+"en" = (/obj/structures/table{tag = "icon-table2 (EAST)"; icon_state = "table2"; dir = 4},/obj/machinery/light/lightbulb,/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"eo" = (/obj/structures/table{tag = "icon-table1 (SOUTHWEST)"; icon_state = "table1"; dir = 10},/turf/simulated/floor{tag = "icon-white"; icon_state = "white"},/area/outside)
+"ep" = (/obj/items/food/crisps,/obj/structures/closets/hatch,/turf/simulated/floor/road,/area/outside)
+"eq" = (/obj/items/modules/st_cb,/obj/structures/closets/hatch,/turf/simulated/floor/road,/area/outside)
+"er" = (/obj/structures/bed,/obj/machinery/light/lightbulb{tag = "icon-bulb1 (WEST)"; icon_state = "bulb1"; dir = 8},/turf/simulated/floor/wood,/area/outside)
+"es" = (/obj/structures/table,/obj/items/modules/st_cb,/turf/simulated/floor/wood,/area/outside)
+"et" = (/turf,/area)
+"eu" = (/turf/simulated/wall,/area)
+"ev" = (/turf/menu,/area)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -233,84 +238,84 @@ aaaaabaoaoaoaoaoaoabahahadadahahadadadadadadadadavadadadadaaaaaaadadadadadadadad
 aaaaababauabababaBabahadadadadahahadadadadadadadadadadadaaaaaaaaaaadadadadadadadadadaaafafafaaaaadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadawadadadadadadaCahadadadadadadadaaaa
 aaaaabaDaoaEabagahahahadaeadadahadadavadadadadadadadadadaaaaaaaaaaaaadadadadadadadadadafafafaaadadadadadadadadaaaaaaaaaaaaadaaaaaaaaaaaaadadadadawadadadadadadadahaAadadadadadadawaa
 aaabababaFababahaGadadaCadadadahahadadadadadadadadadadadaaaaaaaaaaaaadadadadadadadadadafafafaaadadadadadadadadaaaaaaaaaaadadaaaaaaaaaaadadadadadawaHadadadadahahahadadadadadaxadawaa
-aaabaoaIaoaJabahadadadadadavadahahadadadadadadadadadadadadaaaaaaaaadadadadadadadadadadafafafadadadadadadadadadadaaadaaaaadadadaaaaaaadadadadadadawadadadadadahadadadadadadavadawawaa
-aaabataKaLaMabadadadadadadadadahahadadadadadadadadadadadadadaaaaadadadadadadadadadadadafafafadadadadadadadadadadadadadadadadadadadadadadadadadadawadavadadadahadadadadaeadadadawaaaa
-aaabababaBababadadadadadadadadahavadadadadadadadadadadadadadadadadadadadadadadadadadadafafafadadadaNaNaNaNaNadadadadadadadadadadadadaNaNaNaNadadawawawawawawaOawawawawawawawawawaaaa
-aaaaaaadadadadadadadavadadadahahadadadadadadavadadadadadadadadadadadadadadadadadadadadafafafadadadaNaoaPaMaNadadadadadadadadadadadadaNaQaRaNadadadadadadadahahadadadadadadadadaaaaaa
-aaaaadadadadadavadadadahahahahahadadadadadadadadadadadadadadadadadadadadadadadadadadadafafafadadadaSaoaoaTaNadadadadadadadadadadadadaNaUaUaNadadadadadaVadadahadadadadadadadadadadaa
-aaadadadadadadadadavadahadadadavadadadadadadadadadadadadadadadadadadadadadadadadadadadafafafadadadaNaoaoaoaNadadadadadadadadadadadadaNaWaNaNaXadadadadadadadahadadadadadadadadadadaa
-aaadadadaCadadadadadadahavadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadafafafadaNaNaNaNaFaNaNaNaNaNaNaNadadaNaNaNaNaNaNaoaoaNaNaNaNaNadadadadahadadadadadadadadadadaa
-aaadadadadadadadadadadahahadadadadadadadadadaaaaadadadadadadadadadadadadadadadadadadadafafafadaSaoaoaPaoaoaNaUaYaUaZaNahadaNbabbbcaUaNaoaoaNbdbebfaNadadadadahadadadadadadadadadadaa
-aaadadavadadadadadadavadahadadadadadadadadaaaaaaaaadadadadadadadadadadadadadadadadadadafafafahaNaoaoaoaoaoaNaUaUaUbgaSahadaBaUaUaUaUbhaobebibebjbkaNadadadahahadadadadadadadadadadaa
-aaadadadadadadadavadadadahadavadadadadadadaaaaaaaaaaadadavadadadadadadadadadadadadaCadafafafahaFaoaoaoaoaobhaUaUblbmaSahadaBaUaUbnaUaNaoaoaNaobeboaNahahahahahadadadadadadadadadadaa
-aaavadadadadadadadadadadahadadadadadadadadaaaaaaaaaaaaadadadadadadadadadadadadadadadadafafafahaNaoaoaoaoaoaNaUaUaUbpaSahadaBbqbrbsbtaNauaNaNaNaBaNaNahadadadadadadadadadadadadadadaa
-aaadadadavadadadadadadadahahadaCadavadadadaaaaaaaaaaaaadadadadadadadadadadadadadadadadafafafadaSaoaoaoaoaoaNaUaUaUbuaNahadaNaNaNaNaNaNahadadadadadahahadadadadadadadadadadadadadadaa
-aaadadadadadadadadadadadahahahahahahadadadadaaaaaaaaadadadadadadadadadadadadadadaaaaadafafafadaNaNaNaNaNaNaNaNaNaNaNaNadadaCadadahahahahahadadadahahahahadadaCadadadadadadadadadadaa
+aaabaoaIaoaJabahadadadadadavadahahadadadadadadadadadadadadaaaaaaaaadadadadadadadadadadafaKafadadadadadadadadadadaaadaaaaadadadaaaaaaadadadadadadawadadadadadahadadadadadadavadawawaa
+aaabataLaMaNabadadadadadadadadahahadadadadadadadadadadadadadaaaaadadadadadadadadadadadafafafadadadadadadadadadadadadadadadadadadadadadadadadadadawadavadadadahadadadadaeadadadawaaaa
+aaabababaBababadadadadadadadadahavadadadadadadadadadadadadadadadadadadadadadadadadadadafafafadadadaOaOaOaOaOadadadadadadadadadadadadaOaOaOaOadadawawawawawawaPawawawawawawawawawaaaa
+aaaaaaadadadadadadadavadadadahahadadadadadadavadadadadadadadadadadadadadadadadadadadadafafafadadadaOaoaQaNaOadadadadadadadadadadadadaOaRaSaOadadadadadadadahahadadadadadadadadaaaaaa
+aaaaadadadadadavadadadahahahahahadadadadadadadadadadadadadadadadadadadadadadadadadadadafafafadadadaTaoaoaUaOadadadadadadadadadadadadaOaVaVaOadadadadadaWadadahadadadadadadadadadadaa
+aaadadadadadadadadavadahadadadavadadadadadadadadadadadadadadadadadadadadadadadadadadadafafafadadadaOaoaoaoaOadadadadadadadadadadadadaOaXaOaOaYadadadadadadadahadadadadadadadadadadaa
+aaadadadaCadadadadadadahavadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadafafafadaOaOaOaOaFaOaOaOaOaOaOaOadadaOaOaOaOaOaOaoaoaOaOaOaOaOadadadadahadadadadadadadadadadaa
+aaadadadadadadadadadadahahadadadadadadadadadaaaaadadadadadadadadadadadadadadadadadadadafafafadaTaoaoaQaoaoaOaVaZaVbaaOahadaObbbcbdaVaOaoaoaObebfbgaOadadadadahadadadadadadadadadadaa
+aaadadavadadadadadadavadahadadadadadadadadaaaaaaaaadadadadadadadadadadadadadadadadadadafafafahaOaoaoaoaoaoaOaVaVaVbhaTahadaBaVaVaVaVbiaobfbjbfbkblaOadadadahahadadadadadadadadadadaa
+aaadadadadadadadavadadadahadavadadadadadadaaaaaaaaaaadadavadadadadadadadadadadadadaCadafafafahaFaoaoaoaoaobiaVaVbmbnaTahadaBaVaVboaVaOaoaoaOaobfbpaOahahahahahadadadadadadadadadadaa
+aaavadadadadadadadadadadahadadadadadadadadaaaaaaaaaaaaadadadadadadadadadadadadadadadadafafafahaOaoaoaoaoaoaOaVaVaVbqaTahadaBbrbsbtbuaOauaOaOaOaBaOaOahadadadadadadadadadadadadadadaa
+aaadadadavadadadadadadadahahadaCadavadadadaaaaaaaaaaaaadadadadadadadadadadadadadadadadafafafadaTaoaoaoaoaoaOaVaVaVbvaOahadaOaOaOaOaOaOahadadadadadahahadadadadadadadadadadadadadadaa
+aaadadadadadadadadadadadahahahahahahadadadadaaaaaaaaadadadadadadadadadadadadadadaaaaadafafafadaOaOaOaOaOaOaOaOaOaOaOaOadadaCadadahahahahahadadadahahahahadadaCadadadadadadadadadadaa
 aaadadadadadadadadadadadadahahahahahadadadadadaaaaadadadadadadadadadadadavadadaaaaaaaaafafafadadadadadadadadadadadadadadadadadadadahahahahahahahahahahahahadadadadadadadadadadadadaa
 aaadavadadadadadadavadadadadadadahahavadadadadaaaaaaadadadadadadadadadadadadadaaaaaaaaafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafaa
-aaadadadadadadadadadadadadadavadadahadadadadadadaaadadadadadadadadadadadadadaaaaaaaaadafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafbvaa
+aaadadadadadadadadadadadadadavadadahadadadadadadaaadadadadadadadadadadadadadaaaaaaaaadafafafafafafafafafafafafafafafafafafafafafafafafafbwafafafafafafafafafafafafafafafafafafafbxaa
 aaadadadadavadadadadadadadadadadadahadadadavadadaaadadadadadadadadadadadadaaaaaaaaaaadafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafaa
 aaadadadadadadadadadadadadadadadahahadadadadadadadadadadadadadadadadadadadaaaaaaaaadadafafafadadadadadadadadadadadadadadadadadadadadadahahahahahahahahadadadadadadadadadadadadadadaa
 aaadadadadadadadadadadadadadadadahahadadadadadadadadadadadavadadadadadadadadaaaaadadadafafafadadadadadadadadadadadadadadadadadadadadadadadahahahahadadadadadadadadadadadadadadadadaa
-aaadavadadadadadadavadadadavadadahahadadadadadadadadadadadadadadadadadadadadadadadadadafafafadaCadadadadadadadadadadadadadaCadadadadadadadadadadadaCadadadadadadadadadadadadadaCadaa
+aaadavadadadadadadavadadadavadadahahadadadadadadadadadadadadadadadadadadadadadadadadadafaKafadaCadadadadadadadadadadadadadaCadadadadadadadadadadadaCadadadadadadadadadadadadadaCadaa
 aaadadadadadadadadadadadadadadadahahadadavadadadadadadadadadadadadadadadadadadadadadadafafafadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
 aaadadadadadadadadadadadadadadadadahahadadadadadadadadadadadadadadadadadadavadadadadadafafafadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
 aaadadadadadavadadadadadadadadadadahahahadadahahahahahadadadadadadadadadadadadadadadadafafafawawawawawawawawawawawawawawawawawawawawawawawawawadadadadadadadadaaaaaaaaaaadadadadadaa
 aaadadadadadadadadadadadavadadadadahahahahahahahahahahahahahadadadadadadadadaaaaaaadadafafafawadadadadadadadadadadadadadadadadadadadadadadadawadadadadadadadaaaaaaaaaaaaaaadadadadaa
-aaadadadadadadadadadadadadadadadadahahadadadaCadavadahahahahahahadadadadadaaaaaaaaadadafafafawadadadadadavadadadadadadadadadadaNaNaSaNaNadadawadadadadadadadaaaaaaaaaaaaaaadadadadaa
-aaadadavadadadadadavadadadadadadadahadadadadadadadadadadadadahahahadadadaaaaaaaaaaadadafafafawadadadadadadadadadadadadadadadadaNbwaUbwaNadadawadadadadadadadadaaaaaaaaaaaaadadadadaa
-aaadadadadadadadadadadadadadadadadahadadavadadadadadadadadadadahahadadadadadaaaaadadavafafafawadadadadadadadadadadadadadadadadaNbxaUbwaNadadawadadadadadadadadadaaaaaaaaaaadadadadaa
-aaadadadadadadadadadadadadavadadadahadadadadadadadadadadavadadadahadadadadadadadadadadafafafawawawbyawawaNaSaSaSaNaNaNaNadadadaNbwaUbwaNadadawadadadadadadadadadadadaaaaadadadadadaa
-aaadadadadavadadadadadadadadadadadahadadadadadadadadadadadadadadbzahadadadadadadadadadafafafawbAadadadadbBbnbnbnbgbCbDaNaNaNaNaNaNbEaNaNadadawadadadadadadadadadadadadadadadadadadaa
-aaavadadadadadadadadadadadadadadahahadadadadadadadavadadadadadadahahadadadadadadadadadafafafbFafafbGafafbHaUaUaUbIbJbKaNbLbMbBaNbNaUbgaNadadawadadadadadadadadadadadadadadadadadadaa
-aaadadadadadadadavadadadadadahahahahahadadadadadadadadadadadadadahahadadadadadadadaCadafafafbFafafafafafbEaUaUaUbOaUbPaNbQbRbMaNbSbCbTaNadadawadadadavadadadadadadadadadadadadadadaa
-aaaaadadadadadadadadadadadahahahahahahahahahadadadadadadadavadahahadadadadadadavadadadafafafbFafafafafafbHaUaUaUaNaNbEaNbMbMbLaNbUaUbSaNahadawawadadadadadadadadadadadadadadadadadaa
-aaaaadadadadadadadadadadadahaNaNbBaNaNaNaNahadahahahahahahahahahahahadadadadadadadadadafafafawadadadahbVaNaUaUaUbEaUaUbWbMbXbYaNbZaUbuaNahahadawadadadadadadadadadadadadadadadadadaa
-aaaaaaadadadadadadadadadadahaNaUaUaYaUaUaNcaahahahahahahahahahahahahadadaaaaadadadadadafafafawawawawawaiaNaSaSaSaNaUaUaNaNaNaNaNaNbEaNaNaNahadawadadadadadadadadadadadadavadadadadaa
-aaaaaaadadadadadadadcbadadahaNaUaSaSaSaUaNaNaNaNaNahadadaCadadahahahadaaaaaaaaaaaaadadafafafawadadadadahahahahahaNccaUaUaUaUaUaUaUaUbWbMbWahahawadadadadadadadadadadadadadadadadadaa
-aaaaaaadadadavadadadadadadahaNaUaScdaSaUaNcecfceaNadadadadadadadahahadaacgchahaaaaaaadafafafawadadadadadadadahahaNaUaUaUaUaUaUaUaUaUciaNaNahahawadadadadadadadadadadadadadadadadadaa
-aaaaadadadadadadadadadadadahaNaUaSaSaSaUaNcecjceaNadadadadadadadahahadaaahahahahaaaaadafafafawadadadadadadadadahaNaNaNaNaNckbhbhckaNaNaNaNahahawadadadadadadadadadadadadadadadadadaa
-aaadadadadadadadadadadadadahaNaUaUaUaUaUaNcecjceaNaaadavadadadadahahadaaaaaaaaahaaaaadafafafawadadadadadadadadahahaNclcfcmaNaUaUaNcncfcoaNahawawadadadadadadadadadadadadadadadadadaa
-aaawawawawawawawawawawawawaOaNaNckbEckaNaNaNcpaNaNaaaaadadadadahahahadadaaaaahahaaaaadafafafawawawawawawawawawawahbBcqcjcjcrcsaUctcjcucjaNahawadadadadadadadadadadadadadadadcvadadaa
-aaadadadadadadadadadadadadahahaNcwcxcxcxcycxcxcxaNawawawawawawaiahahadadadaaahaaaaadadafafafadadadadadadadadczawahaNcjcjcqaNaUaUaNcjbMcAaNahawadadadadadadadadadadadadadadadadadadaa
-aaadadadadadadadadadadadadadahaNcxcxcxcxcBcxcxcxcCahadadadadadawahahadadadahahahadadadafafafadaCadadadadadadadawahaNaNaNaNaNaNaNaNaNaNaNaNahawadadadadadadadadadadadadadadadadadadaa
-aaadadadadadadadadadadadadadahaNcxcxcxcxcxcxcxcxbBahadadadadadawahahahadahahahahahadadafafafadadadadadadadadadawahahahahahahahahahahahahahahawadadadadadadadadadadadadadadadadadadaa
-aaadadadadadadadadadavadadadahaNaNaNcCaNaNaNbEaNaNahadadadadadaiahahahahahahahahahahahafafafadadadadadadadadadawawawawawawawawawawawawaiaiawawadadadadadadavadadadadadadadadadadaaaa
-aaadadadadadcvadadadadadadadahaOahafafafaSaYaUaUaSahadadadadadawahahaNaNaNaNaNaNaNaNahafafafadadadadadadadadadadadadadadadadadadadadawadadadadadadadadadadadadadadadadadadadadaaaaaa
-aaadadadadadadadaCadadadadadadawahafafafaScDbCcEaSahadadadadadawadahaNcFcGcFcHbMcIaNahafafafadadadadadadadadadadadadavadadadadadadadawadadadadadadadadadadadadadadaaaaaaaaaaaaaaaaaa
-aaadadadadadadadadadadadadadadawadafafafaScJcKcLaSahadadaCadadawawaiaNbMbMcMbMbMbMcNahafafafadadadadadadadadadadadadadadadadadadadadawadadadadadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaa
-aaadadadadadadadadadadadadadadawadafafafaNaSaSaSaNahadadadadadawadahaNcObMbMbMbMbMaNadafafafadadadadadadadadadadadadadadadadadadadadaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaN
-aaadadadadadadadadadadadadadadawadafafafaiahahahahahadadadadadawadadaNcPcQbMcRcSbYaNadafafafadaCadadadadadadadadadadadadadadadadadadaNaNahahahahahahahahahadadadadadadadadadadadadaN
-aaadadadadadadadadadadadadadadawadafafafawadadadadadavadadadadawadadaNaNaNaNaNaNaNaNadafafafadadadadadadavadadadadadadaCadadadadadadaNahahcTahahahahahcUahadadadadadadadadadaCadcVaN
-aaawawawawawawawawawawawawawawawadafafafawawawawawawawawawawawawadadadadadadadadadadadafafafadadadadadadadadadadadadadadadadadadadaNaNahahahahahahahahahahahadadadadadadadadadadaNaN
+aaadadadadadadadadadadadadadadadadahahadadadaCadavadahahahahahahadadadadadaaaaaaaaadadafafafawadadadadadavadadadadadadadadadadaOaOaTaOaOadadawadadadadadadadaaaaaaaaaaaaaaadadadadaa
+aaadadavadadadadadavadadadadadadadahadadadadadadadadadadadadahahahadadadaaaaaaaaaaadadafafafawadadadadadadadadadadadadadadadadaObyaVbyaOadadawadadadadadadadadaaaaaaaaaaaaadadadadaa
+aaadadadadadadadadadadadadadadadadahadadavadadadadadadadadadadahahadadadadadaaaaadadavafafafawadadadadadadadadadadadadadadadadaObzaVbyaOadadawadadadadadadadadadaaaaaaaaaaadadadadaa
+aaadadadadadadadadadadadadavadadadahadadadadadadadadadadavadadadahadadadadadadadadadadafafafawawawbAawawaOaTaTaTaOaOaOaOadadadaObyaVbyaOadadawadadadadadadadadadadadaaaaadadadadadaa
+aaadadadadavadadadadadadadadadadadahadadadadadadadadadadadadadadbBahadadadadadadadadadafafafawbCadadadadbDbobobobhbEbFaOaOaOaOaOaObGaOaOadadawadadadadadadadadadadadadadadadadadadaa
+aaavadadadadadadadadadadadadadadahahadadadadadadadavadadadadadadahahadadadadadadadadadafafafbHafafbIafafbJaVaVaVbKbLbMaObNbObDaObPaVbhaOadadawadadadadadadadadadadadadadadadadadadaa
+aaadadadadadadadavadadadadadahahahahahadadadadadadadadadadadadadahahadadadadadadadaCadafafafbHafafafafafbGaVaVaVbQaVbRaObSbTbOaObUbEbVaOadadawadadadavadadadadadadadadadadadadadadaa
+aaaaadadadadadadadadadadadahahahahahahahahahadadadadadadadavadahahadadadadadadavadadadafafafbHafafafafafbJaVaVaVaOaObGaObObObNaObWaVbUaOahadawawadadadadadadadadadadadadadadadadadaa
+aaaaadadadadadadadadadadadahaOaObDaOaOaOaOahadahahahahahahahahahahahadadadadadadadadadafafafawadadadahbXaOaVaVaVbGaVaVbYbObZcaaOcbaVbvaOahahadawadadadadadadadadadadadadadadadadadaa
+aaaaaaadadadadadadadadadadahaOaVaVaZaVaVaOccahahahahahahahahahahahahadadaaaaadadadadadafafafawawawawawaiaOaTaTaTaOaVaVaOaOaOaOaOaObGaOaOaOahadawadadadadadadadadadadadadavadadadadaa
+aaaaaaadadadadadadadcdadadahaOaVaTaTaTaVaOaOaOaOaOahadadaCadadahahahadaaaaaaaaaaaaadadafafafawadadadadahahahahahaOceaVaVaVaVaVaVaVaVbYbObYahahawadadadadadadadadadadadadadadadadadaa
+aaaaaaadadadavadadadadadadahaOaVaTcfaTaVaOcgchcgaOadadadadadadadahahadaacicjahaaaaaaadafafafawadadadadadadadahahaOaVaVaVaVaVaVaVaVaVckaOaOahahawadadadadadadadadadadadadadadadadadaa
+aaaaadadadadadadadadadadadahaOaVaTaTaTaVaOcgclcgaOadadadadadadadahahadaaahahahahaaaaadafafafawadadadadadadadadahaOaOaOaOaOcmbibicmaOaOaOaOahahawadadadadadadadadadadadadadadadadadaa
+aaadadadadadadadadadadadadahaOaVaVaVaVaVaOcgclcgaOaaadavadadadadahahadaaaaaaaaahaaaaadafafafawadadadadadadadadahahaOcnchcoaOaVaVaOcpchcqaOahawawadadadadadadadadadadadadadadadadadaa
+aaawawawawawawawawawawawawaPaOaOcmbGcmaOaOaOcraOaOaaaaadadadadahahahadadaaaaahahaaaaadafafafawawawawawawawawawawahbDcsclclctcuaVcvclcwclaOahawadadadadadadadadadadadadadadadcxadadaa
+aaadadadadadadadadadadadadahahaOcyczczczcAczczczaOawawawawawawaiahahadadadaaahaaaaadadafafafadadadadadadadadcBawahaOclclcsaOaVaVaOclbOcCaOahawadadadadadadadadadadadadadadadadadadaa
+aaadadadadadadadadadadadadadahaOczczczczcDczczczcEahadadadadadawahahadadadahahahadadadafaKafadaCadadadadadadadawahaOaOaOaOaOaOaOaOaOaOaOaOahawadadadadadadadadadadadadadadadadadadaa
+aaadadadadadadadadadadadadadahaOczczczczczczczczbDahadadadadadawahahahadahahahahahadadafafafadadadadadadadadadawahahahahahahahahahahahahahahawadadadadadadadadadadadadadadadadadadaa
+aaadadadadadadadadadavadadadahaOaOaOcEaOaOaObGaOaOahadadadadadaiahahahahahahahahahahahafafafadadadadadadadadadawawawawawawawawawawawawaiaiawawadadadadadadavadadadadadadadadadadaaaa
+aaadadadadadcxadadadadadadadahaPahafafafaTaZaVaVaTahadadadadadawahahaOaOaOaOaOaOaOaOahafafafadadadadadadadadadadadadadadadadadadadadawadadadadadadadadadadadadadadadadadadadadaaaaaa
+aaadadadadadadadaCadadadadadadawahafafafaTcFbEcGaTahadadadadadawadahaOcHcIcHcJbOcKaOahafafafadadadadadadadadadadadadavadadadadadadadawadadadadadadadadadadadadadadaaaaaaaaaaaaaaaaaa
+aaadadadadadadadadadadadadadadawadafafafaTcLcMcNaTahadadaCadadawawaiaObObOcObObObOcPahafafafadadadadadadadadadadadadadadadadadadadadawadadadadadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaa
+aaadadadadadadadadadadadadadadawadafafafaOaTaTaTaOahadadadadadawadahaOcQbObObObObOaOadafafafadadadadadadadadadadadadadadadadadadadadaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaO
+aaadadadadadadadadadadadadadadawadafafafaiahahahahahadadadadadawadadaOcRcSbOcTcUcaaOadafafafadaCadadadadadadadadadadadadadadadadadadaOaOahahahahahahahahahadadadadadadadadadadadadaO
+aaadadadadadadadadadadadadadadawadafafafawadadadadadavadadadadawadadaOaOaOaOaOaOaOaOadafafafadadadadadadavadadadadadadaCadadadadadadaOahahcVahahahahahcWahadadadadadadadadadaCadcXaO
+aaawawawawawawawawawawawawawawawadafafafawawawawawawawawawawawawadadadadadadadadadadadafafafadadadadadadadadadadadadadadadadadadadaOaOahahahahahahahahahahahadadadadadadadadadadaOaO
 aaadadadadadadadadadadadadadadadadafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafaf
-aaadadadavadadadadadadadadadadadadafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafaScWafcXaScXafafafafafafafafafafafafafafbv
-aaadadadadadadadadadadadadadadadadafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafcYcXafafafafcZcXafafafafafafafafafafafafafafaf
-aadaadadadadadadadadadadadadadadadafafafadaCadadadadadadadadadadadadavadadahahahahahahafafafahahahahaNaNaSaSaNaNadadadadadadadadadaNaNdbbBahahbMahahaSahahahadadadadadadadadadadaNaN
-aaadadadadadadadadadadadadadadadadafafafadadadadadadadadadadadadadadadadaCadahahahahahafafafahaCahaaaNdcbrdddeaNadadadavadadadadadadaNbYbBahdfbMbMahaqahahadadadadadadadadadaCadadaN
-aaadadaNaNaSaNaNadadadadavadadadadafafafadadadavadadadadadadadadadadadadadadadahahahahafafafadadadaaaNccaUaUbuaNaaadadadadadadadadadaNaNbBahahahahahaqazahadadadadadadadadadadadadaN
-aaadadaNdgaodhaNaaadadadadadadadadafafafadahahahadadadadadavadahahahahahahahahahahahahafafafadahdiaaaNaUaUaUaUaNaaadadadadadadadadadaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNaN
-aaadaaaNdjdkdlaNaaaaadadadadadadadafafafadahaNaNaNaSaSaSaNaNaNahaNaNaNaNaNaNaNaNaNaNahafafafadaNaSaNaNaNaNbhaNaNaaadadadadadadadadadadadadadadadadadadadadadadaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaNdmaodnaNaaaaaaaaadadadadadafafafadadbBaoaPaoaoaoaoaoaNahaNdobtbqaNaoaPaoaoaNahafafafadaNdpdqaoaoaoaoaNaaaaaaadadadadadadadadadadadadadadadadadadadadadadadadaaaaaaaaaaaaaaaa
-aaaaaaaNaNaFaNaNaNaNaNaNaNaNadadadafafafadahbBdraoaoaodsaoaoaNahaNbpaUaUaNaoaoaoaoaNafafafafafaNaNaNaoaoaodtaNaaaaaaaaadadadadadadadadadadadadadadadadadadadadadadadadadadadadaaaaaa
-aaaaaaaNdudvdvdvdvdwdvdvdxaSadadaCafafafadahaNaJdqaoaoaoaodyaNahaNbUaUaUbEaoaoaoaoaFafafafafafaFaPaFaoaoaNaNaNaNaNaNaaadadadadadadadadadadadadadadavadadadadadadadadadadadadadadaaaa
-aaaaaaaNdvdvdzdvdAdvdBdCdxaSadadadafafafafdDaNaNaNaNaFaNaNaNaNaiaNbuaUaUaNaoaoaoaoaNafafafafafaNaNaNaoaoaFaoaPaodEaNaaadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaaaa
-aaaaadaNdvdvdFdvdGdvdHdIdJaNadadadafafafafafafaFaoaoaoaoaodsaNahaNaUaUaUaNaoaoaoaoaNahafafafagaNdKaoaodLaNaoaoaoaMaNadadadadadavadadadadadadadadadadadadadadadadadadadadadadadadadaa
-aaadadbBdvdvdvdvdvdvdvdvdvdMadadadafafafafafafaNaodNaoaNaNbBaNahaNaSaSaNaNaNaFaNaNaNahafafafahaNaNaNaNaNaNaoaoaodOaNadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
-aaadadaNdvdvdvdvdvdvdvdvdvdMadadadafafafahahahbBdPdQdRaNdSahahahadadadaNaMaoaoaNbVahahafafafahahaiahaaaaaNaoaoaoaoaNadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
-aaadadaNdvdTdvdUdvdVdvdWdvaNadadadafafafavadahaNaNaNaNaNahadadadadadadaNdXaodYaNadahahafafafadadadadadaaaNaNaSaSaNaNadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
-aaadaaaNdvdZdveadvdWdvebdvaSadadadafafafadadahahahahahahahadadaCadadadaNaNaSaNaNadadahafafafadadawadadaaaaaaadadadadadadadadadadadadadavadadadadadadadadadadadadadadadadadadadadadaa
-aaadaaaNdvdvdvdvdvecdvdvdvaSadadaCafafafadadadadadadadahahahahahadadadadadadadadadadahafafafadadawadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
-aaadaaaNaNaNaNaNaNaNaNaNaNaNadadadafafafadadadaNaNaNaNaNaNaNaNaiawawawawawawawawadadahafafafadadadadadadawawadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
-aaadaaaaaaaaadadadadadadadadadadadafafafafafafaNedbMbMbMeeeeaNahadadadadadadadawadadadafafafadadadadadadadadadavadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
-aaadadaaaaadadefefadadadadadadadadafafafafafafegbMbMbMbMbMbMcNahadadadadadadadawadadadafafafadadadadadadadadadadadadadadadaCadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadehadafafafafafafaNbYbMeibMbMeeaNahahahahahahadadawadadadafafafadavadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
-aaadadadadadadadadadadadadadadadadafafafahahahaNaNaNaNaFaNaNaNaNaNaNaNaNahadadawadadadafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafaa
-aaadadadadejejaSejejadadavadadadadafafafahahahaSaPaodLaoaoaoaNaUbqekelaNahadadawadadadafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafbvaa
-aaadadadadejadadadejadadadadadadadafafafafafafaNaoaNaNaNaNaoaWaUaUaUbmaSahadadawadadadafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafaa
-aaadadaAadadadcvadadadadadadadadadafafafafafafaFbeaFaodXaNdtaNaUaUaUbSaSahadadawadadadafafafadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaaaa
-aaadadadadejaAadefejadadadadadadaCafafafafafafaNaoaNaoemaNenaNaUaUaUbuaNahadadawadadadafafafadadaCadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaaaaaa
-aaadadadadadejaSejejadadadadadadadafafafadadahaNaNaNaSaSaNaNaNaNaNaNaNaNaiawawawadadadafafafadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaaaaaa
+aaadadadavadadadadadadadadadadadadafafafafafafafafafafafafafaKafafafafafafafafafafafafafafafafafafafaKafafafafafafafafafafafafafafafafafafaTcYafcZaTcZafafafaKafafafafafafafafafafbx
+aaadadadadadadadadadadadadadadadadafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafdacZafafafafdbcZafafafafafafafafafafafafafafaf
+aadcadadadadadadadadadadadadadadadafafafadaCadadadadadadadadadadadadavadadahahahahahahafafafahahahahaOaOaTaTaOaOadadadadadadadadadaOaOddbDahahbOahahaTahahahadadadadadadadadadadaOaO
+aaadadadadadadadadadadadadadadadadafafafadadadadadadadadadadadadadadadadaCadahahahahahafafafahaCahaaaOdebsdfdgaOadadadavadadadadadadaOcabDahdhbObOahaqahahadadadadadadadadadaCadadaO
+aaadadaOaOaTaOaOadadadadavadadadadafafafadadadavadadadadadadadadadadadadadadadahahahahafafafadadadaaaOceaVaVbvaOaaadadadadadadadadadaOaObDahahahahahaqazahadadadadadadadadadadadadaO
+aaadadaOdiaodjaOaaadadadadadadadadafafafadahahahadadadadadavadahahahahahahahahahahahahafafafadahdkaaaOaVaVaVaVaOaaadadadadadadadadadaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaOaO
+aaadaaaOdldmdnaOaaaaadadadadadadadafafafadahaOaOaOaTaTaTaOaOaOahaOaOaOaOaOaOaOaOaOaOahafafafadaOaTaOaOaOaObiaOaOaaadadadadadadadadadadadadadadadadadadadadadadaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaOdoaodpaOaaaaaaaaadadadadadafdqafadadbDaoaQaoaoaoaoaoaOahaOdrbubraOaoaQaoaoaOahafafafadaOdsdtaoaoaoaoaOaaaaaaadadadadadadadadadadadadadadadadadadadadadadadadaaaaaaaaaaaaaaaa
+aaaaaaaOaOaFaOaOaOaOaOaOaOaOadadadafafafadahbDduaoaoaodvaoaoaOahaObqaVaVaOaoaoaoaoaOafafafafafaOaOaOaoaoaodwaOaaaaaaaaadadadadadadadadadadadadadadadadadadadadadadadadadadadadaaaaaa
+aaaaaaaOdxdydydydydzdydydAaTadadaCafafafadahaOaJdtaoaoaoaodBaOahaObWaVaVbGaoaoaoaoaFafafaKafafaFaQaFaoaoaOaOaOaOaOaOaaadadadadadadadadadadadadadadavadadadadadadadadadadadadadadaaaa
+aaaaaaaOdydydCdydDdydEdFdAaTadadadafafafafdGaOaOaOaOaFaOaOaOaOaiaObvaVaVaOaoaoaoaoaOafafafafafaOaOaOaoaoaFaoaQaodHaOaaadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaaaa
+aaaaadaOdydydIdydJdydKdLdMaOadadadafafafafafafaFaoaoaoaoaodvaOahaOaVaVaVaOaoaoaoaoaOahafafafagaOdNaoaodOaOaoaoaoaNaOadadadadadavadadadadadadadadadadadadadadadadadadadadadadadadadaa
+aaadadbDdydydydydydydydydydPadadadafafafafafafaOaodQaoaOaObDaOahaOaTaTaOaOaOaFaOaOaOahafafafahaOaOaOaOaOaOaoaoaodRaOadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
+aaadadaOdydydydydydydydydydPadadadafafafahahahbDdSdTdUaOdVahahahadadadaOaNaoaoaObXahahafafafahahaiahaaaaaOaoaoaoaoaOadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
+aaadadaOdydWdydXdydYdydZdyaOadadadafafafavadahaOaOaOaOaOahadadadadadadaOeaaoebaOadahahafafafadadadadadaaaOaOaTaTaOaOadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
+aaadaaaOdyecdyeddydZdyeedyaTadadadafafafadadahahahahahahahadadaCadadadaOaOaTaOaOadadahafafafadadawadadaaaaaaadadadadadadadadadadadadadavadadadadadadadadadadadadadadadadadadadadadaa
+aaadaaaOdydydydydyefdydydyaTadadaCafafafadadadadadadadahahahahahadadadadadadadadadadahafafafadadawadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
+aaadaaaOaOaOaOaOaOaOaOaOaOaOadadadafafafadadadaOaOaOaOaOaOaOaOaiawawawawawawawawadadahafafafadadadadadadawawadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
+aaadaaaaaaaaadadadadadadadadadadadafafafafafafaOegbObObOehehaOahadadadadadadadawadadadafafafadadadadadadadadadavadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
+aaadadaaaaadadeieiadadadadadadadadafafafafafafejbObObObObObOcPahadadadadadadadawadadadafafafadadadadadadadadadadadadadadadaCadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadekadafafafafafafaOcabOelbObOehaOahahahahahahadadawadadadafafafadavadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaa
+aaadadadadadadadadadadadadadadadadafafafahahahaOaOaOaOaFaOaOaOaOaOaOaOaOahadadawadadadafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafaa
+aaadadadadememaTememadadavadadadadafafafahahahaTaQaodOaoaoaoaOaVbreneoaOahadadawadadadafaKafafafafafafafafafafafafafafafafepafafafafafafafafafafafafafafafafafafafafafafafafafafbxaa
+aaadadadademadadademadadadadadadadafafafafafafaOaoaOaOaOaOaoaXaVaVaVbnaTahadadawadadadafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafaa
+aaadadaAadadadcxadadadadadadadadadafeqafafafafaFbfaFaoeaaOdwaOaVaVaVbUaTahadadawadadadafafafadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaaaa
+aaadadadademaAadeiemadadadadadadaCafafafafafafaOaoaOaoeraOesaOaVaVaVbvaOahadadawadadadafafafadadaCadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaaaaaa
+aaadadadadademaTememadadadadadadadafafafadadahaOaOaOaTaTaOaOaOaOaOaOaOaOaiawawawadadadafafafadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaaaaaa
 aaaaadadadadadadadadadadadadadadadafafafadadahahahahahahahaiahahahahahahahadadadadadadafafafadadadadadadadadadadavadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaaaaaa
 aaaaaaaCadadadadaAadadadaaaaadadadafafafaaadadadadadadadadawadadadadadadadadadadadadadafafafadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaaaaaaaa
 aaaaaaaaadavadadadadadaaaaaaaaaaadafafaaaaaaadadadadadadadawadadadadadadadadadadadadadafafafadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaaaaaaaaaaaa
@@ -318,94 +323,94 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}
 
 (1,1,2) = {"
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoepepepeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoepeqepeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoepepepeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
-eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+eteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteueueuetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+eteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteueveuetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+eteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteteueueuetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
+etetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetetet
 "}

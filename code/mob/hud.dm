@@ -16,7 +16,6 @@
 	var/obj/hud/rest/Re
 	var/obj/hud/health/He
 	var/hand = RHAND
-	var/throw_mode = 0
 	var/acthand
 	var/movement = 0
 	var/act = "help"
@@ -99,17 +98,17 @@
 		usr.client.screen += src
 	Click(var/mob/living/H = usr)
 		usr << "\blue *--------*"
-		usr << "\bold СОСТОЯНИЕ [H.name]"
+		usr << "\bold STATUS [H.name]"
 		if(H.isBitten)
-			usr << "\red \bold Укушен."
+			usr << "\red \bold Bitten."
 		if(H.bleeding)
-			usr << "\red \bold Кровотечение."
+			usr << "\red \bold Bleeding."
 		if(H.health <= 40)
-			usr << "\red \bold Т[ya]жело ранен."
+			usr << "\red \bold Heavily wounded."
 		if(H.calories <= 50)
-			usr << "\red Сильно истощен."
+			usr << "\red Severely malnourished"
 		if(H.blood <= 50)
-			usr << "\red Бледный цвет кожи."
+			usr << "\red Pale."
 		usr << "\blue *--------*"
 
 /obj/hud/rest
@@ -226,17 +225,17 @@
 		my_lhand_contents = null
 
 /mob/living/proc/swap_hands()
-	if(hand == RHAND)
-		R.active = 0
-		L.active = 1
-		hand = LHAND
-		return
-
-	else if(hand == LHAND)
-		R.active = 1
-		L.active = 0
-		hand = RHAND
-		return
+	if(!isDead)
+		if(hand == RHAND)
+			R.active = 0
+			L.active = 1
+			hand = LHAND
+			return
+		else if(hand == LHAND)
+			R.active = 1
+			L.active = 0
+			hand = RHAND
+			return
 
 /mob/living/proc/intent()
 	if(act == "help")

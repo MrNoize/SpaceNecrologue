@@ -29,19 +29,19 @@
 	set name = "About Me"
 	set category = "IC"
 	usr << "<B>*---------*</B>"
-	usr << "<B>СТАТЫ:</B>"
-	usr << "<B><font color=purple>Сила - [strength]</B>"
-	usr << "<B><font color=purple>Выносливость - [endurance]</B>"
-	usr << "<B><font color=purple>Ловкость - [dexterity]</B>"
-	usr << "<B>Про мен[ya]:</B>"
+	usr << "<B>STATS:</B>"
+	usr << "<B><font color=purple>Strength - [strength]</B>"
+	usr << "<B><font color=purple>Endurance - [endurance]</B>"
+	usr << "<B><font color=purple>Dexterity - [dexterity]</B>"
+	usr << "<B>About me:</B>"
 	if(meleeskill > 0)
-		usr << "<B><font color=purple>Ближний бой - [meleeskill]</B>"
+		usr << "<B><font color=purple>Melee - [meleeskill]</B>"
 	if(miningskill > 0)
-		usr << "<B><font color=purple>Горное дело - [miningskill]</B>"
+		usr << "<B><font color=purple>Mining - [miningskill]</B>"
 	if(medskill > 0)
-		usr << "\bold <font color=purple>Медицина - [medskill]"
+		usr << "\bold <font color=purple>Medicine - [medskill]"
 	if(craftskill > 0)
-		usr << "<B><font color=purple>Инженери[ya] - [craftskill]</B>"
+		usr << "<B><font color=purple>Engineering - [craftskill]</B>"
 	usr << "<B>*---------*</B>"
 
 /mob/living/ghost
@@ -78,23 +78,26 @@
 
 proc/mob_controller()
 	for(var/mob/living/M in world)
-		if(M.stamina < M.stamina_max)
-			M.stamina += M.stamina_regen
-			if(M.stamina > M.stamina_max)
-				M.stamina = M.stamina_max
-		if(M.health < 100 && M.calories > 250 && !M.isUndead)
-			M.health += 0.1
-		if(M.health > M.maxHealth)
-			M.health = M.maxHealth
-		if(M.health <= 0 && !M.rests)
-			M.fall_down()
-		if(M.blood <= 0)
-			M.fall_down()
-			M.blood = 0
-		if(M.blood > 100)
-			M.blood = 100
-		if(M.isVampire)
-			M.calories = 0
+		if(!M.isDead)
+			if(M.stamina < M.stamina_max)
+				M.stamina += M.stamina_regen
+				if(M.stamina > M.stamina_max)
+					M.stamina = M.stamina_max
+			if(M.health < 100 && M.calories > 250 && !M.isUndead)
+				M.health += 0.1
+			if(!M.isUndead && M.blood < 100 && M.calories > 250)
+				M.blood += 2
+			if(M.health > M.maxHealth)
+				M.health = M.maxHealth
+			if(M.health <= 0 && !M.rests)
+				M.fall_down()
+			if(M.blood <= 0)
+				M.fall_down()
+				M.blood = 0
+			if(M.blood > 100)
+				M.blood = 100
+			if(M.isVampire)
+				M.calories = 0
 
 /mob/living/proc/life()
 	if(!isDead && health > 0 && calories != 0 && !isUndead && !isVampire)
@@ -107,17 +110,16 @@ proc/mob_controller()
 		HurtMe(0.2)
 		stamina--
 		if(prob(15))
-			usr << "\red *Я очень голоден...*"
+			usr << "\red *I'm so damn hungry...*"
 	if(isUndead && ckey)
 		if(prob(10))
-			say(pick("Ммм-м-мэээээ...","Ээээаааааууууу-у!","Ххххммммссссс...","Гррррээээ!","Ммммсссхиии..."))
-			Me("мычит")
+			Me("moans")
 			view() << sound(pick('sounds/zombie_life1.ogg', 'sounds/zombie_life2.ogg', 'sounds/zombie_life3.ogg'))
 	if(!isDead && blood <= 50)
 		HurtMe(0.2)
 		stamina--
 		if(prob(10))
-			usr << "\red *Я могу потер[ya]ть сознание в любую секунду...*"
+			usr << "\red *I feel faint...*"
 	if(health < 0)
 		health = 0
 	if(stamina < 0)
@@ -138,7 +140,7 @@ proc/mob_controller()
 			spawn(10)
 				canrest = 1
 		else
-			view() << "\blue<B>[src.name]</B> поднимаетс[ya] на ноги!"
+			view() << "\blue<B>[src.name]</B> stands up."
 			canrest = 0
 			sleep(10)
 			if(health > 0)
@@ -157,7 +159,7 @@ proc/mob_controller()
 		var/matrix/Ma = matrix()
 		Ma.Turn(90)
 		transform = Ma
-		view() << "<B>[src.name]</B> падает на землю!"
+		view() << "<B>[src.name]</B> falls on the ground!"
 		if(key)
 			Re.icon_state = "rest_down"
 		rests = 1

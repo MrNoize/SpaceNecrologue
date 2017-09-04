@@ -33,34 +33,25 @@ var/delay = 0
 			act_by_item(user, user.acthand)
 
 /obj/machinery/doors/act_by_item(var/mob/living/user, var/obj/items/I)
-	var/obj/items/weapon/crowbar/C = I
 	var/obj/items/weapon/screwdriver/S = I
 	var/obj/items/weapon/plank/P = I
 	if(istype(P))
-		view() << "\bold[user.name] прибивает к двери доску!"
+		view() << "\bold[user.name] nails the board to the [src.name]!"
 		view() << deconstruct
 		new/obj/structures/planks(src.loc)
 		user.cut_hands()
-	if(istype(C))
-		if(closed)
-			if(prob(70))
-				open()
-				view() << "<B>[user.name]</B> открывает дверь монтировкой!"
-			else
-				view() << "\red<B>КРИТИЧЕСКИЙ ПРОВАЛ! [user.name] ломает монтировку!</B>"
-				user.cut_hands()
 	if(istype(S))
 		if(broken)
 			if(prob(user.craftskill*30))
-				view() << "<B>[user.name]</B> чинит дверь!</B>"
+				view() << "<B>[user.name]</B> fixes the door!</B>"
 				broken = 0
 			else
-				view() << "\red<B>КРИТИЧЕСКИЙ ПРОВАЛ! [user.name] ломает отвертку!</B>"
+				view() << "\red<B>CRITICAL FAILURE! [user.name] breaks the screwdriver!</B>"
 				user.cut_hands()
 
 /obj/machinery/doors/proc/try_to_break()
 	if(prob(1))
-		view() << "<B>[src.name]</B> ломаетс[ya]!"
+		view() << "<B>[src.name]</B> breaks!"
 		broken = 1
 
 /obj/machinery/doors/proc/proceed(var/mob/living/user = usr)

@@ -5,12 +5,13 @@
 	var/isFrozen = 0
 
 /mob/living/zombie
-	name = "Zombie"
 	icon = 'mob.dmi'
 	icon_state = "zombie"
 	isUndead = 1
 	rundelay = 5
+	act = "harm"
 	New()
+		name_pick()
 		zombies++
 		skill_rand()
 		if(prob(2))
@@ -22,21 +23,25 @@
 			zombieAI()
 
 /mob/living/zombie/frozen
-	name = "Frozen Zombie"
 	icon_state = "frozen_zombie"
 	rundelay = 6
 	isFrozen = 1
 
 /mob/living/proc/zhit(var/mob/living/zombie)
-	if(!src.isDead && zombie.canhit && zombie.stamina >= 5 && !zombie.rests && zombie.key != src.key)
+	if(!src.isDead && zombie.canhit && zombie.stamina >= 5 && !zombie.rests && zombie.key != src.key && !isUndead)
 		if(prob(src.dexterity*4))
-			view() << "\red \bold [zombie.name] попыталс[ya] ударить [src.name] когт[ya]ми!"
-			view() << "\red \bold [src.name] избежал удара!"
+			view() << "\red \bold [zombie.name] tries to hit [src.name] with his claws!"
+			view() << "\red \bold [src.name] dodges the strike!"
 			view() << miss
 		else
-			view() << "\red \bold [zombie.name] рвет плоть [src.name] своими когт[ya]ми!"
+			view() << "\red \bold [zombie.name] tears [src.name]'s flesh with his claws!"
 			view() << zombiehit
 			src.HurtMe(max(zombie.strength*1.3, 0))
+			if(prob(40))
+				new/obj/cleanable/blood(src.loc)
+				bleeding = 1
+				BloodLoss()
+				view() << "\red [src.name] starts bleeding!"
 			if(zombie.isFrozen)
 				move_debuff += 1
 		zombie.stamina = max(zombie.stamina - 10, 0)
@@ -47,11 +52,11 @@
 /mob/living/proc/zbite(var/mob/living/zombie)
 	if(!src.isDead && zombie.canhit && !zombie.rests && zombie.key != src.key)
 		if(prob(src.dexterity*4))
-			view() << "\red \bold [zombie.name] попыталс[ya] укусить [src.name]!"
-			view() << "\red \bold [src.name] избежал укуса!"
+			view() << "\red \bold [zombie.name] tries to bite [src.name]!"
+			view() << "\red \bold [src.name] dodges the bite!"
 			view() << miss
 		else
-			view() << "\red \bold [zombie.name] кусает [src.name]!"
+			view() << "\red \bold [zombie.name] bites [src.name]!"
 			view() << bite
 			if(prob(40))
 				src.isBitten = 1

@@ -6,9 +6,7 @@
 		if(!isUndead)
 			for(var/mob/M in view())
 				msg = fix255(msg)
-				M << "<B>[usr]</B> говорит, \"[msg]\""
-		else
-			M << pick("Ммм-м-мэээээ...","Ээээаааааууууу-у!","Ххххммммссссс...","Гррррээээ!","Ммммсссхиии...")
+				M << "<B>[usr]</B> says, \"[msg]\""
 
 //EMOTE//
 /mob/living
@@ -18,7 +16,7 @@
 	set name = "Sigh"
 	set category = "Emote"
 	if(canEmote && !isDead)
-		Me("вздыхает")
+		Me("sighs")
 		view() << sigh
 		canEmote = FALSE
 		spawn(30)
@@ -28,7 +26,7 @@
 	set name = "Laugh"
 	set category = "Emote"
 	if(canEmote && !isDead)
-		Me("смеется")
+		Me("laughs")
 		view() << sound(pick('sounds/laugh_1.ogg','sounds/laugh_2.ogg','sounds/laugh_3.ogg'))
 		canEmote = FALSE
 		spawn(30)
@@ -43,7 +41,7 @@
 		if(!msg||msg==""||msg==null) return
 		world << "<B>\blue OOC: [key]: [msg]</B>"
 	else
-		usr << "<B>\red Недоступно.</B>"
+		usr << "<B>\red Unavailable.</B>"
 
 /mob/living/verb/Me(msg as text)
 	set category = "IC"

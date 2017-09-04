@@ -10,7 +10,7 @@
 			var/obj/items/weapon/P = H.acthand
 			if(istype(P))
 				if(P.sharp)
-					view() << "\bold[H.name] режет куст!"
+					view() << "\bold[H.name] cuts the bush!"
 					new/obj/items/drugs/bandage/cloth(src.loc)
 					del src
 
@@ -21,7 +21,7 @@
 	var/full = 1
 	attack_hand(var/mob/living/H)
 		if(!H.acthand && full)
-			view() << "\blue \bold [H.name] срывает [ya]годы!"
+			view() << "\blue \bold [H.name] collects berries!"
 			new/obj/items/food/berries(H.loc)
 			full = 0
 	New()

@@ -1,10 +1,10 @@
 /mob/verb/adminverbs_c()
 	set category = "OOC"
 	set name = "Candy"
-	if(usr.key == "difilex" || usr.key == "Difilex")
+	if(usr.key == "Difilex" || usr.key == "Silentium")
 		GM_check()
 	else
-		src << "Лизь."
+		src << "I want to lick your insides."
 
 /mob/proc/GM_check()
 	usr << "<B>• Бип буп.</B>"
@@ -17,16 +17,6 @@ var/reboottime = 0
 
 /mob/living/var/fotgof = 0
 
-/mob/living/verb/Fotgof_Mode()
-	set category = "OOC"
-	if(!fotgof)
-		fotgof = 1
-		usr << "\bold Фотгоф-Мод активирован."
-	else
-		fotgof = 0
-		usr << "\bold Минус Фотгоф-Мод."
-
-
 mob/admin/verb/End()
 	set category = "Admin"
 	world.End()
@@ -35,10 +25,10 @@ mob/admin/verb/disableOOC()
 	set category = "Admin"
 	set name = "Disable OOC"
 	if(ooc)
-		world << "<B>OOC вырубили!</B>"
+		world << "<B>OOC has been disabled!</B>"
 		ooc = 0
 	else
-		world << "<B>OOC врубили!</B>"
+		world << "<B>OOC has been enabled!</B>"
 		ooc = 1
 
 mob/admin/verb/Announce(message as message)

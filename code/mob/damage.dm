@@ -6,15 +6,10 @@
 
 /mob/living/proc/HurtMe(D)
 	health = health - D
-	if(D >= 10)
-		if(prob(40))
-			new/obj/cleanable/blood(src.loc)
-			bleeding = 1
-			BloodLoss()
-			view() << "\red Из раны [src.name] пошла кровь!"
-			if(!isUndead)
-				Me(pick("стискивает зубы", "шипит", "стонет", "вздрагивает"))
-				view() << moan
+	if(D >= 10 && prob(40))
+		if(!isUndead)
+			Me("moans")
+			view() << moan
 	if(health <= 0)
 		die()
 
@@ -26,14 +21,11 @@
 			new/obj/cleanable/blood(src.loc)
 		spawn(20) BloodLoss()
 
-/mob/living
-
 /mob/living/proc/HealMe(D)
 	health = health + D
 
 /mob/living/proc/die(var/mob/living/human/H = src)
 	killed++
-	H.dropinventory()
 	if(!rests)
 		H.fall_down()
 	if(isUndead)
@@ -45,6 +37,5 @@
 		if(ghost)
 			del_hud()
 			ghost.key = H.key
-			H.overlays = null
 	else
 		H.isDead = 1

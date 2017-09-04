@@ -68,18 +68,6 @@
 	name = "wooden wall"
 	icon_state = "woodenwall"
 
-/turf/simulated/wall/act_by_item(var/mob/living/H = usr, var/obj/items/I)
-	var/obj/items/devices/demolisher/D = I
-	if(istype(D))
-		if(D.charge >= 5)
-			view() << "\bold[H.name] разбирает стену с помощью демолишера!"
-			view() << deconstruct
-			D.charge -= 5
-			new/turf/simulated/floor/plating(src)
-			usr << "<B>Осталось [D.charge] зар[ya]дников.</B>"
-		else
-			usr << "<B>Недостаточно зар[ya]дников.</B>"
-
 /turf/unsimulated/rock
 	name = "rock"
 	icon_state = "rock"
@@ -92,7 +80,7 @@
 		if(!H.isDead && H.acthand && H.canhit && H.stamina >= 5)
 			var/obj/items/weapon/pickaxe/P = H.acthand
 			if(istype(P))
-				view() << "\red \bold[H.name] бьет [src.name] киркой!"
+				view() << "\red \bold[H.name] hits [src.name] with his pickaxe!"
 				view() << pickaxe
 				health -= P.power+H.strength
 				H.stamina -= 5

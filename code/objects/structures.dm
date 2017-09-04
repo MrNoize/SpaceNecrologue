@@ -15,39 +15,27 @@
 /obj/structures/proc/zact(var/mob/living/Z)
 	var/turf/T = src.loc
 	if(Z.canhit && destructible)
-		view() << "\red<B>[Z.name]</B> бьет <B>[src.name]</B>!"
+		view() << "\red<B>[Z.name]</B> hits <B>[src]</B>!"
 		view() << hitsound
 		health -= Z.strength*4
 		Z.canhit = FALSE
 		spawn(10)
 			Z.canhit = TRUE
 	if(health <= 0)
-		view() << breaksound
 		Z.canhit = TRUE
 		new loot(T)
 		del src
 
 /obj/structures/act_by_item(var/mob/living/H, var/obj/items/weapon/W)
 	var/turf/T = src.loc
-	var/obj/items/devices/demolisher/D = W
 	if(istype(W) && H.canhit && destructible)
-		view() << "\red<B>[H.name]</B> бьет <B>[src.name]</B>!"
+		view() << "\red<B>[H.name]</B> hits <B>[src]</B>!"
 		view() << hitsound
 		health -= W.power*1.5
 		H.canhit = FALSE
 		spawn(10)
 			H.canhit = TRUE
-	if(istype(D) && H.act == "harm")
-		if(D.charge >= 5)
-			view() << "\bold[H.name] разбирает [src.name] с помощью демолишера!"
-			view() << deconstruct
-			D.charge -= 5
-			del src
-			usr << "<B>Осталось [D.charge] зар[ya]дников.</B>"
-		else
-			usr << "<B>Недостаточно зар[ya]дников.</B>"
 	if(health <= 0)
-		view() << breaksound
 		H.canhit = TRUE
 		new loot(T)
 		del src
@@ -67,20 +55,10 @@
 			act_by_item(H, H.acthand)
 
 /obj/structures/rack/act_by_item(var/mob/living/H = usr, var/obj/items/I)
-	var/obj/items/devices/demolisher/D = I
 	if(H.act == "help")
 		I.loc = src.loc
 		H.cut_hands()
 		I.layer = 4
-	if(H.act == "harm" && istype(D))
-		if(D.charge >= 5)
-			view() << "\bold[H.name] разбирает [src.name]!"
-			view() << deconstruct
-			D.charge -= 5
-			usr << "<B>Осталось [D.charge] зар[ya]дников.</B>"
-			del src
-		else
-			usr << "<B>Недостаточно зар[ya]дников.</B>"
 
 /obj/structures/grille
 	name = "grille"
@@ -108,12 +86,12 @@
 		if(H in range(1, src))
 			if(!H.acthand && !H.isDead)
 				if(!opened)
-					view() << "\bold[H.name] открывает окно!"
+					view() << "\bold[H.name] opens the window!"
 					icon_state = "window_opened"
 					density = 0
 					opened = 1
 				else
-					view() << "\bold[H.name] закрывает окно!"
+					view() << "\bold[H.name] closes the window!"
 					icon_state = "window"
 					density = 1
 					opened = 0
@@ -122,7 +100,7 @@
 	act_by_item(var/mob/living/H, var/obj/items/weapon/W)
 		var/obj/items/weapon/plank/P = W
 		if(istype(P))
-			view() << "\bold[H.name] прибивает к окну доску!"
+			view() << "\bold[H.name] nails the board to the window!"
 			view() << deconstruct
 			new/obj/structures/planks(src)
 			H.cut_hands()
@@ -143,26 +121,16 @@
 /obj/structures/table/attack_hand(var/mob/living/H = usr)
 	if(H in range(1, src))
 		if(!H.acthand && H.act == "harm" && H.loc != src.loc)
-			view() << "\bold[H.name] залезает на стол!"
+			view() << "\bold[H.name] jumps on the table!"
 			H.loc = src.loc
 		if(H.acthand)
 			act_by_item(H, H.acthand)
 
 /obj/structures/table/act_by_item(var/mob/living/H = usr, var/obj/items/I)
-	var/obj/items/devices/demolisher/D = I
 	if(H.act == "help")
 		I.loc = src.loc
 		H.cut_hands()
 		I.layer = 4
-	if(H.act == "harm" && istype(D))
-		if(D.charge >= 5)
-			view() << "\bold[H.name] разбирает [src.name]!"
-			view() << deconstruct
-			D.charge -= 5
-			usr << "<B>Осталось [D.charge] зар[ya]дников.</B>"
-			del src
-		else
-			usr << "<B>Недостаточно зар[ya]дников.</B>"
 
 /obj/structures/chair
 	name = "chair"
@@ -183,19 +151,19 @@
 				var/obj/items/weapon/shard/S = H.acthand
 				var/obj/items/weapon/plank/P = H.acthand
 				if(istype(P))
-					view() << "\bold[H.name] укрепл[ya]ет стену!"
+					view() << "\bold[H.name] creates a wall!"
 					view() << deconstruct
 					new/turf/simulated/wall/wooden(T)
 					H.cut_hands()
 					del src
 				if(istype(M))
-					view() << "\bold[H.name] укрепл[ya]ет стену!"
+					view() << "\bold[H.name] creates a wall!"
 					view() << deconstruct
 					new/turf/simulated/wall(T)
 					H.cut_hands()
 					del src
 				if(istype(S))
-					view() << "\bold[H.name] создает окно!"
+					view() << "\bold[H.name] creates a window!"
 					view() << deconstruct
 					new/turf/simulated/wall/window(T)
 					H.cut_hands()

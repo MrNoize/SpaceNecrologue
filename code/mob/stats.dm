@@ -20,8 +20,8 @@
 	craftskill = rand(1, 2)
 	medskill = rand(0, 1)
 	miningskill = rand(1, 2)
-	strength = rand(5, 10)
-	endurance = rand(5, 10)
-	dexterity = rand(5, 10)
+	strength = rand(5, 8)
+	endurance = rand(5, 8)
+	dexterity = rand(5, 8)
 	stamina = stamina_max
 	skill_check()

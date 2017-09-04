@@ -19,12 +19,10 @@
 					S.zact(U)
 	if("middle" in params)
 		var/mob/living/Us = usr
-		if(!Us.fotgof)
-			var/mob/living/U = usr
-			U.swap_hands()
+		if(istype(H))
+			H.examine(Us)
 		else
-			if(istype(H) && H in range(1, usr))
-				H.push(usr)
+			Us.swap_hands()
 
 /atom/proc/act_by_item(var/mob/living/H = usr, var/obj/items/I)
 
@@ -43,10 +41,8 @@
 					I.Move(usr)
 					layer = MOB_LAYER + 51
 					H.L.overlays += src
-				if(H.hand && H.my_rhand_contents)
-					act_by_item(usr, H.my_rhand_contents)
-				if(!H.hand && H.my_lhand_contents)
-					act_by_item(usr, H.my_lhand_contents)
+				if(H.acthand)
+					act_by_item(usr, H.acthand)
 			else
 				act_by_item(usr, H.acthand)
 
@@ -93,7 +89,7 @@
 				else
 					src.bloodsuck(usr)
 			if(!H.acthand && H.act == "help")
-				view() << "\blue <B>[H.name]</B> поглаживает <B>[src.name]</B>!"
+				view() << "\blue <B>[H.name]</B> hugs <B>[src.name]</B>!"
 			if(H.acthand)
 				act_by_item(H, H.acthand)
 
@@ -106,36 +102,64 @@
 	if(istype(D) && H.act == "help")
 		healhit(usr, H.acthand)
 	if(istype(W) && H.act == "help")
-		view() << "\blue <B>[H.name]</B> танцует с [W.name]!"
+		view() << "\blue <B>[H.name]</B> dances with [W.name]!"
 	if(istype(A))
-		view() << "\blue <B>[H.name]</B> сканирует <B>[src.name]</B>!"
-		usr << "\blue Здоровье: [src.health]"
-		usr << "\blue Уровень крови: [src.blood]%"
+		view() << "\blue <B>[H.name]</B> scans <B>[src.name]</B>!"
+		usr << "\blue Health: [src.health]"
+		usr << "\blue Blood Level: [src.blood]%"
 		if(src.bleeding)
 			usr << "\red \bold Обнаружено кровотечение."
 
 /mob/living/proc/push(var/mob/living/attacker)
 	if(!src.isDead && !attacker.isDead && attacker.canhit && attacker.stamina >= 10 && !rests && attacker.ckey != src.ckey)
 		if(prob(src.dexterity*3) && !src.isUndead)
-			view() << "\red \bold [src.name] перехватил [attacker.name]!"
+			view() << "\red \bold [src.name] evades and pushes [attacker.name]!"
 			attacker.push(src)
 		else
-			view() << "\red \bold [attacker.name] толкает [src.name]!"
+			view() << "\red \bold [attacker.name] pushes [src.name]!"
 			fall_down()
 			attacker.stamina -= 10
 			attacker.canhit = FALSE
 			spawn(7)
 				attacker.canhit = TRUE
 
+/mob/living/proc/examine(var/mob/living/attacker)
+	view() << "[attacker.name] looks at [src.name]."
+	attacker << "\blue *--------*"
+	attacker << "\blue You can see <B>[src.name]</B>."
+	if(src.fangsOut)
+		attacker << "<font color=purple>\bold He has a pair of sharp fangs, sticking out of his mouth."
+	if(src.dressed)
+		attacker << "\blue He has a [src.my_clothes_contents.name] on his body."
+	if(src.my_rhand_contents)
+		attacker << "\blue There is a [src.my_rhand_contents.name] in his right hand."
+	if(src.my_lhand_contents)
+		attacker << "\blue There is a [src.my_lhand_contents.name] in his left hand."
+	if(src.health <= 40)
+		attacker << "\red \bold He is heavily wounded."
+	if(src.calories <= 50)
+		attacker << "\red He is severely malnourished."
+	if(src.bleeding)
+		attacker << "\red \bold He is bleeding."
+	if(src.blood <= 50)
+		attacker << "\red He looks pale."
+	if(src.strength > attacker.strength)
+		attacker << "\red He looks stronger than you."
+	if(src.act == "help")
+		attacker << "\blue He looks pretty friendly."
+	else
+		attacker << "\red \bold He looks aggressive"
+	attacker << "\blue *--------*"
+
 /mob/living/proc/bloodsuck(var/mob/living/attacker)
 	if(!attacker.isDead && attacker.canhit && attacker.ckey != src.ckey)
 		if(prob(src.dexterity*5) && !src.isUndead)
-			view() << "\red \bold [attacker.name] попыталс[ya] укусить [src.name]!"
-			view() << "\red \bold [src.name] избежал укуса!"
+			view() << "\red \bold [attacker.name] tries to bite [src.name]'s neck!"
+			view() << "\red \bold [src.name] evades the attack!"
 			view() << miss
 		else
 			if(src.blood > 0)
-				view() << "\red \bold [attacker.name] кусает [src.name] за шею!"
+				view() << "\red \bold [attacker.name] bites [src.name]'s neck!"
 				view() << bloodsuck
 				attacker.blood += 15
 				src.blood -= 15
@@ -143,26 +167,26 @@
 				spawn(30)
 					attacker.canhit = TRUE
 			else
-				attacker << "В существе недостаточно крови."
+				attacker << "There is no blood in this creature."
 
 /mob/living/proc/hit(var/mob/living/attacker)
 	if(!src.isDead && attacker.canhit && attacker.stamina >= 5)
 		if(prob(src.dexterity*4) && !src.isUndead && attacker.ckey != src.ckey)
-			view() << "\red \bold [attacker.name] попыталс[ya] ударить [src.name]!"
-			view() << "\red \bold [src.name] избежал удара!"
+			view() << "\red \bold [attacker.name] tries to punch [src.name]!"
+			view() << "\red \bold [src.name] dodges the strike!"
 			view() << miss
 		else
-			view() << "\red \bold [attacker.name] бьет [src.name] кулаком!"
+			view() << "\red \bold [attacker.name] punches [src.name]!"
 			view() << sound(pick('sounds/punch1.ogg','sounds/punch2.ogg','sounds/punch3.ogg'))
 			src.HurtMe(max(attacker.strength*1.3, 0))
 			if(!attacker.isUndead)
 				attacker.calories -= 2
 			if(prob(5+attacker.strength) && !rests)
-				view() << "\red \bold КРИТИЧЕСКИЙ УДАР!"
+				view() << "\red \bold CRITICAL HIT!"
 				src.HurtMe(10)
 				src.fall_down()
-			if(src.isUndead && src.target != attacker)
-				view() << "[src.name] смотрит на [attacker.name]."
+			if(src.isUndead && src.target != attacker && !key)
+				view() << "[src.name] looks at [attacker.name]."
 				src.target = attacker
 		attacker.stamina = max(attacker.stamina - 10, 0)
 		attacker.canhit = FALSE
@@ -172,23 +196,23 @@
 /mob/living/proc/healhit(var/mob/living/attacker, var/obj/items/drugs/D)
 	if(!src.isDead && src.health < 100)
 		if(D.units > 0)
-			view() << "\blue \bold [attacker.name] использует [D.name] на [src.name]!"
+			view() << "\blue \bold [attacker.name] uses [D] on [src.name]!"
 			src.HealMe(D.hp+attacker.medskill*3)
 			D.units -= 1
 			if(D.units <= 0)
 				cut_hands()
 			if(D.isBandage && src.bleeding)
 				bleeding = 0
-				src << "\blue Кровотечение прекратилось."
-			attacker << "\bold Осталось [D.units] использований."
+				src << "\blue The bleeding has stopped."
+			attacker << "\bold [D.name] has [D.units] more units."
 	else
-		attacker << "\bold Не выйдет."
+		attacker << "\bold Won't help."
 
 /mob/living/proc/weaponhit(var/mob/living/attacker, var/obj/items/weapon/W)
 	if(!src.isDead && canhit && attacker.stamina >= 10)
 		if(prob(src.parrychance + src.dexterity))
 			if(attacker.ckey != src.ckey && !src.isUndead)
-				view() << "\red \bold [src.name] парирует [attacker.name]!"
+				view() << "\red \bold [src.name] parries [attacker.name]!"
 				view() << parry
 				canhit = FALSE
 				src.stamina -= 5
@@ -196,18 +220,24 @@
 				spawn(10)
 					canhit = TRUE
 		else
-			view() << "\red \bold [attacker.name] бьет [src.name] с помощью [W.name]!"
+			view() << "\red \bold [attacker.name] [W.attacklog] [src.name] with his [W.name]!"
 			soundpick(attacker,W)
 			view() << attacker.attacksound
 			src.HurtMe(max(W.power*attacker.strength/5, 0))
+			if(W.attacktype == "sharp" || W.attacktype == "slash")
+				if(prob(40))
+					new/obj/cleanable/blood(src.loc)
+					bleeding = 1
+					BloodLoss()
+					view() << "\red [src.name] starts bleeding!"
 			if(!attacker.isUndead)
 				attacker.calories -= 2
 			if(prob(5+attacker.strength) && !rests)
-				view() << "\red \bold КРИТИЧЕСКИЙ УДАР!"
+				view() << "\red \bold CRITICAL HIT!"
 				src.HurtMe(10)
 				src.fall_down()
 			if(src.isUndead && src.target != attacker)
-				view() << "[src.name] смотрит на [attacker.name]."
+				view() << "[src.name] looks at [attacker.name]."
 				src.target = attacker
 			canhit = FALSE
 			attacker.stamina -= 10
@@ -220,7 +250,7 @@
 		if(istype(I))
 			H.C.overlays += I
 			H.my_clothes_contents = I
-			view() << "\blue <B>[H.name]</B> надевает <B>[I.name]</B>."
+			view() << "\blue <B>[H.name]</B> puts on <B>[I]</B>."
 			I.layer = MOB_LAYER + 51
 			H.overlays += I.texture
 			H.dressed = 1
@@ -267,7 +297,7 @@
 		if(istype(I))
 			H.P.overlays += I
 			H.my_pocket_contents = I
-			view() << "<B>[H.name]</B> что-то сует в свой карман."
+			view() << "<B>[H.name]</B> puts something in his pocket."
 			I.layer = MOB_LAYER + 51
 			H.cut_hands()
 

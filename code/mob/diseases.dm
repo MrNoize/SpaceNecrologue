@@ -10,8 +10,8 @@
 		HurtMe(1)
 		if(prob(30))
 			if(canEmote)
-				F << "\red *Я замерзаю...*"
-				F.Me("кашляет")
+				F << "\red *It's so cold in here...*"
+				F.Me("coughs")
 				view() << cough
 				canEmote = FALSE
 				spawn(30)

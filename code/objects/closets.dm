@@ -5,6 +5,7 @@ var/global/list/objects = list()
 	var/closed = 1
 	var/mycloset = ""
 	var/transparent = 0
+	var/transfull = 0
 	var/list/obj/item/container = list()
 	density = 1
 	layer = 2
@@ -18,6 +19,13 @@ var/global/list/objects = list()
 	icon_state = "cabinet_closed"
 	mycloset = "cabinet"
 	transparent = 1
+
+/obj/structures/closets/hatch
+	name = "hatch"
+	icon_state = "hatch_closed"
+	mycloset = "hatch"
+	transfull = 1
+	density = 0
 
 /obj/structures/closets/toilet
 	name = "toilet"
@@ -67,7 +75,7 @@ var/global/list/objects = list()
 /obj/structures/closets/proc/open()
 	icon_state = "[mycloset]_opened"
 	closed = 0
-	if(transparent)
+	if(transparent || transfull)
 		density = 0
 	for(var/obj/items/I in contents)
 		I.Move(src.loc)
@@ -75,7 +83,8 @@ var/global/list/objects = list()
 /obj/structures/closets/proc/close()
 	icon_state = "[mycloset]_closed"
 	closed = 1
-	density = 1
+	if(!transfull)
+		density = 1
 	var/turf/T = src.loc
 	for(var/obj/items/I in T)
 		I.Move(src)

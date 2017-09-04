@@ -6,7 +6,7 @@
 	var/obj/items/weapon/mop/M = H.acthand
 	if(H in range(1, src))
 		if(H.acthand && istype(M))
-			view() << "\blue<B>[H.name]</B> вытирает пол швабронькой!"
+			view() << "\blue<B>[H.name]</B> cleans up the floor!"
 			cleaned++
 			del src
 
