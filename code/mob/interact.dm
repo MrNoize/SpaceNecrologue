@@ -59,9 +59,11 @@
 		my_lhand_contents = null
 	if(my_clothes_contents)
 		var/obj/items/clothing/C = my_clothes_contents
+		usr.overlays -= C
 		C.Move(src.loc)
-		C.layer = 4
+		C.layer = 5
 		my_clothes_contents = null
+		dressed = 0
 	if(my_pocket_contents)
 		var/obj/items/I = my_pocket_contents
 		I.Move(src.loc)

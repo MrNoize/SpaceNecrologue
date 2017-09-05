@@ -21,11 +21,11 @@
 	set name = "Respawn"
 	set category = "OOC"
 	if(client && isDead)
-		var/mob/living/human = null
-		human = new /mob/living/human(locate(/turf/menu))
-		if(human)
-			human.key = src.key
-			human.name = human.key
+		var/mob/default = null
+		default = new /mob/default(locate(/turf/menu))
+		if(default)
+			default.key = src.key
+			default.name = default.key
 			overlays = null
 	else
 		usr << "\red \bold You need to die first."

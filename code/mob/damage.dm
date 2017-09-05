@@ -26,6 +26,7 @@
 
 /mob/living/proc/die(var/mob/living/human/H = src)
 	killed++
+	dropinventory()
 	if(!rests)
 		H.fall_down()
 	if(isUndead)
