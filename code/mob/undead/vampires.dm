@@ -28,9 +28,9 @@
 	set name = "Reflection (10)"
 	if(blood >= 10)
 		blood -= 10
-		alpha = 5
+		alpha = 0
 		invisible = 1
-		view() << discipline
+		usr << discipline
 		spawn(300)
 			alpha = 255
 			invisible = 0
@@ -42,7 +42,7 @@
 	set name = "Blood Strength (30)"
 	if(blood >= 30)
 		blood -= 30
-		view() << discipline
+		usr << discipline
 		strength += 5
 		endurance += 3
 		rundelay += 1
@@ -70,7 +70,10 @@
 		if(bleeding)
 			bleeding = 0
 			usr << "\blue The bleeding has stopped."
+		if(move_debuff > 0)
+			move_debuff = 0
+			usr << "\blue You feel yourself fast again."
 		blood -= 20
-		view() << discipline
+		usr << discipline
 	else
 		usr << "<B>\red Not enough blood.</B>"

@@ -84,7 +84,7 @@
 
 /mob/living/attack_hand(var/mob/living/H = usr)
 	if(H in range(1, src))
-		if(!H.isDead)
+		if(!H.isDead && !invisible)
 			if(!H.acthand && H.act == "harm")
 				if(!H.fangsOut)
 					src.hit(usr)
@@ -113,7 +113,7 @@
 			usr << "\red \bold Обнаружено кровотечение."
 
 /mob/living/proc/push(var/mob/living/attacker)
-	if(!src.isDead && !attacker.isDead && attacker.canhit && attacker.stamina >= 10 && !rests && attacker.ckey != src.ckey)
+	if(!src.isDead && !attacker.isDead && attacker.canhit && attacker.stamina >= 10 && !rests && attacker.ckey != src.ckey && !attacker.invisible && !attacker.isUndead)
 		if(prob(src.dexterity*3) && !src.isUndead)
 			view() << "\red \bold [src.name] evades and pushes [attacker.name]!"
 			attacker.push(src)
@@ -124,34 +124,6 @@
 			attacker.canhit = FALSE
 			spawn(7)
 				attacker.canhit = TRUE
-
-/mob/living/proc/examine(var/mob/living/attacker)
-	view() << "[attacker.name] looks at [src.name]."
-	attacker << "\blue *--------*"
-	attacker << "\blue You can see <B>[src.name]</B>."
-	if(src.fangsOut)
-		attacker << "<font color=purple>\bold He has a pair of sharp fangs, sticking out of his mouth."
-	if(src.dressed)
-		attacker << "\blue He has a [src.my_clothes_contents.name] on his body."
-	if(src.my_rhand_contents)
-		attacker << "\blue There is a [src.my_rhand_contents.name] in his right hand."
-	if(src.my_lhand_contents)
-		attacker << "\blue There is a [src.my_lhand_contents.name] in his left hand."
-	if(src.health <= 40)
-		attacker << "\red \bold He is heavily wounded."
-	if(src.calories <= 50)
-		attacker << "\red He is severely malnourished."
-	if(src.bleeding)
-		attacker << "\red \bold He is bleeding."
-	if(src.blood <= 50)
-		attacker << "\red He looks pale."
-	if(src.strength > attacker.strength)
-		attacker << "\red He looks stronger than you."
-	if(src.act == "help")
-		attacker << "\blue He looks pretty friendly."
-	else
-		attacker << "\red \bold He looks aggressive"
-	attacker << "\blue *--------*"
 
 /mob/living/proc/bloodsuck(var/mob/living/attacker)
 	if(!attacker.isDead && attacker.canhit && attacker.ckey != src.ckey)
@@ -187,7 +159,7 @@
 				view() << "\red \bold CRITICAL HIT!"
 				src.HurtMe(10)
 				src.fall_down()
-			if(src.isUndead && src.target != attacker && !key)
+			if(src.isUndead && src.target != attacker && !src.key)
 				view() << "[src.name] looks at [attacker.name]."
 				src.target = attacker
 		attacker.stamina = max(attacker.stamina - 10, 0)
@@ -222,7 +194,7 @@
 				spawn(10)
 					canhit = TRUE
 		else
-			view() << "\red \bold [attacker.name] [W.attacklog] [src.name] with his [W.name]!"
+			view() << "\red \bold [attacker.name] [W.attacklog] [src.name] with [W.name]!"
 			soundpick(attacker,W)
 			view() << attacker.attacksound
 			src.HurtMe(max(W.power*attacker.strength/5, 0))

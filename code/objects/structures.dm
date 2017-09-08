@@ -28,7 +28,7 @@
 
 /obj/structures/act_by_item(var/mob/living/H, var/obj/items/weapon/W)
 	var/turf/T = src.loc
-	if(istype(W) && H.canhit && destructible)
+	if(istype(W) && H.canhit && destructible && !H.invisible)
 		view() << "\red<B>[H.name]</B> hits <B>[src]</B>!"
 		view() << hitsound
 		health -= W.power*1.5

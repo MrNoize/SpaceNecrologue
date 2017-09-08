@@ -3,20 +3,21 @@
 	var/friendly = 0
 	var/isUndead = 0
 	var/isFrozen = 0
+	var/isKid = 0
 
 /mob/living/zombie
+	name = "Unknown"
 	icon = 'mob.dmi'
 	icon_state = "zombie"
 	isUndead = 1
 	rundelay = 5
 	act = "harm"
 	New()
-		name_pick()
 		zombies++
 		skill_rand()
 		if(prob(2))
 			rundelay = 2
-		if(prob(30) && !isFrozen)
+		if(prob(20) && !isFrozen && !isKid)
 			icon_state = pick("zombie_blacksuit","zombie_biohazard")
 		.=..()
 		spawn(1)
@@ -26,6 +27,12 @@
 	icon_state = "frozen_zombie"
 	rundelay = 6
 	isFrozen = 1
+
+/mob/living/zombie/kid
+	icon_state = "zombie_kid"
+	rundelay = 3
+	isKid = 1
+	maxHealth = 65
 
 /mob/living/proc/zhit(var/mob/living/zombie)
 	if(!src.isDead && zombie.canhit && zombie.stamina >= 5 && !zombie.rests && zombie.key != src.key && !isUndead)

@@ -21,8 +21,9 @@
 	if(!V.isDead && !V.isUndead && !V.isVampire && V.isBitten)
 		spawn(600)
 			V.icon_state = "zombie"
-			V.rundelay = 5
+			V.rundelay = 3.5
 			V.isUndead = 1
 			V.isBitten = 0
+			rest()
 
 

@@ -11,6 +11,7 @@
 	var/spawnlocation = ""
 	layer = 5
 	New()
+		health = maxHealth
 		life()
 
 /mob/living/Stat(var/mob/living/H = usr)
@@ -101,10 +102,13 @@ proc/mob_controller()
 
 /mob/living/proc/life()
 	if(!isDead && health > 0 && calories != 0 && !isUndead && !isVampire)
-		calories -= 1
+		if(nature == "athlete")
+			calories -= 2
+		else
+			calories--
 		sleep(10)
 	if(isVampire)
-		blood -= 1
+		blood--
 		sleep(20)
 	if(calories <= 0 && !isDead && !isUndead && !isVampire)
 		HurtMe(0.2)
@@ -112,7 +116,7 @@ proc/mob_controller()
 		if(prob(15))
 			usr << "\red *I'm so damn hungry...*"
 	if(isUndead && ckey)
-		if(prob(10))
+		if(prob(5))
 			Me("moans")
 			view() << sound(pick('sounds/zombie_life1.ogg', 'sounds/zombie_life2.ogg', 'sounds/zombie_life3.ogg'))
 	if(!isDead && blood <= 50)

@@ -10,6 +10,18 @@
 	nutriments = 50
 	units = 3
 
+/obj/items/food/berrypie
+	name = "berry pie"
+	icon_state = "berrypie"
+	nutriments = 60
+	units = 3
+
+/obj/items/food/donut
+	name = "donut"
+	icon_state = "donut"
+	nutriments = 80
+	units = 1
+
 /obj/items/food/krasnogrib
 	name = "krasnogrib"
 	icon_state = "krasnogrib"

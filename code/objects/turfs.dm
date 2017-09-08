@@ -60,9 +60,20 @@
 	opacity = 1
 	layer = 8
 	attack_hand(var/mob/living/H = usr)
-		if(H in range(1, src))
-			if(H.acthand)
-				act_by_item(H, H.acthand)
+		if(H.acthand)
+			act_by_item(H, H.acthand)
+
+/turf/simulated/wall/act_by_item(var/mob/living/H = usr, var/obj/items/I)
+	var/obj/items/devices/demolisher/D = I
+	if(istype(D))
+		if(D.charge >= 5)
+			view() << "\bold[H.name] разбирает стену с помощью демолишера!"
+			view() << deconstruct
+			D.charge -= 5
+			new/turf/simulated/floor/plating(src)
+			usr << "<B>Осталось [D.charge] зар[ya]дников.</B>"
+		else
+			usr << "<B>Недостаточно зар[ya]дников.</B>"
 
 /turf/simulated/wall/wooden
 	name = "wooden wall"

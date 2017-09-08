@@ -13,6 +13,7 @@
 			isVampire = 1
 			vampire_check()
 		health()
+		skill_check()
 		x = pick(5,15,25)
 		y = 4
 		z = 1

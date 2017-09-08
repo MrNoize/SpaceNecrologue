@@ -15,5 +15,7 @@
 	luminosity = 6
 	layer = 12
 
-/obj/machinery/stove
-	name = "stove"
+/obj/machinery/computer/main
+	name = "main computer"
+	icon_state = "maincomputer"
+	density = 1

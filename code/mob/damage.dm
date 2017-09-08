@@ -1,5 +1,5 @@
 /mob/living
-	var/health = 100
+	var/health
 	var/maxHealth = 100
 	var/bleeding = 0
 	var/blood = 100

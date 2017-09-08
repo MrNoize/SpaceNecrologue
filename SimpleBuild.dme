@@ -15,7 +15,7 @@
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
-#include "testmap.dmm"
+#include "city.dmm"
 #include "code\defines.dm"
 #include "code\effects\cleanable.dm"
 #include "code\effects\effects.dm"
@@ -24,6 +24,7 @@
 #include "code\mob\AI.dm"
 #include "code\mob\damage.dm"
 #include "code\mob\diseases.dm"
+#include "code\mob\examine.dm"
 #include "code\mob\hud.dm"
 #include "code\mob\human.dm"
 #include "code\mob\interact.dm"
@@ -47,6 +48,7 @@
 #include "code\objects\decals.dm"
 #include "code\objects\doors.dm"
 #include "code\objects\flora.dm"
+#include "code\objects\forge.dm"
 #include "code\objects\structures.dm"
 #include "code\objects\turfs.dm"
 #include "code\objects\items\clothing.dm"

@@ -16,10 +16,10 @@
 	parrychance = meleeskill*20
 
 /mob/living/proc/skill_rand()
-	meleeskill = rand(1, 2)
-	craftskill = rand(1, 2)
+	meleeskill = rand(0, 2)
+	craftskill = rand(0, 2)
 	medskill = rand(0, 1)
-	miningskill = rand(1, 2)
+	miningskill = rand(0, 2)
 	strength = rand(5, 8)
 	endurance = rand(5, 8)
 	dexterity = rand(5, 8)

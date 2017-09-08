@@ -22,20 +22,33 @@
 		char.key = src.key
 		del(src)
 
+/mob/living
+	var/nature
+
 /mob/living/human/proc/nature_pick()
-	var/pick = input("Choose your nature") in list("Snob", "Oldtimer", "Athlete") as text|null
+	var/pick = input("Choose your nature") in list("Snob", "Punk", "Oldtimer", "Athlete") as text|null
 	if(pick)
 		switch(pick)
 			if("Snob")
-				dexterity++
+				dexterity += 2
 				usr.overlays += "snob_face"
+				nature = "snob"
 			if("Oldtimer")
-				move_debuff += 0.5
+				rundelay += 0.5
 				usr.overlays += "oldtimer_face"
 				craftskill++
 				miningskill++
+				medskill++
+				nature = "oldtimer"
 			if("Athlete")
-				rundelay -= 0.2
+				rundelay -= 0.3
 				usr.overlays += "athlete_face"
 				strength++
+				endurance += 2
+				nature = "athlete"
+			if("Punk")
+				usr.overlays += "punk_face"
+				meleeskill++
+				dexterity++
 				endurance++
+				nature = "punk"

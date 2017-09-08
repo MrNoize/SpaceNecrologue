@@ -68,6 +68,13 @@
 	attacktype = "hit"
 	attacklog = "hits"
 
+/obj/items/weapon/pipe
+	name = "pipe"
+	icon_state = "pipe"
+	power = 14
+	attacktype = "hit"
+	attacklog = "hits"
+
 /obj/items/weapon/shard
 	name = "shard"
 	icon_state = "shard1"
