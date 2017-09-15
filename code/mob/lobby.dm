@@ -26,29 +26,36 @@
 	var/nature
 
 /mob/living/human/proc/nature_pick()
-	var/pick = input("Choose your nature") in list("Snob", "Punk", "Oldtimer", "Athlete") as text|null
+	var/pick = input("Choose your nature") in list("Snob", "Punk", "Teacher", "Oldtimer", "Athlete") as text|null
 	if(pick)
 		switch(pick)
 			if("Snob")
-				dexterity += 2
+				DX += 4
 				usr.overlays += "snob_face"
-				nature = "snob"
+				nature = "Snob"
+			if("Teacher")
+				rundelay -= 0.3
+				usr.overlays += "teacher_face"
+				craftskill += 2
+				miningskill += 2
+				medskill += 2
+				nature = "Teacher"
 			if("Oldtimer")
 				rundelay += 0.5
 				usr.overlays += "oldtimer_face"
 				craftskill++
 				miningskill++
 				medskill++
-				nature = "oldtimer"
+				nature = "Oldtimer"
 			if("Athlete")
 				rundelay -= 0.3
 				usr.overlays += "athlete_face"
-				strength++
-				endurance += 2
-				nature = "athlete"
+				ST++
+				EN += 2
+				nature = "Athlete"
 			if("Punk")
 				usr.overlays += "punk_face"
 				meleeskill++
-				dexterity++
-				endurance++
-				nature = "punk"
+				DX++
+				EN++
+				nature = "Punk"

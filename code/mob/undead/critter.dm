@@ -12,13 +12,30 @@
 	isUndead = 1
 	rundelay = 5
 	act = "harm"
+	nature = "Zombie"
 	New()
 		zombies++
 		skill_rand()
 		if(prob(2))
 			rundelay = 2
-		if(prob(20) && !isFrozen && !isKid)
-			icon_state = pick("zombie_blacksuit","zombie_biohazard")
+		if(prob(20) && !isKid)
+			overlays += pick("black_suit","shirt_suit","jacket_suit","pink_suit")
+		.=..()
+		spawn(1)
+			zombieAI()
+
+/mob/living/zombie/strong
+	icon_state = "zombie+"
+	rundelay = 4
+	lvl = 6
+	New()
+		zombies++
+		ST = rand(10, 13)
+		EN = rand(9, 12)
+		DX = rand(4, 6)
+		HP = 15
+		stamina = maxStamina
+		skill_check()
 		.=..()
 		spawn(1)
 			zombieAI()
@@ -36,14 +53,14 @@
 
 /mob/living/proc/zhit(var/mob/living/zombie)
 	if(!src.isDead && zombie.canhit && zombie.stamina >= 5 && !zombie.rests && zombie.key != src.key && !isUndead)
-		if(prob(src.dexterity*4))
+		if(prob(src.DX*4))
 			view() << "\red \bold [zombie.name] tries to hit [src.name] with his claws!"
 			view() << "\red \bold [src.name] dodges the strike!"
 			view() << miss
 		else
 			view() << "\red \bold [zombie.name] tears [src.name]'s flesh with his claws!"
 			view() << zombiehit
-			src.HurtMe(max(zombie.strength*1.3, 0))
+			src.HurtMe(max(zombie.ST*1.3, 0))
 			if(prob(40))
 				new/obj/cleanable/blood(src.loc)
 				bleeding = 1
@@ -58,9 +75,10 @@
 
 /mob/living/proc/zbite(var/mob/living/zombie)
 	if(!src.isDead && zombie.canhit && !zombie.rests && zombie.key != src.key)
-		if(prob(src.dexterity*4))
+		if(prob(src.DX*4))
 			view() << "\red \bold [zombie.name] tries to bite [src.name]!"
 			view() << "\red \bold [src.name] dodges the bite!"
+			src.expUp(1)
 			view() << miss
 		else
 			view() << "\red \bold [zombie.name] bites [src.name]!"

@@ -17,7 +17,7 @@
 	if(Z.canhit && destructible)
 		view() << "\red<B>[Z.name]</B> hits <B>[src]</B>!"
 		view() << hitsound
-		health -= Z.strength*4
+		health -= Z.ST*4
 		Z.canhit = FALSE
 		spawn(10)
 			Z.canhit = TRUE
@@ -55,10 +55,9 @@
 			act_by_item(H, H.acthand)
 
 /obj/structures/rack/act_by_item(var/mob/living/H = usr, var/obj/items/I)
-	if(H.act == "help")
-		I.loc = src.loc
-		H.cut_hands()
-		I.layer = 4
+	I.loc = src.loc
+	H.cut_hands()
+	I.layer = 4
 
 /obj/structures/grille
 	name = "grille"
@@ -127,10 +126,9 @@
 			act_by_item(H, H.acthand)
 
 /obj/structures/table/act_by_item(var/mob/living/H = usr, var/obj/items/I)
-	if(H.act == "help")
-		I.loc = src.loc
-		H.cut_hands()
-		I.layer = 4
+	I.loc = src.loc
+	H.cut_hands()
+	I.layer = 4
 
 /obj/structures/chair
 	name = "chair"

@@ -8,7 +8,7 @@
 		usr << "\bold \red You're a vampire."
 		usr.verbs+=new/mob/living/vampire/verb/invis
 		usr.verbs+=new/mob/living/vampire/verb/regeneration
-		usr.verbs+=new/mob/living/vampire/verb/blood_strength
+		usr.verbs+=new/mob/living/vampire/verb/blood_ST
 		usr.verbs+=new/mob/living/vampire/verb/fangs
 
 /mob/living/vampire/verb/fangs()
@@ -37,24 +37,24 @@
 	else
 		usr << "\red Not enough blood."
 
-/mob/living/vampire/verb/blood_strength()
+/mob/living/vampire/verb/blood_ST()
 	set category = "Vampire"
 	set name = "Blood Strength (30)"
 	if(blood >= 30)
 		blood -= 30
 		usr << discipline
-		strength += 5
-		endurance += 3
+		ST += 5
+		EN += 3
 		rundelay += 1
 		skill_check()
 		usr << "\bold You feel much stronger."
 		spawn(500)
 			usr << "\bold You're weak again."
-			strength -= 5
+			ST -= 5
 			if(prob(20))
-				strength -= 1
-				move_debuff += 1
-			endurance -= 3
+				ST -= 1
+				move_debuff += 0.5
+			EN -= 3
 			rundelay -= 1
 			skill_check()
 	else

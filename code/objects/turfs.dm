@@ -16,6 +16,8 @@
 			new /mob/living/zombie(src)
 		if(prob(0.1))
 			new /mob/living/zombie/frozen(src)
+		if(prob(0.1))
+			new /mob/living/zombie/strong(src)
 		if(prob(0.5))
 			new /obj/structures/bush/berries(src)
 		if(prob(1))
@@ -93,7 +95,7 @@
 			if(istype(P))
 				view() << "\red \bold[H.name] hits [src.name] with his pickaxe!"
 				view() << pickaxe
-				health -= P.power+H.strength
+				health -= P.power+H.ST
 				H.stamina -= 5
 				H.calories -= 5
 				if(health <= 0)

@@ -73,7 +73,7 @@ var/delay = 0
 				try_to_break()
 
 	else
-		usr << "<B>Не поддаетс[ya]!</B>"
+		usr << "<B>Won't budge.</B>"
 
 /obj/machinery/doors/proc/open()
 	icon_state = "[mydoor]_opened"

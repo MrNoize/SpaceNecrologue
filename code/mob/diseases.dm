@@ -7,7 +7,7 @@
 
 /mob/living/proc/freeze(var/mob/living/F)
 	if(!isDead && !isUndead && !isVampire)
-		HurtMe(1)
+		HurtMe(2)
 		if(prob(30))
 			if(canEmote)
 				F << "\red *It's so cold in here...*"

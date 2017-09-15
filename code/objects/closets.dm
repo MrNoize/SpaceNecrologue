@@ -32,7 +32,6 @@ var/global/list/objects = list()
 	icon_state = "toilet_closed"
 	mycloset = "toilet"
 	transparent = 1
-	density = 1
 
 /obj/structures/closets/fridge
 	name = "fridge"
@@ -83,7 +82,7 @@ var/global/list/objects = list()
 /obj/structures/closets/proc/close()
 	icon_state = "[mycloset]_closed"
 	closed = 1
-	if(!transfull)
+	if(!transfull || !transparent)
 		density = 1
 	var/turf/T = src.loc
 	for(var/obj/items/I in T)

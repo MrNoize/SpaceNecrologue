@@ -19,7 +19,8 @@ var/sound/cough = sound('sounds/cough.ogg')
 var/sound/discipline = sound('sounds/discipline.ogg')
 var/sound/fangs = sound('sounds/fangs.ogg')
 var/sound/bloodsuck = sound('sounds/bloodsuck.ogg')
-var/sound/bite = sound('bite.ogg')
+var/sound/bite = sound('sounds/bite.ogg')
+var/sound/lvlup = sound('sounds/powerup.wav')
 
 /mob/living
 	var/attacksound

@@ -5,25 +5,24 @@
 	var/isDead = 0
 	var/calories = 300
 	var/stamina
-	var/stamina_max = 100
+	var/maxStamina = 100
 	var/canhit = 1
 	var/mymob = ""
 	var/spawnlocation = ""
 	layer = 5
-	New()
-		health = maxHealth
-		life()
 
 /mob/living/Stat(var/mob/living/H = usr)
 	..()
 	if(statpanel("Status"))
-		stat(null, "ST: [strength]")
-		stat(null, "EN: [endurance]")
-		stat(null, "DX: [dexterity]")
+		stat(null, "ST: [ST]")
+		stat(null, "EN: [EN]")
+		stat(null, "DX: [DX]")
+		stat(null, "HP: [HP]")
 		if(isVampire)
 			stat(null, "Blood: [blood]")
 		stat(null, "Calories: [calories]")
 		stat(null, "Stamina: [stamina]")
+		stat(null, "Exp: [exp]/[needExp]")
 		stat(null, "Daytime: [daytime]")
 
 /mob/living/verb/check()
@@ -31,9 +30,10 @@
 	set category = "IC"
 	usr << "<B>*---------*</B>"
 	usr << "<B>STATS:</B>"
-	usr << "<B><font color=purple>Strength - [strength]</B>"
-	usr << "<B><font color=purple>Endurance - [endurance]</B>"
-	usr << "<B><font color=purple>Dexterity - [dexterity]</B>"
+	usr << "<B><font color=purple>ST - [ST]</B>"
+	usr << "<B><font color=purple>EN - [EN]</B>"
+	usr << "<B><font color=purple>DX - [DX]</B>"
+	usr << "<B><font color=purple>HP - [HP]</B>"
 	usr << "<B>About me:</B>"
 	if(meleeskill > 0)
 		usr << "<B><font color=purple>Melee - [meleeskill]</B>"
@@ -54,38 +54,38 @@
 	if(!isDead)
 		spawn(0.1)
 			health()
-		if(health >= 100)
+		if(health >= maxHealth)
 			He.icon_state = "health10"
-		if(health <= 90)
+		if(health <= maxHealth/1.1)
 			He.icon_state = "health9"
-		if(health <= 80)
+		if(health <= maxHealth/1.2)
 			He.icon_state = "health8"
-		if(health <= 70)
+		if(health <= maxHealth/1.4)
 			He.icon_state = "health7"
-		if(health <= 60)
+		if(health <= maxHealth/1.6)
 			He.icon_state = "health6"
-		if(health <= 50)
+		if(health <= maxHealth/2)
 			He.icon_state = "health5"
-		if(health <= 40)
+		if(health <= maxHealth/2.5)
 			He.icon_state = "health4"
-		if(health <= 30)
+		if(health <= maxHealth/3.3)
 			He.icon_state = "health3"
-		if(health <= 20)
+		if(health <= maxHealth/5)
 			He.icon_state = "health2"
-		if(health <= 10)
+		if(health <= maxHealth/10)
 			He.icon_state = "health1"
-		if(health <= 0)
+		if(health <= maxHealth-maxHealth)
 			He.icon_state = "health0"
 
 proc/mob_controller()
 	for(var/mob/living/M in world)
 		if(!M.isDead)
-			if(M.stamina < M.stamina_max)
+			if(M.stamina < M.maxStamina)
 				M.stamina += M.stamina_regen
-				if(M.stamina > M.stamina_max)
-					M.stamina = M.stamina_max
-			if(M.health < 100 && M.calories > 250 && !M.isUndead)
-				M.health += 0.1
+				if(M.stamina > M.maxStamina)
+					M.stamina = M.maxStamina
+			if(M.health < M.maxHealth && M.calories > 250 && !M.isUndead)
+				M.health += 0.2
 			if(!M.isUndead && M.blood < 100 && M.calories > 250)
 				M.blood += 2
 			if(M.health > M.maxHealth)
@@ -97,12 +97,15 @@ proc/mob_controller()
 				M.blood = 0
 			if(M.blood > 100)
 				M.blood = 100
+			if(M.exp >= M.needExp)
+				M.lvlUp()
 			if(M.isVampire)
 				M.calories = 0
+			M.life()
 
 /mob/living/proc/life()
 	if(!isDead && health > 0 && calories != 0 && !isUndead && !isVampire)
-		if(nature == "athlete")
+		if(nature == "Athlete")
 			calories -= 2
 		else
 			calories--
@@ -130,7 +133,6 @@ proc/mob_controller()
 		stamina = 0
 	if(!dressed && !isUndead)
 		try_to_cold(30)
-	spawn(10) life()
 
 /mob/living/var/canrest = 1
 

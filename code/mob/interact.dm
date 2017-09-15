@@ -114,8 +114,9 @@
 
 /mob/living/proc/push(var/mob/living/attacker)
 	if(!src.isDead && !attacker.isDead && attacker.canhit && attacker.stamina >= 10 && !rests && attacker.ckey != src.ckey && !attacker.invisible && !attacker.isUndead)
-		if(prob(src.dexterity*3) && !src.isUndead)
+		if(prob(src.DX*3) && !src.isUndead)
 			view() << "\red \bold [src.name] evades and pushes [attacker.name]!"
+			src.exp++
 			attacker.push(src)
 		else
 			view() << "\red \bold [attacker.name] pushes [src.name]!"
@@ -127,7 +128,7 @@
 
 /mob/living/proc/bloodsuck(var/mob/living/attacker)
 	if(!attacker.isDead && attacker.canhit && attacker.ckey != src.ckey)
-		if(prob(src.dexterity*5) && !src.isUndead)
+		if(prob(src.DX*5) && !src.isUndead)
 			view() << "\red \bold [attacker.name] tries to bite [src.name]'s neck!"
 			view() << "\red \bold [src.name] evades the attack!"
 			view() << miss
@@ -145,18 +146,19 @@
 
 /mob/living/proc/hit(var/mob/living/attacker)
 	if(!src.isDead && attacker.canhit && attacker.stamina >= 5)
-		if(prob(src.dexterity*4) && !src.isUndead && attacker.ckey != src.ckey)
+		if(prob(src.DX*4) && !src.isUndead && attacker.ckey != src.ckey)
 			view() << "\red \bold [attacker.name] tries to punch [src.name]!"
 			view() << "\red \bold [src.name] dodges the strike!"
 			view() << miss
 		else
 			view() << "\red \bold [attacker.name] punches [src.name]!"
 			view() << sound(pick('sounds/punch1.ogg','sounds/punch2.ogg','sounds/punch3.ogg'))
-			src.HurtMe(max(attacker.strength*1.3, 0))
+			src.HurtMe(max(attacker.ST*1.3, 0))
 			if(!attacker.isUndead)
 				attacker.calories -= 2
-			if(prob(5+attacker.strength) && !rests)
+			if(prob(5+attacker.ST) && !rests)
 				view() << "\red \bold CRITICAL HIT!"
+				attacker.expUp(1)
 				src.HurtMe(10)
 				src.fall_down()
 			if(src.isUndead && src.target != attacker && !src.key)
@@ -168,7 +170,7 @@
 			attacker.canhit = TRUE
 
 /mob/living/proc/healhit(var/mob/living/attacker, var/obj/items/drugs/D)
-	if(!src.isDead && src.health < 100)
+	if(!src.isDead && src.health < src.maxHealth)
 		if(D.units > 0)
 			view() << "\blue \bold [attacker.name] uses [D] on [src.name]!"
 			src.HealMe(D.hp+attacker.medskill*3)
@@ -184,9 +186,10 @@
 
 /mob/living/proc/weaponhit(var/mob/living/attacker, var/obj/items/weapon/W)
 	if(!src.isDead && canhit && attacker.stamina >= 10)
-		if(prob(src.parrychance + src.dexterity))
+		if(prob(src.parrychance + src.DX))
 			if(attacker.ckey != src.ckey && !src.isUndead)
 				view() << "\red \bold [src.name] parries [attacker.name]!"
+				src.expUp(1)
 				view() << parry
 				canhit = FALSE
 				src.stamina -= 5
@@ -197,7 +200,7 @@
 			view() << "\red \bold [attacker.name] [W.attacklog] [src.name] with [W.name]!"
 			soundpick(attacker,W)
 			view() << attacker.attacksound
-			src.HurtMe(max(W.power*attacker.strength/5, 0))
+			src.HurtMe(max(W.power*attacker.ST/5, 0))
 			if(W.attacktype == "sharp" || W.attacktype == "slash")
 				if(prob(40))
 					new/obj/cleanable/blood(src.loc)
@@ -206,8 +209,9 @@
 					view() << "\red [src.name] starts bleeding!"
 			if(!attacker.isUndead)
 				attacker.calories -= 2
-			if(prob(5+attacker.strength) && !rests)
+			if(prob(5+attacker.ST) && !rests)
 				view() << "\red \bold CRITICAL HIT!"
+				attacker.expUp(1)
 				src.HurtMe(10)
 				src.fall_down()
 			if(src.isUndead && src.target != attacker)

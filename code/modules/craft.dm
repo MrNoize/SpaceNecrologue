@@ -2,6 +2,7 @@
 	if(istype(M))
 		if(prob(H.craftskill*30))
 			view() << "\bold[H.name] creates the girder!"
+			H.expUp(1)
 			new/obj/structures/girder(src.loc)
 		else
 			view() << "\bold[H.name] broke the materials!"
@@ -16,6 +17,7 @@
 	if(istype(M))
 		if(prob(H.craftskill*30))
 			view() << "\bold[H.name] modifies [src]!"
+			H.expUp(2)
 			new/obj/items/weapon/bat/lucille(src.loc)
 		else
 			view() << "\bold[H.name] broke the materials!"
@@ -26,6 +28,7 @@
 	if(istype(B))
 		if(prob(H.craftskill*30))
 			view() << "\bold[H.name] creates a cartridge!"
+			H.expUp(1)
 			new/obj/items/cartridge(src.loc)
 		else
 			view() << "\bold[H.name] broke the materials!"
@@ -36,6 +39,7 @@
 	if(istype(P))
 		if(prob(H.craftskill*30))
 			view() << "\bold[H.name] creates a baseball bat!"
+			H.expUp(1)
 			new/obj/items/weapon/bat(src.loc)
 		else
 			view() << "\bold[H.name] broke the materials!"
