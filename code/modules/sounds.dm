@@ -33,6 +33,6 @@ proc/soundpick(var/mob/living/H, var/obj/items/weapon/W)
 	if(W.attacktype == "slash")
 		H.attacksound = sound(pick('sounds/slash1.ogg','sounds/slash2.ogg','sounds/slash3.ogg','sounds/slash4.ogg','sounds/slash5.ogg'))
 
-mob/proc/playsound(sound/S as sound)
+proc/playsound(sound/S as sound)
 	for(var/mob/M in view(10))
 		M << S

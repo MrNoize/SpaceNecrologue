@@ -14,14 +14,13 @@
 /mob/living/vampire/verb/fangs()
 	set category = "Vampire"
 	set name = "Fangs"
+	playsound(fangs)
 	if(!fangsOut)
 		fangsOut = 1
-		view() << fangs
-		view() << "<B>[src.name]</B> reveals his gigantic fangs!"
+		msg("<B>[src.name]</B> reveals his gigantic fangs!")
 	else
 		fangsOut = 0
-		view() << fangs
-		view() << "<B>[src.name]</B> hides his fangs."
+		msg("<B>[src.name]</B> hides his fangs.")
 
 /mob/living/vampire/verb/invis()
 	set category = "Vampire"

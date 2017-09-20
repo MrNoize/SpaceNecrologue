@@ -36,37 +36,36 @@ var/delay = 0
 	var/obj/items/weapon/screwdriver/S = I
 	var/obj/items/weapon/plank/P = I
 	if(istype(P))
-		view() << "\bold[user.name] nails the board to the [src.name]!"
-		view() << deconstruct
+		msg("\bold[user.name] nails the board to the [src.name]!")
+		playsound(deconstruct)
 		new/obj/structures/planks(src.loc)
 		user.cut_hands()
 	if(istype(S))
 		if(broken)
 			if(prob(user.craftskill*30))
-				view() << "<B>[user.name]</B> fixes the door!</B>"
+				msg("<B>[user.name]</B> fixes the door!</B>")
 				broken = 0
 			else
-				view() << "\red<B>CRITICAL FAILURE! [user.name] breaks the screwdriver!</B>"
+				msg("\red<B>CRITICAL FAILURE! [user.name] breaks the screwdriver!</B>")
 				user.cut_hands()
 
 /obj/machinery/doors/proc/try_to_break()
 	if(prob(1))
-		view() << "<B>[src.name]</B> breaks!"
+		msg("<B>[src.name]</B> breaks!")
 		broken = 1
 
 /obj/machinery/doors/proc/proceed(var/mob/living/user = usr)
 	if(!broken)
 		if(!working)
+			playsound(mysound)
 			if(closed)
 				flick("[mydoor]_opening", src)
-				view() << mysound
 				working = 1
 				sleep(6)
 				open()
 				try_to_break()
 			else
 				flick("[mydoor]_closing", src)
-				view() << mysound
 				working = 1
 				sleep(6)
 				close()

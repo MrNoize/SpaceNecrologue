@@ -121,7 +121,7 @@ proc/mob_controller()
 	if(isUndead && ckey)
 		if(prob(5))
 			Me("moans")
-			view() << sound(pick('sounds/zombie_life1.ogg', 'sounds/zombie_life2.ogg', 'sounds/zombie_life3.ogg'))
+			playsound(pick('sounds/zombie_life1.ogg', 'sounds/zombie_life2.ogg', 'sounds/zombie_life3.ogg'))
 	if(!isDead && blood <= 50)
 		HurtMe(0.2)
 		stamina--
@@ -146,7 +146,7 @@ proc/mob_controller()
 			spawn(10)
 				canrest = 1
 		else
-			view() << "\blue<B>[src.name]</B> stands up."
+			msg("\blue<B>[src.name]</B> stands up.")
 			canrest = 0
 			sleep(10)
 			if(health > 0)
@@ -165,7 +165,7 @@ proc/mob_controller()
 		var/matrix/Ma = matrix()
 		Ma.Turn(90)
 		transform = Ma
-		view() << "<B>[src.name]</B> falls on the ground!"
+		msg("<B>[src.name]</B> falls on the ground!")
 		if(key)
 			Re.icon_state = "rest_down"
 		rests = 1

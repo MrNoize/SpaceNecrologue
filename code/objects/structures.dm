@@ -15,8 +15,8 @@
 /obj/structures/proc/zact(var/mob/living/Z)
 	var/turf/T = src.loc
 	if(Z.canhit && destructible)
-		view() << "\red<B>[Z.name]</B> hits <B>[src]</B>!"
-		view() << hitsound
+		msg("\red<B>[Z.name]</B> hits <B>[src]</B>!")
+		playsound(hitsound)
 		health -= Z.ST*4
 		Z.canhit = FALSE
 		spawn(10)
@@ -29,8 +29,8 @@
 /obj/structures/act_by_item(var/mob/living/H, var/obj/items/weapon/W)
 	var/turf/T = src.loc
 	if(istype(W) && H.canhit && destructible && !H.invisible)
-		view() << "\red<B>[H.name]</B> hits <B>[src]</B>!"
-		view() << hitsound
+		msg("\red<B>[H.name]</B> hits <B>[src]</B>!")
+		playsound(hitsound)
 		health -= W.power*1.5
 		H.canhit = FALSE
 		spawn(10)
@@ -85,12 +85,12 @@
 		if(H in range(1, src))
 			if(!H.acthand && !H.isDead)
 				if(!opened)
-					view() << "\bold[H.name] opens the window!"
+					msg("\bold[H.name] opens the window!")
 					icon_state = "window_opened"
 					density = 0
 					opened = 1
 				else
-					view() << "\bold[H.name] closes the window!"
+					msg("\bold[H.name] closes the window!")
 					icon_state = "window"
 					density = 1
 					opened = 0
@@ -99,8 +99,8 @@
 	act_by_item(var/mob/living/H, var/obj/items/weapon/W)
 		var/obj/items/weapon/plank/P = W
 		if(istype(P))
-			view() << "\bold[H.name] nails the board to the window!"
-			view() << deconstruct
+			msg("\bold[H.name] nails the board to the window!")
+			playsound(deconstruct)
 			new/obj/structures/planks(src)
 			H.cut_hands()
 	New()
@@ -120,7 +120,7 @@
 /obj/structures/table/attack_hand(var/mob/living/H = usr)
 	if(H in range(1, src))
 		if(!H.acthand && H.act == "harm" && H.loc != src.loc)
-			view() << "\bold[H.name] jumps on the table!"
+			msg("\bold[H.name] jumps on the table!")
 			H.loc = src.loc
 		if(H.acthand)
 			act_by_item(H, H.acthand)
@@ -148,21 +148,19 @@
 				var/obj/items/metal/M = H.acthand
 				var/obj/items/weapon/shard/S = H.acthand
 				var/obj/items/weapon/plank/P = H.acthand
+				playsound(deconstruct)
 				if(istype(P))
-					view() << "\bold[H.name] creates a wall!"
-					view() << deconstruct
+					msg("\bold[H.name] creates a wall!")
 					new/turf/simulated/wall/wooden(T)
 					H.cut_hands()
 					del src
 				if(istype(M))
-					view() << "\bold[H.name] creates a wall!"
-					view() << deconstruct
+					msg("\bold[H.name] creates a wall!")
 					new/turf/simulated/wall(T)
 					H.cut_hands()
 					del src
 				if(istype(S))
-					view() << "\bold[H.name] creates a window!"
-					view() << deconstruct
+					msg("\bold[H.name] creates a window!")
 					new/turf/simulated/wall/window(T)
 					H.cut_hands()
 					del src

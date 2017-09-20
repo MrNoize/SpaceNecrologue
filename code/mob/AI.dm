@@ -18,7 +18,7 @@
 					step_to(src, target, 0, 10)
 					sleep(rundelay*time_scale)
 				else
-					if(prob(90))
+					if(prob(95))
 						target.zhit(src)
 					else
 						target.zbite(src)
@@ -37,7 +37,7 @@
 				sleep(rundelay)
 		sleep(rundelay*time_scale)
 		if(prob(10))
-			view() << sound(pick('sounds/zombie_life1.ogg', 'sounds/zombie_life2.ogg', 'sounds/zombie_life3.ogg'))
+			playsound(pick('sounds/zombie_life1.ogg', 'sounds/zombie_life2.ogg', 'sounds/zombie_life3.ogg'))
 		if(rests)
 			rest()
 		if(isFrozen)

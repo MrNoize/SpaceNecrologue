@@ -1,7 +1,7 @@
 /obj/items/food/proc/consume(var/mob/living/H = usr)
 	if(units > 0 && H.calories < 300 && !H.isVampire)
-		view() << "\red \bold [H.name] consumes [src.name]!"
-		view() << eat
+		msg("\red \bold [H.name] consumes [src.name]!")
+		playsound(eat)
 		units--
 		if(nutriments)
 			H.calories += nutriments

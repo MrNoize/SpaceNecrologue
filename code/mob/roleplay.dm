@@ -8,6 +8,10 @@
 				msg = fix255(msg)
 				M << "<B>[usr]</B> says, \"[msg]\""
 
+proc/msg(txt)
+	for(var/mob/living/H in range(10))
+		H << txt
+
 //EMOTE//
 /mob/living
 	var/canEmote = 1
@@ -17,7 +21,7 @@
 	set category = "Emote"
 	if(canEmote && !isDead)
 		Me("sighs")
-		view() << sigh
+		playsound(sigh)
 		canEmote = FALSE
 		spawn(30)
 			canEmote = TRUE
@@ -27,7 +31,7 @@
 	set category = "Emote"
 	if(canEmote && !isDead)
 		Me("laughs")
-		view() << sound(pick('sounds/laugh_1.ogg','sounds/laugh_2.ogg','sounds/laugh_3.ogg'))
+		playsound(pick('sounds/laugh_1.ogg','sounds/laugh_2.ogg','sounds/laugh_3.ogg'))
 		canEmote = FALSE
 		spawn(30)
 			canEmote = TRUE
@@ -47,4 +51,4 @@
 	set category = "IC"
 	msg = fix255(msg)
 	if(!msg||msg==""||msg==null) return
-	view() << "<B>[src.name]</B> [msg].</B>"
+	msg("<B>[src.name]</B> [msg].</B>")

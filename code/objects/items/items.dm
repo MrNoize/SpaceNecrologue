@@ -34,12 +34,12 @@
 	var/obj/items/cartridge/C = I
 	var/obj/items/devices/analyzer/A = I
 	if(istype(C))
-		view() << "<B>[H.name]</B> charges [src]!"
-		view() << click
+		msg("<B>[H.name]</B> charges [src]!")
+		playsound(click)
 		charge += C.charges
-		usr << "<B>Demolisher has [charge] charges left зар[ya]дов.</B>"
+		usr << "<B>[charge] charges left.</B>"
 		H.cut_hands()
 	if(istype(A))
-		view() << "<B>[H.name]</B> scans <B>[src.name]</B>!"
+		msg("<B>[H.name]</B> scans <B>[src.name]</B>!")
 		usr << "<B>Charges left: [charge]</B>"
 

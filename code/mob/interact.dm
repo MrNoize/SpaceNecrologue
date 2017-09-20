@@ -91,7 +91,7 @@
 				else
 					src.bloodsuck(usr)
 			if(!H.acthand && H.act == "help")
-				view() << "\blue <B>[H.name]</B> hugs <B>[src.name]</B>!"
+				msg("\blue <B>[H.name]</B> hugs <B>[src.name]</B>!")
 			if(H.acthand)
 				act_by_item(H, H.acthand)
 
@@ -104,22 +104,22 @@
 	if(istype(D) && H.act == "help")
 		healhit(usr, H.acthand)
 	if(istype(W) && H.act == "help")
-		view() << "\blue <B>[H.name]</B> dances with [W.name]!"
+		msg("\blue <B>[H.name]</B> dances with [W.name]!")
 	if(istype(A))
-		view() << "\blue <B>[H.name]</B> scans <B>[src.name]</B>!"
+		msg("\blue <B>[H.name]</B> scans <B>[src.name]</B>!")
 		usr << "\blue Health: [src.health]"
 		usr << "\blue Blood Level: [src.blood]%"
 		if(src.bleeding)
-			usr << "\red \bold Обнаружено кровотечение."
+			usr << "\red \bold [src.name] is bleeding."
 
 /mob/living/proc/push(var/mob/living/attacker)
 	if(!src.isDead && !attacker.isDead && attacker.canhit && attacker.stamina >= 10 && !rests && attacker.ckey != src.ckey && !attacker.invisible && !attacker.isUndead)
 		if(prob(src.DX*3) && !src.isUndead)
-			view() << "\red \bold [src.name] evades and pushes [attacker.name]!"
+			msg("\red \bold [src.name] evades and pushes [attacker.name]!")
 			src.exp++
 			attacker.push(src)
 		else
-			view() << "\red \bold [attacker.name] pushes [src.name]!"
+			msg("\red \bold [attacker.name] pushes [src.name]!")
 			fall_down()
 			attacker.stamina -= 10
 			attacker.canhit = FALSE
@@ -129,13 +129,13 @@
 /mob/living/proc/bloodsuck(var/mob/living/attacker)
 	if(!attacker.isDead && attacker.canhit && attacker.ckey != src.ckey)
 		if(prob(src.DX*5) && !src.isUndead)
-			view() << "\red \bold [attacker.name] tries to bite [src.name]'s neck!"
-			view() << "\red \bold [src.name] evades the attack!"
-			view() << miss
+			msg("\red \bold [attacker.name] tries to bite [src.name]'s neck!")
+			msg("\red \bold [src.name] evades the attack!")
+			playsound(miss)
 		else
 			if(src.blood > 0)
-				view() << "\red \bold [attacker.name] bites [src.name]'s neck!"
-				view() << bloodsuck
+				msg("\red \bold [attacker.name] bites [src.name]'s neck!")
+				playsound(bloodsuck)
 				attacker.blood += 15
 				src.blood -= 15
 				attacker.canhit = FALSE
@@ -147,22 +147,22 @@
 /mob/living/proc/hit(var/mob/living/attacker)
 	if(!src.isDead && attacker.canhit && attacker.stamina >= 5)
 		if(prob(src.DX*4) && !src.isUndead && attacker.ckey != src.ckey)
-			view() << "\red \bold [attacker.name] tries to punch [src.name]!"
-			view() << "\red \bold [src.name] dodges the strike!"
-			view() << miss
+			msg("\red \bold [attacker.name] tries to punch [src.name]!")
+			msg("\red \bold [src.name] dodges the strike!")
+			playsound(miss)
 		else
-			view() << "\red \bold [attacker.name] punches [src.name]!"
-			view() << sound(pick('sounds/punch1.ogg','sounds/punch2.ogg','sounds/punch3.ogg'))
+			msg("\red \bold [attacker.name] punches [src.name]!")
+			playsound(pick('sounds/punch1.ogg','sounds/punch2.ogg','sounds/punch3.ogg'))
 			src.HurtMe(max(attacker.ST*1.3, 0))
 			if(!attacker.isUndead)
 				attacker.calories -= 2
 			if(prob(5+attacker.ST) && !rests)
-				view() << "\red \bold CRITICAL HIT!"
+				msg("\red \bold CRITICAL HIT!")
 				attacker.expUp(1)
 				src.HurtMe(10)
 				src.fall_down()
 			if(src.isUndead && src.target != attacker && !src.key)
-				view() << "[src.name] looks at [attacker.name]."
+				msg("[src.name] looks at [attacker.name].")
 				src.target = attacker
 		attacker.stamina = max(attacker.stamina - 10, 0)
 		attacker.canhit = FALSE
@@ -172,7 +172,7 @@
 /mob/living/proc/healhit(var/mob/living/attacker, var/obj/items/drugs/D)
 	if(!src.isDead && src.health < src.maxHealth)
 		if(D.units > 0)
-			view() << "\blue \bold [attacker.name] uses [D] on [src.name]!"
+			msg("\blue \bold [attacker.name] uses [D] on [src.name]!")
 			src.HealMe(D.hp+attacker.medskill*3)
 			D.units -= 1
 			if(D.units <= 0)
@@ -188,34 +188,36 @@
 	if(!src.isDead && canhit && attacker.stamina >= 10)
 		if(prob(src.parrychance + src.DX))
 			if(attacker.ckey != src.ckey && !src.isUndead)
-				view() << "\red \bold [src.name] parries [attacker.name]!"
+				msg("\red \bold [src.name] parries [attacker.name]!")
 				src.expUp(1)
-				view() << parry
+				playsound(parry)
+				src.overlays += "shield"
 				canhit = FALSE
 				src.stamina -= 5
 				attacker.stamina -= 10
 				spawn(10)
+					src.overlays -= "shield"
 					canhit = TRUE
 		else
-			view() << "\red \bold [attacker.name] [W.attacklog] [src.name] with [W.name]!"
+			msg("\red \bold [attacker.name] [W.attacklog] [src.name] with [W.name]!")
 			soundpick(attacker,W)
-			view() << attacker.attacksound
+			playsound(attacker.attacksound)
 			src.HurtMe(max(W.power*attacker.ST/5, 0))
 			if(W.attacktype == "sharp" || W.attacktype == "slash")
 				if(prob(40))
 					new/obj/cleanable/blood(src.loc)
 					bleeding = 1
 					BloodLoss()
-					view() << "\red [src.name] starts bleeding!"
+					msg("\red [src.name] starts bleeding!")
 			if(!attacker.isUndead)
 				attacker.calories -= 2
 			if(prob(5+attacker.ST) && !rests)
-				view() << "\red \bold CRITICAL HIT!"
+				msg("\red \bold CRITICAL HIT!")
 				attacker.expUp(1)
 				src.HurtMe(10)
 				src.fall_down()
-			if(src.isUndead && src.target != attacker)
-				view() << "[src.name] looks at [attacker.name]."
+			if(src.isUndead && !src.key && src.target != attacker)
+				msg("[src.name] looks at [attacker.name].")
 				src.target = attacker
 			canhit = FALSE
 			attacker.stamina -= 10
@@ -228,7 +230,7 @@
 		if(istype(I))
 			H.C.overlays += I
 			H.my_clothes_contents = I
-			view() << "\blue <B>[H.name]</B> puts on <B>[I]</B>."
+			msg("\blue <B>[H.name]</B> puts on <B>[I]</B>.")
 			I.layer = MOB_LAYER + 51
 			H.overlays += I.texture
 			H.dressed = 1
@@ -275,7 +277,7 @@
 		if(istype(I))
 			H.P.overlays += I
 			H.my_pocket_contents = I
-			view() << "<B>[H.name]</B> puts something in his pocket."
+			msg("<B>[H.name]</B> puts something in his pocket.")
 			I.layer = MOB_LAYER + 51
 			H.cut_hands()
 

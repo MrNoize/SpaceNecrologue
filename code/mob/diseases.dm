@@ -12,7 +12,7 @@
 			if(canEmote)
 				F << "\red *It's so cold in here...*"
 				F.Me("coughs")
-				view() << cough
+				playsound(cough)
 				canEmote = FALSE
 				spawn(30)
 					canEmote = TRUE

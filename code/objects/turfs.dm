@@ -69,13 +69,13 @@
 	var/obj/items/devices/demolisher/D = I
 	if(istype(D))
 		if(D.charge >= 5)
-			view() << "\bold[H.name] разбирает стену с помощью демолишера!"
-			view() << deconstruct
+			msg("\bold[H.name] destroys the wall with [I]!")
+			playsound(deconstruct)
 			D.charge -= 5
 			new/turf/simulated/floor/plating(src)
-			usr << "<B>Осталось [D.charge] зар[ya]дников.</B>"
+			usr << "<B>[D.charge] charges left.</B>"
 		else
-			usr << "<B>Недостаточно зар[ya]дников.</B>"
+			usr << "<B>Demolisher is out of charge.</B>"
 
 /turf/simulated/wall/wooden
 	name = "wooden wall"
@@ -93,8 +93,8 @@
 		if(!H.isDead && H.acthand && H.canhit && H.stamina >= 5)
 			var/obj/items/weapon/pickaxe/P = H.acthand
 			if(istype(P))
-				view() << "\red \bold[H.name] hits [src.name] with his pickaxe!"
-				view() << pickaxe
+				msg("\red \bold[H.name] hits [src.name] with his pickaxe!")
+				playsound(pickaxe)
 				health -= P.power+H.ST
 				H.stamina -= 5
 				H.calories -= 5

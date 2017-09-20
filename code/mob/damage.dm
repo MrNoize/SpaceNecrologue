@@ -6,23 +6,30 @@
 
 /mob/living/proc/HurtMe(D)
 	health = health - D
-	if(D >= 10 && prob(40))
-		if(!isUndead)
-			Me("moans")
-			view() << moan
+	var/colour = "white"
+	if(!isDead)
+		if(D >= 12 && prob(40))
+			colour = "orange"
+			if(!isUndead)
+				Me("moans")
+				view() << moan
+		if(bleeding)
+			colour = "red"
+		s_damage(src,D,colour)
 	if(health <= 0)
 		die()
 
 /mob/living/proc/BloodLoss()
 	if(bleeding && blood > 0)
 		blood -= 1
-		HurtMe(0.3)
+		HurtMe(1)
 		if(prob(50))
 			new/obj/cleanable/blood(src.loc)
 		spawn(20) BloodLoss()
 
 /mob/living/proc/HealMe(D)
 	health = health + D
+	s_damage(src,D,"aqua")
 
 /mob/living/proc/die(var/mob/living/human/H = src)
 	killed++

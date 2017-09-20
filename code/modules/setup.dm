@@ -6,6 +6,7 @@ world
 
 /world/New()
 	sd_SetDarkIcon('light.dmi',7)
+	colorize()
 	countLight()
 	spawn(1) DemoDayCycle()
 	master_controller()

@@ -19,7 +19,7 @@
 /obj/machinery/vendomats/proc/vend(var/mob/living/user)
 	if(hascharge >= 1)
 		if(canwork)
-			view() << "\bold[src.name] beeps."
+			msg("\bold[src.name] beeps.")
 			hascharge--
 			new loot(user.loc)
 			canwork = 0
@@ -34,10 +34,10 @@
 	var/obj/items/cartridge/C = I
 	var/obj/items/devices/analyzer/A = I
 	if(istype(C))
-		view() << "\blue<B>[H.name]</B> charges [src]!"
-		view() << click
+		msg("\blue<B>[H.name]</B> charges [src]!")
+		playsound(click)
 		hascharge += C.charges
 		H.cut_hands()
 	if(istype(A))
-		view() << "<B>[H.name]</B> scans <B>[src]</B>!"
+		msg("<B>[H.name]</B> scans <B>[src]</B>!")
 		usr << "<B>Charges left: [hascharge]</B>"

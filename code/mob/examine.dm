@@ -10,6 +10,8 @@
 		attacker << "\blue There is a [src.my_rhand_contents.name] in his right hand."
 	if(src.my_lhand_contents)
 		attacker << "\blue There is a [src.my_lhand_contents.name] in his left hand."
+	if(!src.dressed && src.isBitten)
+		attacker << "\red \bold He was bitten."
 	if(src.health <= src.maxHealth/2.5)
 		attacker << "\red \bold He is heavily wounded."
 	if(src.calories <= 50)

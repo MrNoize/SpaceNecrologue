@@ -54,18 +54,18 @@
 /mob/living/proc/zhit(var/mob/living/zombie)
 	if(!src.isDead && zombie.canhit && zombie.stamina >= 5 && !zombie.rests && zombie.key != src.key && !isUndead)
 		if(prob(src.DX*4))
-			view() << "\red \bold [zombie.name] tries to hit [src.name] with his claws!"
-			view() << "\red \bold [src.name] dodges the strike!"
-			view() << miss
+			msg("\red \bold [zombie.name] tries to hit [src.name] with his claws!")
+			msg("\red \bold [src.name] dodges the strike!")
+			playsound(miss)
 		else
-			view() << "\red \bold [zombie.name] tears [src.name]'s flesh with his claws!"
-			view() << zombiehit
+			msg("\red \bold [zombie.name] tears [src.name]'s flesh with his claws!")
+			playsound(zombiehit)
 			src.HurtMe(max(zombie.ST*1.3, 0))
 			if(prob(40))
 				new/obj/cleanable/blood(src.loc)
 				bleeding = 1
 				BloodLoss()
-				view() << "\red [src.name] starts bleeding!"
+				msg("\red [src.name] starts bleeding!")
 			if(zombie.isFrozen)
 				move_debuff += 1
 		zombie.stamina = max(zombie.stamina - 10, 0)
@@ -76,13 +76,13 @@
 /mob/living/proc/zbite(var/mob/living/zombie)
 	if(!src.isDead && zombie.canhit && !zombie.rests && zombie.key != src.key)
 		if(prob(src.DX*4))
-			view() << "\red \bold [zombie.name] tries to bite [src.name]!"
-			view() << "\red \bold [src.name] dodges the bite!"
+			msg("\red \bold [zombie.name] tries to bite [src.name]!")
+			msg("\red \bold [src.name] dodges the bite!")
 			src.expUp(1)
-			view() << miss
+			playsound(miss)
 		else
-			view() << "\red \bold [zombie.name] bites [src.name]!"
-			view() << bite
+			msg("\red \bold [zombie.name] bites [src.name]!")
+			playsound(bite)
 			if(prob(40))
 				src.isBitten = 1
 				virus(src)

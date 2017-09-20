@@ -65,7 +65,7 @@ var/global/list/objects = list()
 		proceed()
 
 /obj/structures/closets/proc/proceed()
-	view() << sound('sounds/click.ogg')
+	playsound('sounds/click.ogg')
 	if(closed)
 		open()
 	else
